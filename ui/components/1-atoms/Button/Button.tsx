@@ -10,9 +10,9 @@ export interface ButtonProps {
 export const Button: React.FC<ButtonProps> = ({
   children,
   onClick,
-  style = "primary",
+  style 
 }) => <button 
         className={classNames(styles.Button, [styles[`Button___${style}`]])}
         onClick={onClick}>
     {children}
-</button>;
+    </button>;
