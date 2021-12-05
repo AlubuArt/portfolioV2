@@ -1,0 +1,24 @@
+.Button {
+  border: 0;
+  font-family: Avenir;
+  font-size: 14px;
+  line-height: 19px;
+  font-weight: 500;
+  padding: .8rem 2.1rem;
+  border-radius: 1.5rem;
+}
+
+.Button___primary {
+  background-color: #8ab5bb;
+  color: #ffffff;
+}
+
+.Button___secondary {
+  background-color: #3698c5;
+  color: #ffffff;
+}
+
+.Button___white {
+  background-color: white;
+  color: #8ab5bb;
+}
