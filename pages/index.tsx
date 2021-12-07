@@ -5,6 +5,7 @@ import {Card} from '../ui/components/1-atoms/Card/index';
 import { Heading } from '../ui/components/1-atoms/Heading/Heading';
 import { ProjectHeader } from "../ui/components/3-organisms/ProjectHeader";
 import { ProjectDescription } from '../ui/components/3-organisms/ProjectDescription';
+import { Gallery } from '../ui/components/3-organisms/Gallery';
 
 const Home: NextPage = () => {
 
@@ -28,6 +29,9 @@ const Home: NextPage = () => {
     </div>
     <div>
       <ProjectDescription title="tech used" description="in this project the following technologies was used" list={[]}></ProjectDescription>
+    </div>
+    <div>
+      <Gallery slides={['https://firebasestorage.googleapis.com/v0/b/jc-portofolio-93953.appspot.com/o/sponsormatch.png?alt=media&token=a379dfa2-e761-49ff-934a-4fc84d15e373']}></Gallery>
     </div>
     </>
   )
