@@ -6,7 +6,7 @@ import styles from './Heading.module.css';
 export interface HeadingProps {
     children: React.ReactNode;
     className?: string;
-    type: 'h1' | 'h2' | 'h3';
+    type: 'h1' | 'h2' | 'h3' 
     tag: 'h1' | 'h2' | 'h3' | 'p';
 }
 

@@ -8,6 +8,8 @@ it('renders a h1, h2 and a CTA primary, with text "test"', () => {
     expect(screen.getByRole('ProjectHeader')).toHaveClass("Project_container")
     expect(screen.getByRole('heading', {level: 1})).toHaveTextContent("test")
     expect(screen.getByRole('heading',{level: 3})).toHaveTextContent("test")
-    expect(screen.getByRole('button')).toHaveTextContent('VISIT WEBSITE')
+    expect(screen.getByText('VISIT WEBSITE'))
+    expect(screen.getByText('SEE ON GITHUB'))
+    
 })
 
