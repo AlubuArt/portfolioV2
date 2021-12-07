@@ -8,3 +8,12 @@
 .ProjectDescription_description {
     margin-top: 5px;
 }
+
+.ProjectDescription_listItem {
+    font-weight: 300;
+    color: #8AB5BB;
+    font-size: 20px;
+    font-family: Avenir;
+    list-style-type: circle;
+
+}

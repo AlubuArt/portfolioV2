@@ -1,9 +1,10 @@
-import {useState} from 'react';
+import React, {useState} from 'react';
 import type { NextPage } from 'next';
 import {Button} from '../ui/components/1-atoms/Button/index';
 import {Card} from '../ui/components/1-atoms/Card/index';
 import { Heading } from '../ui/components/1-atoms/Heading/Heading';
 import { ProjectHeader } from "../ui/components/3-organisms/ProjectHeader";
+import { ProjectDescription } from '../ui/components/3-organisms/ProjectDescription';
 
 const Home: NextPage = () => {
 
@@ -24,6 +25,9 @@ const Home: NextPage = () => {
     {/* <Heading type="h1" tag="h1">This is a heading</Heading> */}
     <div>
       <ProjectHeader title="sponsormatch.dk" description="Short description" onClick={handleClick}></ProjectHeader>
+    </div>
+    <div>
+      <ProjectDescription title="tech used" description="in this project the following technologies was used" list={[]}></ProjectDescription>
     </div>
     </>
   )
