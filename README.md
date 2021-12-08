@@ -1,4 +1,4 @@
-# Custom Portfolio / CV Design
+# Custom Portfolio / CV Design (work in progress)
 #By Jacob Christensen
 
 
@@ -14,7 +14,7 @@
 ## about the website
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 It utilize the GraphCMS headless graphQL CMS for content management.  
-This website is designed and build with [Atomic Design Methodology](https://atomicdesign.bradfrost.com), which is a design methodology to used to create effective design systems with highly reusable components through deliberately design, with a explicit order and hierachy.
+This website is designed and build with [Atomic Design Methodology](https://atomicdesign.bradfrost.com), which is a design methodology used to create effective design systems with highly reusable components through deliberate design, with explicit order and hierachy.
 
 
 ## tech used
