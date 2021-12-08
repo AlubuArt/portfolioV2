@@ -38,8 +38,8 @@ export const Gallery: React.FC<GalleryProps> = ({ className, slides }) => {
               <SwiperSlide key={index} className={styles.SwiperSlide_slide}>
                 <Image
                   alt=""
-                  width="800"
-                  height="600"
+                  width={16}
+                  height={9}
                   layout="responsive"
                   objectFit="fill"
                   className={styles.SwiperSlide_slide}
