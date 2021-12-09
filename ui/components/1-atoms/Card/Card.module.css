@@ -1,23 +1,31 @@
 .Card {
-
+  border-radius: 34px;
+  border: 3px solid rgba(67, 115, 137, 0.94);
+  box-shadow: 3px 3px 8px 1px #cecece;
 }
 
-.Card___frosted {
-    background:linear-gradient(261.91deg, rgba(38, 124, 204, 0.17) 1.29%, rgba(2, 164, 255, 0) 100%);
-    mix-blend-mode: normal;
-    opacity: 0.8;
-    backdrop-filter: blur(30px);
-    border-radius: 34px;
-    border: 3px solid rgba(67, 115, 137, .3);
-    box-shadow: 3px 3px 8px 1px #CECECE;
+.Card___sm {
+  width: 430px;
+  height: 287px;
 }
 
-.Card___small {
-    width: 430px;
-    height: 287px;
+.Card_lg {
+  width: 876px;
+  height: 287px;
+}
+.Card___basic {
+  background: linear-gradient(
+    261.91deg,
+    rgba(38, 124, 204, 0.17) 1.29%,
+    rgba(2, 164, 255, 0) 100%
+  );
+  mix-blend-mode: normal;
+  opacity: 0.8;
 }
 
-.Card_large {
-    width: 876px;
-    height: 287px;
+.Card___project_card {
+  overflow: hidden;
+  background-size: cover;
+  
+  
 }

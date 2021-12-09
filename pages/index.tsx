@@ -6,6 +6,7 @@ import { Heading } from "../ui/components/1-atoms/Heading/Heading";
 import { ProjectHeader } from "../ui/components/3-organisms/ProjectHeader";
 import { ProjectDescription } from "../ui/components/3-organisms/ProjectDescription";
 import { Gallery } from "../ui/components/3-organisms/Gallery";
+import { ProjectCard } from '../ui/components/2-molecules/ProjectCard';
 
 const Home: NextPage = () => {
   let [buttonName, setButtonName] = useState("Button");
@@ -14,6 +15,8 @@ const Home: NextPage = () => {
     console.log("clicked");
     setButtonName("clicked");
   };
+
+  let url = "https://firebasestorage.googleapis.com/v0/b/jc-portofolio-93953.appspot.com/o/Sk%C3%A6rmbillede%202020-12-28%20kl.%2013.22.18.png?alt=media&token=4449a9f8-2b9f-4585-818b-ba804f5a75d9"
 
   return (
     <div style={{maxWidth: "800px", marginRight: "auto", marginLeft: "auto"}}>
@@ -48,6 +51,7 @@ const Home: NextPage = () => {
           list={['react', 'firebase', 'Bootstrap', 'NextJS']}
         ></ProjectDescription>
       </div>
+      
       <Button style={"primary"} onClick={() => handleClick()}>
         {buttonName}
       </Button>
@@ -57,10 +61,12 @@ const Home: NextPage = () => {
       <Button style={"CTA___secondary"} onClick={() => handleClick()}>
         {buttonName}
       </Button>
-      <Card style={"frosted"} size={"small"} onClick={() => handleClick()}>
+     {/*  <Card type={"basic"} size={"sm"} onClick={() => handleClick()}>
         {}
-      </Card>
+      </Card> */}
       {/* <Heading type="h1" tag="h1">This is a heading</Heading> */}
+        <ProjectCard image={url} title={"sponsormatch.dk"} description={"this is a project that is made with react and nextjs"}></ProjectCard>
+      
     </div>
   );
 };
