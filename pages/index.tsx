@@ -39,7 +39,7 @@ const Home: NextPage = () => {
       </div>
       <div>
         <ProjectDescription
-          title="About this project"
+          title="about this project"
           description="Get Things Done er en klassisk todo applikation, lavet med React og Typescript, stylet med CSS modules og bruger React Context API til at håndtere state. Med applikationen kan man tilføje, slette og ændre status på todos, samt sætte deadlines for hver todo."
           list={[]}
         ></ProjectDescription>
@@ -51,23 +51,6 @@ const Home: NextPage = () => {
           list={["react", "firebase", "Bootstrap", "NextJS"]}
         ></ProjectDescription>
       </div>
-
-      <Button style={"primary"} onClick={() => handleClick()}>
-        {buttonName}
-      </Button>
-      <Button style={"CTA___primary"} onClick={() => handleClick()}>
-        {buttonName}
-      </Button>
-      <Button style={"CTA___secondary"} onClick={() => handleClick()}>
-        {buttonName}
-      </Button>
-      
-      <ProjectCard
-        image={url}
-        title={"sponsormatch.dk"}
-        description={"Sponsormatch.dk er en landingpage lavet i React og udformet til at informere omkring SponsorMatch platformen og hvilken værdi platformen kan give foreningerne."}
-        onClick={() => handleClick()}
-      ></ProjectCard>
     </div>
   );
 };
