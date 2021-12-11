@@ -11,8 +11,9 @@
 
 .ProjectDescription_listItem {
     font-weight: 300;
-    color: #8AB5BB;
-    font-size: 20px;
+    color: rgb(73, 111, 117);
+    font-size: 22px;
+    font-weight: 400;
     font-family: Avenir;
     list-style-type: circle;
 

@@ -11,32 +11,32 @@
 }
 
 .Button___primary {
-  background-color: #8ab5bb;
+  background-color: rgb(28, 156, 173);
   color: #ffffff;
 }
 
 .Button___secondary {
-  background-color: #3698c5;
+  background-color: rgb(28, 156, 173);
   color: #ffffff;
 }
 
 .Button___white {
   background-color: white;
-  color: #8ab5bb;
+  color: rgb(28, 156, 173);
 }
 
 .Button___CTA___primary {
   background-color: white;
-  border: 1px solid #3698C5;
-  color: #8ab5bb;
+  border: 1px solid rgb(28, 156, 173);
+  color:rgb(28, 156, 173);
   border-radius: 0px;
   box-sizing: border-box;
 }
 
 .Button___CTA___secondary {
-  background: #3698C5;
+  background: rgb(28, 156, 173);
   color: #ffffff;
   border-radius: 0px;
-  border: 1px solid #3698C5;
+  border: 1px solid rgb(28, 156, 173);
 
 }
