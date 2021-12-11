@@ -6,7 +6,7 @@ import { Heading } from "../ui/components/1-atoms/Heading/Heading";
 import { ProjectHeader } from "../ui/components/3-organisms/ProjectHeader";
 import { ProjectDescription } from "../ui/components/3-organisms/ProjectDescription";
 import { Gallery } from "../ui/components/3-organisms/Gallery";
-import { ProjectCard } from '../ui/components/2-molecules/ProjectCard';
+import { ProjectCard } from "../ui/components/2-molecules/ProjectCard";
 
 const Home: NextPage = () => {
   let [buttonName, setButtonName] = useState("Button");
@@ -16,19 +16,19 @@ const Home: NextPage = () => {
     setButtonName("clicked");
   };
 
-  let url = "https://firebasestorage.googleapis.com/v0/b/jc-portofolio-93953.appspot.com/o/Sk%C3%A6rmbillede%202020-12-28%20kl.%2013.22.18.png?alt=media&token=4449a9f8-2b9f-4585-818b-ba804f5a75d9"
+  let url =
+    "https://firebasestorage.googleapis.com/v0/b/jc-portofolio-93953.appspot.com/o/Sk%C3%A6rmbillede%202020-12-28%20kl.%2013.22.18.png?alt=media&token=4449a9f8-2b9f-4585-818b-ba804f5a75d9";
 
   return (
-    <div style={{maxWidth: "800px", marginRight: "auto", marginLeft: "auto"}}>
+    <div style={{ maxWidth: "800px", marginRight: "auto", marginLeft: "auto" }}>
       <div>
-
         <ProjectHeader
           title="sponsormatch.dk"
           description="Get Things Done er en klassisk todo applikation, hvor man kan tilføje, slette og ændre status på todos, samt sætte deadlines for hver todo."
           onClick={handleClick}
-          ></ProjectHeader>
+        ></ProjectHeader>
       </div>
-      
+
       <div style={{ maxWidth: "800px" }}>
         <Gallery
           slides={[
@@ -48,10 +48,10 @@ const Home: NextPage = () => {
         <ProjectDescription
           title="tech used"
           description="in this project the following technologies was used"
-          list={['react', 'firebase', 'Bootstrap', 'NextJS']}
+          list={["react", "firebase", "Bootstrap", "NextJS"]}
         ></ProjectDescription>
       </div>
-      
+
       <Button style={"primary"} onClick={() => handleClick()}>
         {buttonName}
       </Button>
@@ -61,12 +61,13 @@ const Home: NextPage = () => {
       <Button style={"CTA___secondary"} onClick={() => handleClick()}>
         {buttonName}
       </Button>
-     {/*  <Card type={"basic"} size={"sm"} onClick={() => handleClick()}>
-        {}
-      </Card> */}
-      {/* <Heading type="h1" tag="h1">This is a heading</Heading> */}
-        <ProjectCard image={url} title={"sponsormatch.dk"} description={"this is a project that is made with react and nextjs"}></ProjectCard>
       
+      <ProjectCard
+        image={url}
+        title={"sponsormatch.dk"}
+        description={"Sponsormatch.dk er en landingpage lavet i React og udformet til at informere omkring SponsorMatch platformen og hvilken værdi platformen kan give foreningerne."}
+        onClick={() => handleClick()}
+      ></ProjectCard>
     </div>
   );
 };

@@ -3,18 +3,21 @@ import styles from "./ProjectCard.module.css";
 import classNames from "classNames";
 import { Card } from "../../1-atoms/Card";
 import { Heading } from "../../1-atoms/Heading";
+import{ Button }from "../../1-atoms/Button";
 
 export interface ProjectCardProps {
   className?: string;
   title: string;
   description?: string;
   image: string;
+  onClick: React.MouseEventHandler<HTMLButtonElement>;
 }
 
 export const ProjectCard: React.FC<ProjectCardProps> = ({
   title,
   description,
   image,
+  onClick
 }) => (
   <>
     <Card
@@ -31,10 +34,9 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
         <Heading className={styles.infoDescription} type={"h3"} tag={"h3"}>
           {description}
         </Heading>
-        {/*  <div>
-            <Button></Button>
-            <Button></Button>
-        </div> */}
+         
+            <Button style={"primary"} onClick={onClick}>more...</Button>
+        
       </div>
     </Card>
   </>

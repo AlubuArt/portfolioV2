@@ -1,4 +1,10 @@
+/* Thank you Trevor Eyre for the code on
+https://codepen.io/trevoreyre/pen/bRrrEx
+*/
+
+
 .info {
+  text-align: center;
   position: relative;
   width: 100%;
   height: 287px;
@@ -6,10 +12,10 @@
   transform: translateY(110%) translateY(-100px) translateZ(0);
   transition: transform 0.3s ease-out;
   mix-blend-mode: normal;
-  opacity: 0.8;
-  opacity: 0.95;
+  opacity: 0.97;
   top: 0;
 }
+/* this is not getting used ATM. Use it when the overlay should be frosted.  */
 .info:before {
   z-index: -1;
   display: block;
@@ -28,19 +34,13 @@
 .infoTitle {
   margin-bottom: 5px;
   margin-top: 0px;
-  padding-left: 15px;
-  padding-right: 15px;
 }
 
 .infoDescription {
   margin-top: 5px;
-  padding-left: 15px;
-  padding-right: 15px;
 }
 
 .project_card:hover .info,
 .project_card:hover .info:before {
   transform: translateY(0) translateZ(0);
 }
-
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400");
