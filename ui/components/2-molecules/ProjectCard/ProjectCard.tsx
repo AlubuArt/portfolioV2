@@ -30,7 +30,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
       onClick={() => {}}
     >
       <div className={styles.info}>
-        <Heading className={styles.infoTitle} type={"h2"} tag={"h2"}>
+        <Heading className={styles.infoTitle} type={"h3"} tag={"h3"}>
           {title}
         </Heading>
         <Paragraph className={styles.infoDescription} tag={"p"}>
