@@ -4,6 +4,8 @@ import classNames from "classNames";
 import { Card } from "../../1-atoms/Card";
 import { Heading } from "../../1-atoms/Heading";
 import{ Button }from "../../1-atoms/Button";
+import { Paragraph } from '../../1-atoms/Paragraph';
+
 
 export interface ProjectCardProps {
   className?: string;
@@ -31,9 +33,9 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
         <Heading className={styles.infoTitle} type={"h2"} tag={"h2"}>
           {title}
         </Heading>
-        <Heading className={styles.infoDescription} type={"h3"} tag={"h3"}>
+        <Paragraph className={styles.infoDescription} tag={"p"}>
           {description}
-        </Heading>
+        </Paragraph >
          
             <Button style={"primary"} onClick={onClick}>more...</Button>
         
