@@ -34,7 +34,7 @@ var styles = {
     padding: "2.5em 1.5em 0",
     fontSize: "1.15em",
   },
-  
+
   bmItemList: {
     color: "#b8b7ad",
     padding: "0.8em",
@@ -48,22 +48,31 @@ var styles = {
   },
 };
 
-export const Hamburger: React.FC = () => (
-  <Menu right styles={styles}>
-    <Link href="/about" passHref>
-      <Paragraph tag="p">about me</Paragraph>
-    </Link>
-    <Link href="/projects" passHref>
-      <Paragraph tag="p">projects</Paragraph>
-    </Link>
-    <Link href="/experience" passHref>
-      <Paragraph tag="p">experience</Paragraph>
-    </Link>
-    <Link href="/education" passHref>
-      <Paragraph tag="p">education</Paragraph>
-    </Link>
-    <Link href="/contact" passHref>
-      <Paragraph tag="p">contact</Paragraph>
-    </Link>
-  </Menu>
-);
+interface MenuItem {
+  path: string;
+  text: string;
+}
+
+export interface HamburgerProps {
+  menuItems: Array<MenuItem>;
+}
+
+export const Hamburger: React.FC<HamburgerProps> = ({ menuItems }) => {
+  return (
+    <Menu right styles={styles}>
+      {menuItems.map((item, index: number) => {
+        return (
+          <Link key={index} href={item.path} passHref>
+            {/* this feels hacky! Seems like a bug. 
+            if future me would like to fix it some day, use a link wrapper: https://github.com/vercel/next.js/issues/7915 
+            and https://nextjs.org/docs/api-reference/next/link#if-the-child-is-a-function-component
+            could be worth fixing for better SEO*/}
+            <div>
+              <Paragraph tag="p">{item.text}</Paragraph>
+            </div>
+          </Link>
+        );
+      })}
+    </Menu>
+  );
+};

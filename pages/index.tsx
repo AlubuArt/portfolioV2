@@ -7,13 +7,14 @@ import { ProjectHeader } from "../ui/components/3-organisms/ProjectHeader";
 import { ProjectDescription } from "../ui/components/3-organisms/ProjectDescription";
 import { Gallery } from "../ui/components/3-organisms/Gallery";
 import { ProjectCard } from "../ui/components/2-molecules/ProjectCard";
-import { Hamburger} from '../ui/components/1-atoms/Hamburger';
-
-
+import { Hamburger } from "../ui/components/1-atoms/Hamburger";
+import { Header } from "../ui/components/2-molecules/Header";
 
 const Home: NextPage = () => {
   let [buttonName, setButtonName] = useState("Button");
-
+  let [menuItems, setMenuItems] = useState([
+    { path: "/projects", text: "projects" },
+  ]);
   const handleClick = () => {
     console.log("clicked");
     setButtonName("clicked");
@@ -24,12 +25,11 @@ const Home: NextPage = () => {
 
   return (
     <>
-<Hamburger></Hamburger>
-    
-    <div style={{ maxWidth: "800px", marginRight: "auto", marginLeft: "auto" }}>
+      <Header menuItems={menuItems} />
 
-        
-
+      <div
+        style={{ maxWidth: "800px", marginRight: "auto", marginLeft: "auto" }}
+      >
         <div>
           <ProjectHeader
             title="sponsormatch.dk"
@@ -60,7 +60,8 @@ const Home: NextPage = () => {
             list={["react", "firebase", "Bootstrap", "NextJS"]}
           ></ProjectDescription>
         </div>
-      </div></>
+      </div>
+    </>
   );
 };
 
