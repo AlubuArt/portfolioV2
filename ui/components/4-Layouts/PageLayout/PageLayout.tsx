@@ -1,5 +1,6 @@
 import React from "react";
-import { Header } from "../2-molecules/Header";
+import { Header } from "../../2-molecules/Header";
+import { Container } from '../Container';
 
 
 export interface PageLayoutProps {
@@ -8,9 +9,9 @@ export interface PageLayoutProps {
 
 export const PageLayout: React.FC<PageLayoutProps> = ({children}) => {
     return (
-        <div>
+        <Container width={"full"} spacing={"sm"}>
             <Header menuItems={[]}/>
             {children}
-        </div>
+        </Container>
     )
 }

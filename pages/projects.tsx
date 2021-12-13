@@ -16,13 +16,7 @@ const Projects: NextPage = () => {
         <div
         style={{ maxWidth: "800px", marginRight: "auto", marginLeft: "auto" }}
       >
-        <div>
-          <ProjectHeader
-            title="sponsormatch.dk"
-            description="Get Things Done er en klassisk todo applikation, hvor man kan tilføje, slette og ændre status på todos, samt sætte deadlines for hver todo."
-            onClick={handleClick}
-          ></ProjectHeader>
-        </div>
+        
       </div>
     )
 }

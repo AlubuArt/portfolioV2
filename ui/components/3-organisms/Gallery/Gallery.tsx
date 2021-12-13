@@ -14,6 +14,7 @@ import SwiperCore, {
   Mousewheel,
   Keyboard,
 } from "swiper";
+import { Container } from "../../4-Layouts/Container";
 
 SwiperCore.use([Navigation, Pagination, Mousewheel, Keyboard]);
 
@@ -24,7 +25,7 @@ export interface GalleryProps {
 
 export const Gallery: React.FC<GalleryProps> = ({ className, slides }) => {
   return (
-    <div className={classNames(styles.Gallery, className)}>
+    <Container className={classNames(styles.Gallery, className)} width={'md'}>
       <div>
         <Swiper
           cssMode={true}
@@ -50,6 +51,6 @@ export const Gallery: React.FC<GalleryProps> = ({ className, slides }) => {
           })}
         </Swiper>
       </div>
-    </div>
+    </Container>
   );
 };
