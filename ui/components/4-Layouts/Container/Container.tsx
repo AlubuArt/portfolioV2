@@ -10,8 +10,8 @@ export interface ContainerProps {
     className?: string;
 }
 
-export const Container: React.FC<ContainerProps> = ({children, width}) => (
-    <div className={classNames(styles.Container, styles[`Container___${width}`])}>
+export const Container: React.FC<ContainerProps> = ({children, width, spacing}) => (
+    <div className={classNames(styles.Container, styles[`Container___${width}`], styles[`Container___spacing_${spacing}`])}>
         {children}
 
     </div>

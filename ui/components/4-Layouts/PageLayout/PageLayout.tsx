@@ -9,7 +9,7 @@ export interface PageLayoutProps {
 
 export const PageLayout: React.FC<PageLayoutProps> = ({children}) => {
     return (
-        <Container width={"full"} spacing={"sm"}>
+        <Container width={"full"}>
             <Header menuItems={[]}/>
             {children}
         </Container>

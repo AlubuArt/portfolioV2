@@ -1,6 +1,5 @@
 import React from "react";
 import styles from "./ProjectCard.module.css";
-import classNames from "classNames";
 import { Card } from "../../1-atoms/Card";
 import { Heading } from "../../1-atoms/Heading";
 import{ Button }from "../../1-atoms/Button";

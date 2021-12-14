@@ -15,7 +15,7 @@ export const ProjectDescription: React.FC<ProjectDescriptionProps> = ({
   description,
   list,
 }) => (
-  <Container className={styles.ProjectDescription_container} width={"lg"}>
+  <Container  width={"lg"} spacing={'lg'}>
     <Heading type="h2" tag="h2" className={styles.ProjectDescription_title}>
       {title}
     </Heading>

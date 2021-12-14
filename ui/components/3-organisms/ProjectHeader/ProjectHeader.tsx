@@ -16,7 +16,7 @@ export const ProjectHeader: React.FC<ProjectHeaderProps> = ({
   description,
   onClick,
 }) => (
-  <Container className={styles.Project_container} width={"lg"}>
+  <Container width={"lg"} spacing={'lg'}>
     <Heading type="h1" tag="h1" className={styles.ProjectHeader_title}>
       {title}
     </Heading>

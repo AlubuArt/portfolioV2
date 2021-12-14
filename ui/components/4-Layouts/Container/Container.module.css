@@ -24,3 +24,20 @@
 .Container___lg {
   width: 100%;
 }
+
+.Container___spacing_sm {
+  margin-top: 5px;
+  margin-bottom: 5px;
+
+}
+
+.Container___spacing_md {
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+}
+
+.Container___spacing_lg {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
