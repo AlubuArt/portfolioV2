@@ -24,13 +24,11 @@ export const ProjectHeader: React.FC<ProjectHeaderProps> = ({
       {description}
     </Paragraph>
 
-    <Container width={'sm'}>
-      <Button onClick={onClick} style={"CTA___primary"}>
-        {"VISIT WEBSITE"}
-      </Button>
-      <Button onClick={onClick} style={"CTA___secondary"}>
-        {"SEE ON GITHUB"}
-      </Button>
-    </Container>
+    <Button onClick={onClick} style={"CTA___primary"}>
+      {"VISIT WEBSITE"}
+    </Button>
+    <Button onClick={onClick} style={"CTA___secondary"}>
+      {"SEE ON GITHUB"}
+    </Button>
   </Container>
 );

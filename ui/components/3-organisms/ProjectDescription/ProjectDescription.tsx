@@ -1,7 +1,8 @@
 import React from "react";
 import styles from "./ProjectDescription.module.css";
 import { Heading } from "../../1-atoms/Heading";
-import { Paragraph } from '../../1-atoms/Paragraph';
+import { Paragraph } from "../../1-atoms/Paragraph";
+import { Container } from "../../4-Layouts/Container";
 
 export interface ProjectDescriptionProps {
   title: string;
@@ -14,25 +15,26 @@ export const ProjectDescription: React.FC<ProjectDescriptionProps> = ({
   description,
   list,
 }) => (
-  <div
-    role="ProjectDescription"
-    className={styles.ProjectDescription_container}
-  >
+  <Container className={styles.ProjectDescription_container} width={"lg"}>
     <Heading type="h2" tag="h2" className={styles.ProjectDescription_title}>
       {title}
     </Heading>
     <Paragraph className={styles.ProjectDescription_description} tag={"p"}>
-          {description}
-        </Paragraph >
-    
+      {description}
+    </Paragraph>
+
     <ul>
-    {list.length > 0 ? (
-      list.map((item, index) => {
-        return <li className={styles.ProjectDescription_listItem} key={index}>{item}</li>;//TODO replace with custom list item
-      })
-    ) : (
-      <></>
-    )}
+      {list.length > 0 ? (
+        list.map((item, index) => {
+          return (
+            <li className={styles.ProjectDescription_listItem} key={index}>
+              {item}
+            </li>
+          ); //TODO replace with custom list item
+        })
+      ) : (
+        <></>
+      )}
     </ul>
-  </div>
+  </Container>
 );

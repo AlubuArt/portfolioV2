@@ -25,32 +25,30 @@ export interface GalleryProps {
 
 export const Gallery: React.FC<GalleryProps> = ({ className, slides }) => {
   return (
-    <Container className={classNames(styles.Gallery, className)} width={'md'}>
-      <div>
-        <Swiper
-          cssMode={true}
-          navigation={true}
-          pagination={true}
-          mousewheel={true}
-          keyboard={true}
-        >
-          {slides.map((slide, index) => {
-            return (
-              <SwiperSlide key={index} className={styles.SwiperSlide_slide}>
-                <Image
-                  alt=""
-                  width={16}
-                  height={9}
-                  layout="responsive"
-                  objectFit="fill"
-                  className={styles.SwiperSlide_slide}
-                  src={slide}
-                />
-              </SwiperSlide>
-            );
-          })}
-        </Swiper>
-      </div>
+    <Container className={classNames(styles.Gallery, className)} width={"md"}>
+      <Swiper
+        cssMode={true}
+        navigation={true}
+        pagination={true}
+        mousewheel={true}
+        keyboard={true}
+      >
+        {slides.map((slide, index) => {
+          return (
+            <SwiperSlide key={index} className={styles.SwiperSlide_slide}>
+              <Image
+                alt=""
+                width={16}
+                height={9}
+                layout="responsive"
+                objectFit="fill"
+                className={styles.SwiperSlide_slide}
+                src={slide}
+              />
+            </SwiperSlide>
+          );
+        })}
+      </Swiper>
     </Container>
   );
 };
