@@ -1,12 +1,14 @@
 .Card {
+  width: 430px;
+  height: 287px;
   border-radius: 34px;
   border: 3px solid rgba(67, 115, 137, 0.94);
   box-shadow: 3px 3px 8px 1px #cecece;
+ 
 }
 
 .Card___sm {
-  width: 430px;
-  height: 287px;
+  
 }
 
 .Card_lg {
@@ -26,6 +28,8 @@
 .Card___project_card {
   overflow: hidden;
   background-size: cover;
+  width: 430px;
+  height: 287px;
   
   
 }
