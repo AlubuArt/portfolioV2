@@ -14,7 +14,7 @@ export const ListLayout: React.FC<ListLayoutProps> = ({ }) => {
     let [listItems, setListItems] = useState([{}, {}, {}, {}, {}])
 
     return (
-        <Container width={"md"}>
+        <Container width={"md"} spacing={'lg'}>
             <div className={styles.ListLayoutContainer} >
                 {
                     listItems.map((item, index) => {
