@@ -1,24 +1,20 @@
 .Container {
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin: 0px 20px;
+  position: relative;
 }
 
 .Container___full {
-  width: 100%
+ 
 }
 
 .Container___sm {
   width: 50%;
   margin-bottom: 5px;
-  margin-top: 5px;
 }
 
 .Container___md {
   width: 70%;
   margin-bottom: 10px;
-  margin-top: 10px;
 }
 
 .Container___lg {
@@ -26,18 +22,15 @@
 }
 
 .Container___spacing_sm {
-  margin-top: 5px;
   margin-bottom: 5px;
 
 }
 
 .Container___spacing_md {
-  margin-top: 10px;
   margin-bottom: 10px;
 
 }
 
 .Container___spacing_lg {
-  margin-top: 50px;
   margin-bottom: 50px;
 }

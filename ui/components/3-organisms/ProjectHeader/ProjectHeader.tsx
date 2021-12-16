@@ -16,19 +16,20 @@ export const ProjectHeader: React.FC<ProjectHeaderProps> = ({
   description,
   onClick,
 }) => (
-  <Container width={"lg"} spacing={'lg'}>
+  <Container width={"full"} spacing={'lg'}>
     <Heading type="h1" tag="h1" className={styles.ProjectHeader_title}>
       {title}
     </Heading>
     <Paragraph className={styles.ProjectHeader_description} tag={"p"}>
       {description}
     </Paragraph>
-
+    <div>
     <Button onClick={onClick} style={"CTA___primary"}>
       {"VISIT WEBSITE"}
     </Button>
     <Button onClick={onClick} style={"CTA___secondary"}>
       {"SEE ON GITHUB"}
     </Button>
+    </div>
   </Container>
 );

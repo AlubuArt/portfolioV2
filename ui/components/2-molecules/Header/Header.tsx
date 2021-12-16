@@ -12,7 +12,7 @@ export interface HeaderProps {
 }
 
 export const Header: React.FC<HeaderProps> = ({menuItems}) => (
-    <Container width={"lg"}>
+    
         <Hamburger menuItems={menuItems} />
-    </Container>
+    
 )

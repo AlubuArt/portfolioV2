@@ -14,14 +14,11 @@ const Projects: NextPage = () => {
     }
     return (
         <>
-            <Container width={"full"} spacing={'lg'}>
+            <Container width={"lg"} >
 
-                <Container width={"lg"} spacing={'lg'}>
+                <Container width={"md"} spacing={'lg'}>
                     <PageHeader title={"project portfolio"} description={'my lastest work with ReactJS, NextJS, Firebase, NodeJS, GraphQL, UX/UI design, Figma'} />
                 </Container>
-
-
-
             <ListLayout />
             </Container>
            

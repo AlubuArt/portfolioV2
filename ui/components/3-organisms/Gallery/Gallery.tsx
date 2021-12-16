@@ -25,7 +25,8 @@ export interface GalleryProps {
 
 export const Gallery: React.FC<GalleryProps> = ({ className, slides }) => {
   return (
-    <Container className={classNames(styles.Gallery, className)} width={"md"} spacing={'lg'}>
+    <Container width={"full"} spacing={'lg'}>
+      <div className={styles.Gallery}>
       <Swiper
         cssMode={true}
         navigation={true}
@@ -49,6 +50,7 @@ export const Gallery: React.FC<GalleryProps> = ({ className, slides }) => {
           );
         })}
       </Swiper>
+      </div>
     </Container>
   );
 };
