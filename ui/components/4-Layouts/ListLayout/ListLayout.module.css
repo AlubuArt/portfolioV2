@@ -1,13 +1,14 @@
 .ListLayoutContainer {
   display: grid; 
   grid-template-columns: repeat(2, 1fr); 
-  gap: 40px 40px;
-  justify-content: space-between;    
+  gap: 45px 45px;
+  justify-content: space-between;  
+  
   
   
 }
 
-/* .ListItem {
-  
+
+.listItem {
+  margin: auto;
 }
- */

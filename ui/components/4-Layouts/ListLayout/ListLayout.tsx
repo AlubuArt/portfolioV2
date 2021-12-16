@@ -14,16 +14,16 @@ export const ListLayout: React.FC<ListLayoutProps> = ({ }) => {
     let [listItems, setListItems] = useState([{}, {}, {}, {}, {}])
 
     return (
-        <Container width={"sm"} spacing={'lg'}>
+        <Container width={"full"} spacing={'lg'}>
             <div className={styles.ListLayoutContainer} >
                 {
                     listItems.map((item, index) => {
                         return (
                             // eslint-disable-next-line react/jsx-key
-                            <>
+                            <div className={styles.listItem}>
                                 
                                 <ProjectCard key={index} title={"sponsormatch.dk"} description={"lorem ipsum"} onClick={() => { }} image={""} />
-                            </>
+                            </div>
                            
                         )
                     })

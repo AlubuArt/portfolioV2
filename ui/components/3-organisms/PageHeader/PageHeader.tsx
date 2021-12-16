@@ -13,14 +13,14 @@ export interface PageHeaderProps {
 }
 
 export const PageHeader: React.FC<PageHeaderProps> = ({ title, description }) => (
-    <>
+    <Container width={'full'} spacing={'lg'}>
         <Heading className={styles.PageHeader_title} type="h1" tag="h1">
             {title}
         </Heading>
         <Paragraph className={styles.PageHeader_description} tag={"p"}>
             {description}
         </Paragraph>
-    </>
+    </Container>
 )
 
 
