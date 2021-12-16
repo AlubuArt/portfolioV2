@@ -11,7 +11,7 @@ export interface ListLayoutProps {
 
 export const ListLayout: React.FC<ListLayoutProps> = ({ }) => {
 
-    let [listItems, setListItems] = useState([{}, {}, {}, {}, {}])
+    let [listItems, setListItems] = useState([{}, {}, {}, {}, {}, {}, {}, {}, {}, {}])
 
     return (
         <Container width={"md"} spacing={'lg'}>

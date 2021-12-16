@@ -1,31 +1,7 @@
-/* .ListLayoutContainer {
-  display: grid; 
-  grid-template-columns: repeat(2, 1fr); 
-  gap: 45px 45px;
-  justify-content: space-between;  
- 
-  
-  
-  
-} */
-
 .ListLayoutContainer {
   display: flex; 
   flex-wrap: wrap; 
   align-content: stretch;
   flex-direction: row;
   justify-content: space-between;
-}
-
-
- 
-  
-  
-  
-
-
-
-
-
-.listItem {
 }
