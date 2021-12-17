@@ -6,22 +6,9 @@ import { Gallery } from "../ui/components/3-organisms/Gallery";
 import { Container } from "../ui/components/4-Layouts/Container";
 import styles from '../styles/wrapper.module.css';
 
-export interface Image {
-  url: string;
-}
-
-export interface Project {
-  title: string;
-  description: string;
-  aboutText: string;
-  images: Array<Image>;
-  list: Array<string>
-}
-
 export interface ProjectInfo {
-  project: Project;
+  project: Models.Project;
 }
-
 
 const ProjectInfo: NextPage<ProjectInfo> = ({project}) => {
   const handleClick = () => {

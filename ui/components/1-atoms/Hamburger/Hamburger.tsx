@@ -48,13 +48,8 @@ var styles = {
   },
 };
 
-export interface MenuItem {
-  path: string;
-  text: string;
-}
-
 export interface HamburgerProps {
-  menuItems: Array<MenuItem>;
+  menuItems: Array<Models.MenuItem>;
 }
 
 export const Hamburger: React.FC<HamburgerProps> = ({ menuItems }) => {
