@@ -4,13 +4,19 @@ import { PageHeader } from "../ui/components/3-organisms/PageHeader";
 import { Container } from "../ui/components/4-Layouts/Container";
 import { ProjectCard } from "../ui/components/2-molecules/ProjectCard";
 import { ListLayout } from "../ui/components/4-Layouts/ListLayout";
-import styles from '../styles/wrapper.module.css'
+import styles from '../styles/wrapper.module.css';
+import { useRouter } from 'next/router'
 
 
 const Projects: NextPage = () => {
 
+    const router = useRouter()
+
 
     const handleClick = () => {
+
+        router.push('/projectInfo')
+
 
     }
     return (

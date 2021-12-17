@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import styles from "./ListLayout.module.css";
 import { ProjectCard } from "../../2-molecules/ProjectCard";
-import { Container } from "../../4-Layouts/Container"
+import { Container } from "../../4-Layouts/Container";
+import { useRouter } from 'next/router'
 
 
 export interface ListLayoutProps {
@@ -12,6 +13,17 @@ export interface ListLayoutProps {
 export const ListLayout: React.FC<ListLayoutProps> = ({ }) => {
 
     let [listItems, setListItems] = useState([{}, {}, {}, {}, {}, {}, {}, {}, {}, {}])
+
+
+    const router = useRouter()
+
+
+    const handleClick = () => {
+
+        router.push('/projectInfo')
+
+
+    }
 
     return (
         <Container width={"md"} spacing={'lg'}>
@@ -24,7 +36,7 @@ export const ListLayout: React.FC<ListLayoutProps> = ({ }) => {
                             // eslint-disable-next-line react/jsx-key
                             <div className={styles.listItem}>
                                 
-                                <ProjectCard key={index} title={"sponsormatch.dk"} description={"lorem ipsum"} onClick={() => { }} image={""} />
+                                <ProjectCard key={index} title={"sponsormatch.dk"} description={"lorem ipsum"} onClick={handleClick} image={""} />
                             </div>
                            
                         )
