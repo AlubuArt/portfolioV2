@@ -13,6 +13,8 @@
 .Button___primary {
   background-color: rgb(28, 156, 173);
   color: #ffffff;
+  margin-right: 1.5rem;
+  margin-left: 1.5rem;
 }
 
 .Button___secondary {

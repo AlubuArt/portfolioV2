@@ -19,29 +19,25 @@ export const ListLayout: React.FC<ListLayoutProps> = ({ }) => {
 
 
     const handleClick = () => {
-
+        console.log("routing to project info page")
         router.push('/projectInfo')
-
-
     }
 
     return (
         <Container width={"md"} spacing={'lg'}>
             <div className={styles.test}>
-            <div className={styles.ListLayoutContainer} >
-                
-                {
-                    listItems.map((item, index) => {
-                        return (
-                            // eslint-disable-next-line react/jsx-key
-                            <div className={styles.listItem}>
-                                
-                                <ProjectCard key={index} title={"sponsormatch.dk"} description={"lorem ipsum"} onClick={handleClick} image={""} />
-                            </div>
-                           
-                        )
-                    })
-                }
+                <div className={styles.ListLayoutContainer} >
+
+                    {
+                        listItems.map((item, index) => {
+                            return (
+                                <div key={index} className={styles.listItem}>
+                                    <ProjectCard title={"sponsormatch.dk"} description={"lorem ipsum"} onClick={handleClick} image={""} />
+                                </div>
+
+                            )
+                        })
+                    }
                 </div>
             </div>
         </Container>

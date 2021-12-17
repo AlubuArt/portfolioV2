@@ -2,7 +2,6 @@
 https://codepen.io/trevoreyre/pen/bRrrEx
 */
 
-
 .info {
   text-align: center;
   position: relative;
@@ -37,6 +36,15 @@ https://codepen.io/trevoreyre/pen/bRrrEx
 
 .infoDescription {
   margin-top: 5px;
+}
+
+.infoButton {
+  position: absolute;
+  bottom: 80px;
+  text-align:center;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .project_card:hover .info,

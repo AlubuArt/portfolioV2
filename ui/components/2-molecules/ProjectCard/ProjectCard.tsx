@@ -35,8 +35,11 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
         <Paragraph className={styles.infoDescription} tag={"p"}>
           {description}
         </Paragraph >
-         
+        <div className={styles.infoButton}>
+
             <Button style={"primary"} onClick={onClick}>more...</Button>
+        </div>
+         
         
       </div>
     </Card>
