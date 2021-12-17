@@ -6,7 +6,24 @@ import { Gallery } from "../ui/components/3-organisms/Gallery";
 import { Container } from "../ui/components/4-Layouts/Container";
 import styles from '../styles/wrapper.module.css';
 
-const ProjectInfo: NextPage = () => {
+export interface Image {
+  url: string;
+}
+
+export interface Project {
+  title: string;
+  description: string;
+  aboutText: string;
+  images: Array<Image>;
+  list: Array<string>
+}
+
+export interface ProjectInfo {
+  project: Project;
+}
+
+
+const ProjectInfo: NextPage<ProjectInfo> = ({project}) => {
   const handleClick = () => {
     console.log("clicked");
   };
@@ -19,6 +36,7 @@ const ProjectInfo: NextPage = () => {
             onClick={handleClick}
           ></ProjectHeader>
         <Gallery
+        //TODO: make some mapping of the images
           slides={[
             "https://firebasestorage.googleapis.com/v0/b/jc-portofolio-93953.appspot.com/o/sponsormatch.png?alt=media&token=a379dfa2-e761-49ff-934a-4fc84d15e373",
             "https://firebasestorage.googleapis.com/v0/b/jc-portofolio-93953.appspot.com/o/Sk%C3%A6rmbillede%202021-09-13%20kl.%2019.26.38.png?alt=media&token=7410d19d-0305-4348-9523-0a37a376ebd2",

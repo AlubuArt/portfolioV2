@@ -3,15 +3,17 @@ import styles from "./ListLayout.module.css";
 import { ProjectCard } from "../../2-molecules/ProjectCard";
 import { Container } from "../../4-Layouts/Container";
 import { useRouter } from 'next/router'
+import { Project } from "../../../../pages/projectInfo";
 
 
 export interface ListLayoutProps {
+    projects: Array<Project>
 
 }
 
+export const ListLayout: React.FC<ListLayoutProps> = ({projects}) => {
 
-export const ListLayout: React.FC<ListLayoutProps> = ({ }) => {
-
+    //TODO: removed this when projects are implemented from CMS
     let [listItems, setListItems] = useState([{}, {}, {}, {}, {}, {}, {}, {}, {}, {}])
 
 

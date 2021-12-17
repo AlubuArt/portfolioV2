@@ -48,7 +48,7 @@ var styles = {
   },
 };
 
-interface MenuItem {
+export interface MenuItem {
   path: string;
   text: string;
 }
