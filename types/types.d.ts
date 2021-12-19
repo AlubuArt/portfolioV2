@@ -11,10 +11,6 @@ declare namespace Models {
     list: Array<string>;
   }
 
-  export interface ProjectInfo {
-    project: Project;
-  }
-
   export interface MenuItem {
     path: string;
     text: string;

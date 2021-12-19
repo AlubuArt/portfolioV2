@@ -6,11 +6,11 @@ import { Gallery } from "../ui/components/3-organisms/Gallery";
 import { Container } from "../ui/components/4-Layouts/Container";
 import styles from '../styles/wrapper.module.css';
 
-export interface ProjectInfo {
+export interface ProjectInfoProps {
   project: Models.Project;
 }
 
-const ProjectInfo: NextPage<ProjectInfo> = ({project}) => {
+const ProjectInfo: NextPage<ProjectInfoProps> = ({project}) => {
   const handleClick = () => {
     console.log("clicked");
   };

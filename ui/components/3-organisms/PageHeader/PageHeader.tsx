@@ -8,18 +8,26 @@ import { Container } from "../../4-Layouts/Container";
 
 export interface PageHeaderProps {
     title: string;
-    description: string;
+    subtitle: string;
     className?: string;
+    withButton?: boolean;
+    onClick?: React.MouseEventHandler<HTMLButtonElement>
 }
 
-export const PageHeader: React.FC<PageHeaderProps> = ({ title, description }) => (
+export const PageHeader: React.FC<PageHeaderProps> = ({ title, subtitle, onClick, withButton }) => (
     <Container width={'full'} spacing={'lg'}>
         <Heading className={styles.PageHeader_title} type="h1" tag="h1">
             {title}
         </Heading>
-        <Paragraph className={styles.PageHeader_description} tag={"p"}>
-            {description}
+        <Paragraph className={styles.PageHeader_subtitle} tag={"p"}>
+            {subtitle}
         </Paragraph>
+        {withButton ?
+            <div>
+                <Button onClick={onClick} style={"secondary"}>{"see projects"}</Button>
+            </div>
+            : ""
+        }
     </Container>
 )
 

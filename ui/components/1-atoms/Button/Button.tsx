@@ -3,7 +3,7 @@ import classNames from "classNames";
 
 export interface ButtonProps {
   children: React.ReactNode;
-  onClick: React.MouseEventHandler<HTMLButtonElement>;
+  onClick: React.MouseEventHandler<HTMLButtonElement> | undefined;
   style?: "primary" | "secondary" | "white" | "CTA___primary" | "CTA___secondary";
 
 }
