@@ -2,7 +2,6 @@ import React from "react";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import styles from "./Gallery.module.css";
-import classNames from "classNames";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
@@ -54,3 +53,4 @@ export const Gallery: React.FC<GalleryProps> = ({ className, slides }) => {
     </Container>
   );
 };
+

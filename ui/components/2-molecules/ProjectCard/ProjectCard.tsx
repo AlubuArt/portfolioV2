@@ -36,7 +36,6 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
           {description}
         </Paragraph >
         <div className={styles.infoButton}>
-
             <Button style={"primary"} onClick={onClick}>more...</Button>
         </div>
          
