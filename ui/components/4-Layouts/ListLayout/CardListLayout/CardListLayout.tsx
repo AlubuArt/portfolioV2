@@ -1,27 +1,26 @@
 import React, { useState } from "react";
-import styles from "./ListLayout.module.css";
-import { ProjectCard } from "../../2-molecules/ProjectCard";
-import { Container } from "../../4-Layouts/Container";
+import styles from "./CardListLayout.module.css";
+import { ProjectCard } from "../../../2-molecules/ProjectCard";
+import { Container } from "../../Container";
 import { useRouter } from 'next/router';
 
-export interface ListLayoutProps {
+export interface CardListLayoutProps {
     projects: Array<Models.Project>
 }
 
-export const ListLayout: React.FC<ListLayoutProps> = ({ projects }) => {
+export const CardListLayout: React.FC<CardListLayoutProps> = ({ projects }) => {
 
     //TODO: removed this when projects are implemented from CMS
     let [listItems, setListItems] = useState([{}, {}, {}, {}, {}, {}, {}, {}, {}, {}]);
 
     const router = useRouter()
     const handleClick = () => {
-        console.log("routing to project info page")
         router.push('/projectInfo')
     }
     return (
         <Container width={"md"} spacing={'lg'}>
-            <div className={styles.test}>
-                <div className={styles.ListLayoutContainer} >
+            <div>
+                <div className={styles.CardListLayoutContainer} >
                     {
                         listItems.map((item, index: number) => {
                             return (

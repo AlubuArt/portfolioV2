@@ -7,7 +7,7 @@ export interface CardProps {
   type: "basic" | "project_card";
   children?: React.ReactNode;
   onClick?: React.MouseEventHandler<HTMLDivElement>;
-  image?: Models.Image;
+  image?: Models.Image | undefined
 }
 
 export const Card: React.FC<CardProps> = ({
@@ -21,7 +21,7 @@ export const Card: React.FC<CardProps> = ({
 }) => (
   <div
     role="card"
-    style={{backgroundImage: `url(${image})`}}
+    style={{backgroundImage: `url(${image?.url})`}}
     className={classNames(
       styles.Card,
       [styles[`Card___${type}`]],

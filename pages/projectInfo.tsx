@@ -1,9 +1,8 @@
 import React from "react";
 import type { NextPage } from "next";
-import { ProjectHeader } from "../ui/components/3-organisms/ProjectHeader";
+import { PageHeader } from "../ui/components/3-organisms/PageHeader";
 import { ProjectDescription } from "../ui/components/3-organisms/ProjectDescription";
 import { Gallery } from "../ui/components/3-organisms/Gallery";
-import { Container } from "../ui/components/4-Layouts/Container";
 import styles from '../styles/wrapper.module.css';
 
 export interface ProjectInfoProps {
@@ -17,11 +16,12 @@ const ProjectInfo: NextPage<ProjectInfoProps> = ({project}) => {
 
   return (
     <div className={styles.wrapper}>
-          <ProjectHeader
+          <PageHeader
             title="sponsormatch.dk"
-            description="Get Things Done er en klassisk todo applikation, hvor man kan tilføje, slette og ændre status på todos, samt sætte deadlines for hver todo."
+            subtitle="Get Things Done er en klassisk todo applikation, hvor man kan tilføje, slette og ændre status på todos, samt sætte deadlines for hver todo."
+            type={'ProjectHeader'}
             onClick={handleClick}
-          ></ProjectHeader>
+          ></PageHeader>
         <Gallery
         //TODO: make some mapping of the images
           slides={[

@@ -8,12 +8,15 @@ export interface PageLayoutProps {
     children: React.ReactNode;
 }
 
-export const PageLayout: React.FC<PageLayoutProps> = ({children}) => {
+export const PageLayout: React.FC<PageLayoutProps> = ({ children }) => {
+
+    let menuItems = [{ text: 'projects', path: '/projects' }, { text: 'about', path: '/about' }, { text: 'experiences', path: '/experience' }, { text: 'education', path: '/education' }, { text: 'contact', path: '/contact' }]
+
     return (
         <div className={styles.PageContent}>
-            <Header menuItems={[]}/>
+            <Header menuItems={ menuItems} />
             {children}
         </div>
-        
+
     )
 }

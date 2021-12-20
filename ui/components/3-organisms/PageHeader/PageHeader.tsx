@@ -5,16 +5,15 @@ import styles from "./PageHeader.module.css";
 import { Paragraph } from "../../1-atoms/Paragraph";
 import { Container } from "../../4-Layouts/Container";
 
-
 export interface PageHeaderProps {
     title: string;
     subtitle: string;
     className?: string;
-    withButton?: boolean;
-    onClick?: React.MouseEventHandler<HTMLButtonElement>
+    onClick?: React.MouseEventHandler<HTMLButtonElement>;
+    type?: 'ProjectHeader' | 'PageHeader' | 'HeroHeader'
 }
 
-export const PageHeader: React.FC<PageHeaderProps> = ({ title, subtitle, onClick, withButton }) => (
+export const PageHeader: React.FC<PageHeaderProps> = ({ title, subtitle, onClick, type }) => (
     <Container width={'full'} spacing={'lg'}>
         <Heading className={styles.PageHeader_title} type="h1" tag="h1">
             {title}
@@ -22,14 +21,26 @@ export const PageHeader: React.FC<PageHeaderProps> = ({ title, subtitle, onClick
         <Paragraph className={styles.PageHeader_subtitle} tag={"p"}>
             {subtitle}
         </Paragraph>
-        {withButton ?
-            <div>
-                <Button onClick={onClick} style={"secondary"}>{"see projects"}</Button>
-            </div>
-            : ""
+        {
+            type === 'HeroHeader' ?
+                <div>
+                    <Button onClick={onClick} style={"secondary"}>{"see projects"}</Button>
+                </div>
+            : type === 'ProjectHeader' ?
+                <div>
+                    <Button onClick={onClick} style={"CTA___primary"}>
+                        {"VISIT WEBSITE"}
+                    </Button>
+                    <Button onClick={onClick} style={"CTA___secondary"}>
+                        {"SEE ON GITHUB"}
+                    </Button>
+                </div>
+
+                : ""
         }
     </Container>
 )
+
 
 
 
