@@ -14,7 +14,6 @@
   background-color: rgb(28, 156, 173);
   color: #ffffff;
   margin-right: 1.5rem;
-  margin-left: 1.5rem;
 }
 
 .Button___secondary {
@@ -41,4 +40,8 @@
   border-radius: 0px;
   border: 1px solid rgb(28, 156, 173);
 
+}
+
+.Button___disabled {
+  
 }
