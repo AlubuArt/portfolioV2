@@ -1,17 +1,10 @@
-import React, { ChangeEvent } from "react";
+import React, { ChangeEvent, KeyboardEventHandler } from "react";
 import { Button } from "../../../1-atoms/Button";
 import styles from "./InputForm.module.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser } from '@fortawesome/free-solid-svg-icons';
 import { IconProp } from "@fortawesome/fontawesome-svg-core";
 
-/* interface MyEventTarget extends EventTarget {
-    value: string
-}
-
-interface MyFormEvent extends React.FormEvent {
-    target: MyEventTarget
-} */
 
 interface InputFormProps {
   type: "name" | "email" | "message";
@@ -21,6 +14,7 @@ interface InputFormProps {
   buttonText: string;
   onClick: React.MouseEventHandler<HTMLButtonElement>;
   onChange?: React.ChangeEventHandler<HTMLInputElement> | undefined;
+  onKeyPress: KeyboardEventHandler<HTMLInputElement>;
 }
 
 export const InputForm: React.FC<InputFormProps> = ({
@@ -29,7 +23,9 @@ export const InputForm: React.FC<InputFormProps> = ({
   placeholder,
   value,
   icon,
-  buttonText
+  buttonText,
+  type, 
+  onKeyPress
 }) => {
   return (
     <>
@@ -40,6 +36,7 @@ export const InputForm: React.FC<InputFormProps> = ({
           className={styles.Inputfield}
           placeholder={placeholder}
           onChange={onChange}
+          onKeyPress={onKeyPress}
           value={value}
         ></input>
         <FontAwesomeIcon className={styles.icon} icon={icon}/>
