@@ -1,5 +1,5 @@
 import styles from "./Button.module.css";
-import classNames from "classNames";
+import classNames from "classnames";
 
 export interface ButtonProps {
   children: React.ReactNode;

@@ -13,12 +13,14 @@
   letter-spacing: .10rem;
 }
 
-.Heading___h2 {
+.He  ading___h2 {
   font-size: 38px;
   line-height: 66px;
+  margin-bottom: 5px
 }
 
 .Heading___h3 {
   font-size: 24px;
+  margin-top: 5px
 }
 

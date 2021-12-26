@@ -1,28 +1,28 @@
-import React, { KeyboardEvent, ChangeEvent, useState } from "react";
+import React, { KeyboardEvent, useState } from "react";
 import { Container } from "../../4-Layouts/Container";
 import { PageHeader } from "../PageHeader";
 import styles from "./ContactForm.module.css";
 import { InputForm } from "./InputForm/InputForm";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
 // import icons needed, and use as prop in INputForm component
 import {
   faUser,
   faEnvelope,
   faComment,
 } from "@fortawesome/free-solid-svg-icons";
+import { Heading } from "../../1-atoms/Heading";
 
 export const ContactForm: React.FC = () => {
   let [inputStep, setInputStep] = useState<string>("name");
-  let [inputs] = useState<Array<string>>([]);
-
+  let [inputs, setInputs] = useState<Array<string>>([]);
+  let [buttonText, setButtonText] = useState("SUBMIT");
   let [userInputs, setUserInputs] = useState({
     name: "",
     email: "",
     message: "",
   });
 
-  const handleClick = (type: string, input: string) => {
+  const handleNextClick = (type: string, input: string) => {
     setInputStep(type);
     inputs.push(input);
   };
@@ -34,13 +34,12 @@ export const ContactForm: React.FC = () => {
   ) => {
     if (e.key === "Enter") {
       e.preventDefault();
-      console.log("pressed enter");
       setInputStep(type);
       inputs.push(input);
     }
   };
 
-  const handleChange = (key: string, value: string) => {
+  const handleInputChange = (key: string, value: string) => {
     setUserInputs((prevState) => ({
       ...prevState,
       [key]: value,
@@ -48,15 +47,34 @@ export const ContactForm: React.FC = () => {
   };
 
   const submit = () => {
-    console.log(userInputs);
-    setInputStep('done')
+    sendMail(userInputs);
   };
 
   const submitOnkeyPress = (e: KeyboardEvent<HTMLInputElement>) => {
     if (e.key === "Enter") {
-      console.log(userInputs);
-      setInputStep('done')
+      sendMail(userInputs);
     }
+  };
+
+  const sendMail = async (data: {
+    name: string;
+    email: string;
+    message: string;
+  }) => {
+    setButtonText("Sending");
+
+    const res = await fetch("/api/sendmail", {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify(data),
+    });
+    const { error } = await res.json();
+    if (error) {
+      console.log(error);
+      return;
+    }
+    setInputStep("done");
+    setInputs([]);
   };
 
   return (
@@ -91,8 +109,8 @@ export const ContactForm: React.FC = () => {
             <InputForm
               value={userInputs.name}
               placeholder={"Fill in your name"}
-              onChange={(e) => handleChange("name", e.target.value)}
-              onClick={(e) => handleClick("email", userInputs.name)}
+              onChange={(e) => handleInputChange("name", e.target.value)}
+              onClick={() => handleNextClick("email", userInputs.name)}
               onKeyPress={(e) =>
                 handleKeyboardEvent(e, "email", userInputs.name)
               }
@@ -104,8 +122,8 @@ export const ContactForm: React.FC = () => {
             <InputForm
               value={userInputs.email}
               placeholder={"this time your email"}
-              onChange={(e) => handleChange("email", e.target.value)}
-              onClick={() => handleClick("message", userInputs.email)}
+              onChange={(e) => handleInputChange("email", e.target.value)}
+              onClick={() => handleNextClick("message", userInputs.email)}
               onKeyPress={(e) =>
                 handleKeyboardEvent(e, "message", userInputs.email)
               }
@@ -113,20 +131,31 @@ export const ContactForm: React.FC = () => {
               icon={faEnvelope}
               buttonText={"NEXT"}
             />
-          ) : inputStep === 'message' ?(
+          ) : inputStep === "message" ? (
             <InputForm
               value={userInputs.message}
               placeholder={"lastly your message "}
-              onChange={(e) => handleChange("message", e.target.value)}
+              onChange={(e) => handleInputChange("message", e.target.value)}
               onClick={() => submit()}
               onKeyPress={(e) => submitOnkeyPress(e)}
               type={"message"}
               icon={faComment}
-              buttonText={"SUBMIT"}
+              buttonText={buttonText}
             />
-          )
-        : 'done'
-        }
+          ) : inputStep === "done" ? (
+            <Container width={"md"} spacing={"lg"}>
+              <Heading tag={"h2"} type={"h2"}>
+                {"Nice!"}
+              </Heading>
+              <Heading tag={"h3"} type={"h3"}>
+                {
+                  "Your awesome message was sent successfully. "
+                }
+              </Heading>{" "}
+            </Container>
+          ) : (
+            "not working"
+          )}
         </div>
       </Container>
     </>
