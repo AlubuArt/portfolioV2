@@ -25,7 +25,7 @@ export const CardListLayout: React.FC<CardListLayoutProps> = ({ projects }) => {
                         listItems.map((item, index: number) => {
                             return (
                                 <div key={index} className={styles.listItem}>
-                                    <ProjectCard title={"sponsormatch.dk"} description={"lorem ipsum"} onClick={handleClick} image={''} />
+                                    <ProjectCard title={"sponsormatch.dk"} description={"lorem ipsum"} onClick={handleClick} image={Image} />
                                 </div>
                             )
                         })
