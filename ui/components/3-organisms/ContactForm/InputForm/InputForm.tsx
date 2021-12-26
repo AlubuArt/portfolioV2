@@ -2,7 +2,6 @@ import React, { ChangeEvent, KeyboardEventHandler } from "react";
 import { Button } from "../../../1-atoms/Button";
 import styles from "./InputForm.module.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUser } from '@fortawesome/free-solid-svg-icons';
 import { IconProp } from "@fortawesome/fontawesome-svg-core";
 
 
@@ -10,7 +9,7 @@ interface InputFormProps {
   type: "name" | "email" | "message";
   placeholder: string;
   value: string;
-  icon?: IconProp | undefined;
+  icon?: IconProp;
   buttonText: string;
   onClick: React.MouseEventHandler<HTMLButtonElement>;
   onChange?: React.ChangeEventHandler<HTMLInputElement> | undefined;
