@@ -1,5 +1,5 @@
 import styles from "./Card.module.css";
-import classNames from "classNames";
+import classNames from "classnames";
 
 export interface CardProps {
   className?: string;
