@@ -5,10 +5,11 @@ import { Container } from "../../Container";
 import { useRouter } from 'next/router';
 
 export interface CardListLayoutProps {
-    projects: Array<Models.Project>
+    projects: Array<Models.Project>;
+    image: Models.Image;
 }
 
-export const CardListLayout: React.FC<CardListLayoutProps> = ({ projects }) => {
+export const CardListLayout: React.FC<CardListLayoutProps> = ({ projects, image }) => {
 
     //TODO: removed this when projects are implemented from CMS
     let [listItems, setListItems] = useState([projects]);
@@ -25,7 +26,7 @@ export const CardListLayout: React.FC<CardListLayoutProps> = ({ projects }) => {
                         listItems.map((item, index: number) => {
                             return (
                                 <div key={index} className={styles.listItem}>
-                                    <ProjectCard title={"sponsormatch.dk"} description={"lorem ipsum"} onClick={handleClick} image={Image} />
+                                    <ProjectCard title={"sponsormatch.dk"} description={"lorem ipsum"} onClick={handleClick} image={image} />
                                 </div>
                             )
                         })

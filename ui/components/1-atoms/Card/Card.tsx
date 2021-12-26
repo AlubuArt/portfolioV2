@@ -7,7 +7,7 @@ export interface CardProps {
   type: "basic" | "project_card";
   children?: React.ReactNode;
   onClick?: React.MouseEventHandler<HTMLDivElement>;
-  image?: Models.Image | undefined
+  image: Models.Image;
 }
 
 export const Card: React.FC<CardProps> = ({
