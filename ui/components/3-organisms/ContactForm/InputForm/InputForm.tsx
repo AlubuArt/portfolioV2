@@ -9,7 +9,7 @@ interface InputFormProps {
   type: "name" | "email" | "message";
   placeholder: string;
   value: string;
-  icon?: IconProp;
+  icon: IconProp;
   buttonText: string;
   onClick: React.MouseEventHandler<HTMLButtonElement>;
   onChange?: React.ChangeEventHandler<HTMLInputElement> | undefined;
