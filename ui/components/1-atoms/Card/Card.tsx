@@ -21,7 +21,7 @@ export const Card: React.FC<CardProps> = ({
 }) => (
   <div
     role="card"
-    style={{backgroundImage: `url(${image?.url})`}}
+    style={{backgroundImage: `url(${image.url})`}}
     className={classNames(
       styles.Card,
       [styles[`Card___${type}`]],
