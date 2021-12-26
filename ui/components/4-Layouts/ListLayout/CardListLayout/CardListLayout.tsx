@@ -11,7 +11,7 @@ export interface CardListLayoutProps {
 export const CardListLayout: React.FC<CardListLayoutProps> = ({ projects }) => {
 
     //TODO: remove this when projects are implemented from CMS
-    let [listItems, setListItems] = useState([projects]);
+    let [listItems, setListItems] = useState([{title: "project1", description: "descripton1", aboutText: 'about project1', image: {url: "https://firebasestorage.googleapis.com/v0/b/jc-portofolio-93953.appspot.com/o/sponsormatch.png?alt=media&token=a379dfa2-e761-49ff-934a-4fc84d15e373"}, list: ["item 1", "item2"]  }]);
 
     const router = useRouter()
     const handleClick = () => {
@@ -25,7 +25,7 @@ export const CardListLayout: React.FC<CardListLayoutProps> = ({ projects }) => {
                         listItems.map((item, index: number) => {
                             return (
                                 <div key={index} className={styles.listItem}>
-                                    <ProjectCard title={"sponsormatch.dk"} description={"lorem ipsum"} onClick={handleClick} image={item[index].images[0]} />
+                                    <ProjectCard title={"sponsormatch.dk"} description={"lorem ipsum"} onClick={handleClick} image={item.image} />
                                 </div>
                             )
                         })

@@ -7,7 +7,7 @@ declare namespace Models {
     title: string;
     description: string;
     aboutText: string;
-    images: Array<Image>;
+    image: Image;
     list: Array<string>;
   }
 
