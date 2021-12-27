@@ -1,14 +1,16 @@
 # Custom Portfolio / CV Design (work in progress)
 #By Jacob Christensen
 
+- [Live website](https://portfolio-v2-alubuart.vercel.app/projects)
 
 ## Contents
-- Frontpage 
-- Projects page
-- Project info page
-- Experiences page
-- Education page
-- contact/about page
+[x] Hero page
+[x] Projects page
+[x] Project info page
+[] Experiences page
+[] Education page
+[x] Contact
+[] About page
 
 
 ## about the website
@@ -36,11 +38,12 @@ The project uses to some extend third party libraries, but the overall aim is to
 
 ## resources
 
+- [Live website](https://portfolio-v2-alubuart.vercel.app/projects)
 - [Figma wireframes desktop](https://www.figma.com/file/vuRpDJv3f1WBoKQrDpaivB/Portfolio-v2?node-id=0%3A1)
 - [Figma wireframes mobile](https://www.figma.com/file/vuRpDJv3f1WBoKQrDpaivB/Portfolio-v2?node-id=5%3A38)
 - [Figma mobile design](https://www.figma.com/file/vuRpDJv3f1WBoKQrDpaivB/Portfolio-v2?node-id=5%3A279)
 - [Figma desktop design](https://www.figma.com/file/vuRpDJv3f1WBoKQrDpaivB/Portfolio-v2?node-id=5%3A278)
 - [Figma design system](https://www.figma.com/file/vuRpDJv3f1WBoKQrDpaivB/Portfolio-v2?node-id=4%3A24)
-- Live version
 
 
+## backlog
