@@ -2,6 +2,7 @@
 module.exports = {
   reactStrictMode: true,
   images: {
-    domains: ["firebasestorage.googleapis.com", "jc-portofolio-93953.web.app"],
+    domains: ["firebasestorage.googleapis.com", "jc-portofolio-93953.web.app", "media.graphcms.com"],
+    
   },
 };

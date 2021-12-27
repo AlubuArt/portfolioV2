@@ -4,13 +4,13 @@
 - [Live website](https://portfolio-v2-alubuart.vercel.app/projects)
 
 ## Contents
-[x] Hero page
-[x] Projects page
-[x] Project info page
-[] Experiences page
-[] Education page
-[x] Contact
-[] About page
+- [x] Hero page
+- [x] Projects page
+- [x] Project info page
+- [ ] Experiences page
+- [ ] Education page
+- [x] Contact
+- [ ] About page
 
 
 ## about the website

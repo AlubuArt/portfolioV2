@@ -1,30 +1,39 @@
 import React from "react";
-import type { NextPage } from "next";
-import { Hero } from '../ui/components/3-organisms/Hero';
-
+import type { NextPage, GetStaticProps } from "next";
+import { Hero } from "../ui/components/3-organisms/Hero";
+import { getHeroContent } from "../lib/graphcms";
 
 export interface HomePageProps {
-  title: string;
-  subtitle: string;
-  image: Models.Image;
-  url: string;
+  content: {
+    heroes: [
+      {
+        header: string;
+        subheader: { text: string };
+        heroImage: { url: string };
+      }
+    ];
+  };
 }
 
-const Home: NextPage<HomePageProps> = ({ title, subtitle, image, url }) => {
-
-
+const Home: NextPage<HomePageProps> = ({ content }) => {
   return (
     <>
-      <Hero 
-        heroImage={"https://jc-portofolio-93953.web.app/static/media/header_blaa_2000x1000.18040b32.jpg"} 
-        heroTitle={"JACOB CHRISTENSEN "} 
-        heroSubtitle={"Digital Product Developer | Frontend Developer | UX & Web | Entrepreneur | Tech"} 
-        onClick={'/projects'} 
+      <Hero
+        heroImage={content.heroes[0].heroImage.url}
+        heroTitle={content.heroes[0].header}
+        heroSubtitle={content.heroes[0].subheader.text}
+        onClick={"/projects"}
       />
-
-
     </>
   );
+};
+
+export const getStaticProps: GetStaticProps = async () => {
+  const content = await getHeroContent();
+  return {
+    props: { content },
+    revalidate: 60,
+  };
 };
 
 export default Home;
