@@ -47,3 +47,9 @@ The project uses to some extend third party libraries, but the overall aim is to
 
 
 ## backlog
+
+- [ ] Dynamic project pages
+- [ ] Responsive design for mobile and tablet
+- [ ] Darkmode/lightmode toggle
+- [ ] Comment section on projects pages
+

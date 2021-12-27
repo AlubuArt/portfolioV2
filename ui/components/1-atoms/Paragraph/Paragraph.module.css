@@ -1,7 +1,10 @@
 .Paragraph {
-  color: rgb(73, 111, 117);
-  font-size: 20px;
+  /* color: rgb(73, 111, 117); */
+  color: white;
+  font-size: 18px;
   font-family: "Avenir";
   font-weight: 300;
   width: 100%;
+  margin-top: 0px;
+  
 }

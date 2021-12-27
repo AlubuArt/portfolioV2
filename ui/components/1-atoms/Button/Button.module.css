@@ -5,15 +5,16 @@
   line-height: 19px;
   font-weight: 500;
   padding: .8rem 2.1rem;
-  border-radius: 1.5rem;
   margin-right: 1.5rem;
+  border-radius: 1.5rem;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .Button___primary {
   background-color: rgb(28, 156, 173);
   color: #ffffff;
-  margin-right: 1.5rem;
+
+  margin-right: 0px;
 }
 
 .Button___secondary {

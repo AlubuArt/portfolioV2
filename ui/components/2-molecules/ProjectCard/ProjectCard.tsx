@@ -32,9 +32,12 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
         <Heading className={styles.infoTitle} type={"h3"} tag={"h3"}>
           {title}
         </Heading>
-        <Paragraph className={styles.infoDescription} tag={"p"}>
+        <div className={styles.infoDescription}>
+
+        <Paragraph  tag={"p"}>
           {description}
         </Paragraph >
+        </div>
         <div className={styles.infoButton}>
             <Button style={"primary"} onClick={onClick}>more...</Button>
         </div>
