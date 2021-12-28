@@ -1,7 +1,7 @@
 import React from "react";
 import type { GetStaticProps, NextPage } from "next";
 import { PageHeader } from "../ui/components/3-organisms/PageHeader";
-import { CardListLayout } from "../ui/components/4-Layouts/ListLayout/CardListLayout";
+import { CardListLayout } from "../ui/components/4-layouts/ListLayout/CardListLayout";
 import styles from '../styles/wrapper.module.css';
 import { getAllProjects } from "../lib/graphcms";
 

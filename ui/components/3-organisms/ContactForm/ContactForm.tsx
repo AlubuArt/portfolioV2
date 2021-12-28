@@ -1,5 +1,5 @@
 import React, { KeyboardEvent, useState } from "react";
-import { Container } from "../../4-Layouts/Container";
+import { Container } from "../../4-layouts/Container";
 import { PageHeader } from "../PageHeader";
 import styles from "./ContactForm.module.css";
 import { InputForm } from "./InputForm/InputForm";

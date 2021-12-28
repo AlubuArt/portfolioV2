@@ -3,7 +3,7 @@ import { Button } from "../../1-atoms/Button";
 import { Heading } from "../../1-atoms/Heading";
 import styles from "./PageHeader.module.css";
 import { Paragraph } from "../../1-atoms/Paragraph";
-import { Container } from "../../4-Layouts/Container";
+import { Container } from "../../4-layouts/Container";
 
 export interface PageHeaderProps {
     title: string;
