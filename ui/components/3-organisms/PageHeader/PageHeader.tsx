@@ -10,10 +10,12 @@ export interface PageHeaderProps {
     subtitle: string;
     className?: string;
     onClick?: React.MouseEventHandler<HTMLButtonElement>;
+    githubLink?: React.MouseEventHandler<HTMLButtonElement>;
+    liveVersionLink?: React.MouseEventHandler<HTMLButtonElement>;
     type?: 'ProjectHeader' | 'PageHeader' | 'HeroHeader'
 }
 
-export const PageHeader: React.FC<PageHeaderProps> = ({ title, subtitle, onClick, type }) => (
+export const PageHeader: React.FC<PageHeaderProps> = ({ title, subtitle, onClick, githubLink, liveVersionLink, type }) => (
     <Container width={'full'} spacing={'lg'}>
         <Heading className={styles.PageHeader_title} type="h1" tag="h1">
             {title}
@@ -28,10 +30,10 @@ export const PageHeader: React.FC<PageHeaderProps> = ({ title, subtitle, onClick
                 </div>
             : type === 'ProjectHeader' ?
                 <div>
-                    <Button onClick={onClick} style={"CTA___primary"}>
+                    <Button onClick={liveVersionLink} style={"CTA___primary"}>
                         {"VISIT WEBSITE"}
                     </Button>
-                    <Button onClick={onClick} style={"CTA___secondary"}>
+                    <Button onClick={githubLink} style={"CTA___secondary"}>
                         {"SEE ON GITHUB"}
                     </Button>
                 </div>

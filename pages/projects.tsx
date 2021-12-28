@@ -3,7 +3,7 @@ import type { GetStaticProps, NextPage } from "next";
 import { PageHeader } from "../ui/components/3-organisms/PageHeader";
 import { CardListLayout } from "../ui/components/4-Layouts/ListLayout/CardListLayout";
 import styles from '../styles/wrapper.module.css';
-import { getProjects } from "../lib/graphcms";
+import { getAllProjects } from "../lib/graphcms";
 
 export interface ProjectsProps {
     projects: Array<Models.Project>
@@ -11,7 +11,6 @@ export interface ProjectsProps {
 
 const Projects: NextPage<ProjectsProps> = ({ projects }) => {
 
-    console.log(projects)
 
     return (
         <div className={styles.wrapper}>
@@ -22,7 +21,7 @@ const Projects: NextPage<ProjectsProps> = ({ projects }) => {
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-    const projects = await getProjects();
+    const projects = await getAllProjects();
     return {
       props: { projects },
       revalidate: 60,

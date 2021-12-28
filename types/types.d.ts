@@ -11,8 +11,10 @@ declare namespace Models {
     key1: string;
     key2: string;
     key3: strign;
-    liveUrl: string;
-    githubUrl: string;
+    seLiveUrl: string;
+    seGithubURL: string;
+    id: string;
+    slug: string
   }
 
   export interface MenuItem {
