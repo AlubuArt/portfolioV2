@@ -13,3 +13,11 @@
 
 
 }
+
+.swiper {
+    overflow: visible;
+}
+
+.Swiper-button-next {
+    right: -50px;
+}

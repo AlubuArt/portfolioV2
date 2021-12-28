@@ -78,9 +78,9 @@ export const ContactForm: React.FC = () => {
   };
 
   return (
-    <>
+    <div className={styles.PageWrapper}>
       <Container width={"full"} spacing={"lg"}>
-        <div className={styles.PageHeader___container}>
+        <div >
           <PageHeader
             title={"get in contact"}
             subtitle={
@@ -158,6 +158,6 @@ export const ContactForm: React.FC = () => {
           )}
         </div>
       </Container>
-    </>
+    </div>
   );
 };

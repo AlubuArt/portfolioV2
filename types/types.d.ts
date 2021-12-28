@@ -14,7 +14,8 @@ declare namespace Models {
     seLiveUrl: string;
     seGithubURL: string;
     id: string;
-    slug: string
+    slug: string;
+    projectPictures: []
   }
 
   export interface MenuItem {

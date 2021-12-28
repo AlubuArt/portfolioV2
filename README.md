@@ -6,7 +6,7 @@
 ## Contents
 - [x] Hero page
 - [x] Projects page
-- [x] Project info page
+- [x] Dynamic project page
 - [ ] Experiences page
 - [ ] Education page
 - [x] Contact
@@ -47,8 +47,7 @@ The project uses to some extend third party libraries, but the overall aim is to
 
 
 ## backlog
-
-- [ ] Dynamic project pages
+- [ ] Gallery styling
 - [ ] Responsive design for mobile and tablet
 - [ ] Darkmode/lightmode toggle
 - [ ] Comment section on projects pages

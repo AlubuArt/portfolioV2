@@ -19,7 +19,7 @@ SwiperCore.use([Navigation, Pagination, Mousewheel, Keyboard]);
 
 export interface GalleryProps {
   className?: string;
-  slides: any[];
+  slides: [];
 }
 
 export const Gallery: React.FC<GalleryProps> = ({ className, slides }) => {
@@ -27,13 +27,14 @@ export const Gallery: React.FC<GalleryProps> = ({ className, slides }) => {
     <Container width={"full"} spacing={'lg'}>
       <div className={styles.Gallery}>
       <Swiper
+      className={styles.swiper}
         cssMode={true}
         navigation={true}
         pagination={true}
         mousewheel={true}
         keyboard={true}
       >
-        {slides.map((slide, index) => {
+        {slides.map((slide: {url: string}, index) => {
           return (
             <SwiperSlide key={index} className={styles.SwiperSlide_slide}>
               <Image
@@ -43,7 +44,7 @@ export const Gallery: React.FC<GalleryProps> = ({ className, slides }) => {
                 layout="responsive"
                 objectFit="fill"
                 className={styles.SwiperSlide_slide}
-                src={slide}
+                src={slide.url}
               />
             </SwiperSlide>
           );
