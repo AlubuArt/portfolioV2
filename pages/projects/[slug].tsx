@@ -15,7 +15,7 @@ const ProjectPage: NextPage<ProjectPageProps> = ({ project }) => {
     document.location.href = url;
   };
 
-  //console.log(project.projectPictures[0]?.url)
+  
   return (
     <div className={styles.wrapper}>
       <PageHeader

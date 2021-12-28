@@ -1,13 +1,15 @@
 import { NextPage } from "next";
 import React from "react";
+import UnderConstruction from "../ui/components/3-organisms/UnderConstruction/UnderConstruction";
+import styles from '../styles/wrapper.module.css';
 
 
 const EducationPage: NextPage = ({}) => {
 
      return (
-        <>
-        <p>Education page</p>
-        </>
+      <div className={styles.wrapper}>
+      <UnderConstruction pageTitle={"education"} />
+      </div>
      )
 }
 

@@ -1,6 +1,6 @@
 import React from "react";
 import { Hamburger } from '../../1-atoms/Hamburger';
-import { Container } from '../../4-layouts/Container';
+import { Container } from '../../4-Layouts/Container';
 
 
 export interface HeaderProps {

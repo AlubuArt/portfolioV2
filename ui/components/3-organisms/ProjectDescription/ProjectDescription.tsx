@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./ProjectDescription.module.css";
 import { Heading } from "../../1-atoms/Heading";
 import { Paragraph } from "../../1-atoms/Paragraph";
-import { Container } from "../../4-layouts/Container";
+import { Container } from "../../4-Layouts/Container";
 
 export interface ProjectDescriptionProps {
   title: string;
