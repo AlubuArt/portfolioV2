@@ -20,7 +20,7 @@ const ProjectPage: NextPage<ProjectPageProps> = ({ project }) => {
     <div className={styles.wrapper}>
       <PageHeader
         title={project.projectTitle}
-        subtitle={project.aboutText}
+        subtitle={project.description}
         type={"ProjectHeader"}
         githubLink={() => handleExternalRouting(project.seGithubURL)}
         liveVersionLink={() => handleExternalRouting(project.seLiveUrl)}
@@ -29,14 +29,14 @@ const ProjectPage: NextPage<ProjectPageProps> = ({ project }) => {
 
       <ProjectDescription
         title="about this project"
-        description={project.description}
+        description={project.about.html}
         list={[]} //TODO: should be made optional
       ></ProjectDescription>
 
       <ProjectDescription
         title="tech used"
         description="in this project the following technologies was used"
-        list={[project.key1, project.key2, project.key3]} //TODO: make it possible to add more than three keys
+        list={project.keys} //TODO: make it possible to add more than three keys
       ></ProjectDescription>
     </div>
   );

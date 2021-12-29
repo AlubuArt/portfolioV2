@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import styles from "./CardListLayout.module.css";
 import { ProjectCard } from "../../../2-molecules/ProjectCard";
 import { useRouter } from "next/router";
@@ -23,7 +23,7 @@ export const CardListLayout: React.FC<CardListLayoutProps> = ({ projects }) => {
               <div key={index} className={styles.listItem}>
                 <ProjectCard
                   title={item.projectTitle}
-                  description={item.aboutText}
+                  description={item.description}
                   onClick={() => handleClick(item.slug)}
                   image={item.pictureUrl}
                 />

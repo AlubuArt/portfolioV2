@@ -7,7 +7,7 @@ import { Container } from "../../4-Layouts/Container";
 export interface ProjectDescriptionProps {
   title: string;
   description: string;
-  list: any[];
+  list: [];
 }
 
 export const ProjectDescription: React.FC<ProjectDescriptionProps> = ({
@@ -15,12 +15,12 @@ export const ProjectDescription: React.FC<ProjectDescriptionProps> = ({
   description,
   list,
 }) => (
-  <Container  width={"full"} spacing={'lg'}>
+  <Container width={"full"} spacing={"lg"}>
     <Heading type="h2" tag="h2" className={styles.ProjectDescription_title}>
       {title}
     </Heading>
     <Paragraph className={styles.ProjectDescription_description} tag={"p"}>
-      {description}
+      <div dangerouslySetInnerHTML={{ __html: description }} />
     </Paragraph>
 
     <ul>

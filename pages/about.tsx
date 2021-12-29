@@ -4,7 +4,7 @@ import styles from '../styles/wrapper.module.css';
 import UnderConstruction from "../ui/components/3-organisms/UnderConstruction/UnderConstruction";
 
 
-const AboutPage: NextPage = ({}) => {
+const AboutPage: NextPage = () => {
 
      return (
       <div className={styles.wrapper}>

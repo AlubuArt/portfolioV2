@@ -7,15 +7,13 @@ declare namespace Models {
     pictureUrl: string;
     projectTitle: string;
     description: string;
-    aboutText: string;
-    key1: string;
-    key2: string;
-    key3: strign;
+    about: { html: string };
     seLiveUrl: string;
     seGithubURL: string;
     id: string;
     slug: string;
-    projectPictures: []
+    projectPictures: [];
+    keys: [];
   }
 
   export interface MenuItem {
