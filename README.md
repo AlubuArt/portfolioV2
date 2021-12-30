@@ -20,7 +20,6 @@ This website is designed and build with [Atomic Design Methodology](https://atom
 
 
 ## tech used
-- [ReactJS](https://reactjs.org/)
 - [Next.js](https://nextjs.org/)
 - Typescript
 - CSS modules
@@ -48,6 +47,7 @@ The project uses to some extend third party libraries, but the overall aim is to
 
 ## backlog
 - [ ] Gallery styling
+- [ ] Add loading spinner 
 - [ ] Responsive design for mobile and tablet
 - [ ] Darkmode/lightmode toggle
 - [ ] Comment section on projects pages

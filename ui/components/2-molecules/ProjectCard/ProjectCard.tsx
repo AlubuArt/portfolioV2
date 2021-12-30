@@ -10,7 +10,7 @@ export interface ProjectCardProps {
   className?: string;
   title: string;
   description?: string;
-  image: string;
+  image:  Models.Image['url'];
   onClick: React.MouseEventHandler<HTMLButtonElement>;
 }
 

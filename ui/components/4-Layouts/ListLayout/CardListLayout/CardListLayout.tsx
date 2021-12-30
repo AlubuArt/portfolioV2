@@ -8,8 +8,10 @@ export interface CardListLayoutProps {
   projects: Models.Project[];
 }
 
-export const CardListLayout: React.FC<CardListLayoutProps> = ({ projects }) => {
+export const CardListLayout: React.FC<CardListLayoutProps> =  ({ projects }) => {
   const router = useRouter();
+
+  console.log(projects[0].projectPictures[0].url)
 
   const handleClick = (slug: string) => {
     router.push(`/projects/${slug}`);
@@ -25,7 +27,7 @@ export const CardListLayout: React.FC<CardListLayoutProps> = ({ projects }) => {
                   title={item.projectTitle}
                   description={item.description}
                   onClick={() => handleClick(item.slug)}
-                  image={item.pictureUrl}
+                  image={item.projectPictures[0].url}
                 />
               </div>
             );
