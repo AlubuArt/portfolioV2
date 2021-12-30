@@ -27,7 +27,7 @@ export const CardListLayout: React.FC<CardListLayoutProps> =  ({ projects }) => 
                   title={item.projectTitle}
                   description={item.description}
                   onClick={() => handleClick(item.slug)}
-                  image={item.projectPictures[0].url}
+                  image={item.pictureUrl}
                 />
               </div>
             );

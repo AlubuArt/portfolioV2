@@ -1,6 +1,8 @@
 declare namespace Models {
   export interface Image {
+    
     url: string;
+    
   }
 
   export interface Project {
@@ -12,7 +14,7 @@ declare namespace Models {
     seGithubURL: string;
     id: string;
     slug: string;
-    projectPictures: Image[string];
+    projectPictures: Array<Image>;
     keys: [];
   }
 

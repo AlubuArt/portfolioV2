@@ -19,7 +19,7 @@ SwiperCore.use([Navigation, Pagination, Mousewheel, Keyboard]);
 
 export interface GalleryProps {
   className?: string;
-  slides: Models.Image[];
+  slides: Array<Models.Image>;
 }
 
 export const Gallery: React.FC<GalleryProps> = ({ className, slides }) => {
