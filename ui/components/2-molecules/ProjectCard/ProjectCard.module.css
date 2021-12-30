@@ -2,53 +2,58 @@
 https://codepen.io/trevoreyre/pen/bRrrEx
 */
 
-.info {
-  text-align: center;
-  position: relative;
-  width: 100%;
-  height: 287px;
-  background-color: #1e1f21 ;
-  transform: translateY(99%) translateY(-100px) translateZ(0);
-  transition: transform 0.2s ease-out;
-  mix-blend-mode: normal;
-  opacity: 0.98;
-}
-/* this is not getting used ATM. Use it when the overlay should be frosted.  */
-.info:before {
-  z-index: -1;
-  display: block;
-  position: absolute;
-  content: " ";
-  width: 100%;
-  height: 287px;
-  overflow: hidden;
-  filter: blur(10px);
-  background-size: cover;
-  opacity: 0.25;
-  transform: translateY(-100%) translateY(110px) translateZ(0);
-  transition: transform 0.1s ease-out;
-}
 
-.infoTitle {
-  margin-bottom: 5px;
-  margin-top: 0px;
-}
 
-.infoDescription {
-  margin-top: 0px;
-  padding:10px;
-}
-
-.infoButton {
-  position: absolute;
-  bottom: 80px;
-  text-align: center;
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.project_card:hover .info,
-.project_card:hover .info:before {
-  transform: translateY(0) translateZ(0);
+@media screen and (min-width: 992px) {
+  .info {
+    text-align: center;
+    position: relative;
+    width: 100%;
+    height: 287px;
+    background-color: #1e1f21 ;
+    transform: translateY(99%) translateY(-100px) translateZ(0);
+    transition: transform 0.2s ease-out;
+    mix-blend-mode: normal;
+    opacity: 0.98;
+  }
+  /* this is not getting used ATM. Use it when the overlay should be frosted.  */
+  .info:before {
+    z-index: -1;
+    display: block;
+    position: absolute;
+    content: " ";
+    width: 100%;
+    height: 287px;
+    overflow: hidden;
+    filter: blur(10px);
+    background-size: cover;
+    opacity: 0.25;
+    transform: translateY(-100%) translateY(110px) translateZ(0);
+    transition: transform 0.1s ease-out;
+  }
+  
+  .infoTitle {
+    margin-bottom: 5px;
+    margin-top: 0px;
+  }
+  
+  .infoDescription {
+    margin-top: 0px;
+    padding:10px;
+  }
+  
+  .infoButton {
+    position: absolute;
+    bottom: 80px;
+    text-align: center;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .project_card:hover .info,
+  .project_card:hover .info:before {
+    transform: translateY(0) translateZ(0);
+  }
+    
 }

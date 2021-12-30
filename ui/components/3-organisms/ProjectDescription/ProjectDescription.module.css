@@ -1,16 +1,16 @@
-.ProjectDescription_title {
+@media screen and (min-width: 992px) {
+  .ProjectDescription_title {
     margin-bottom: 10px;
-
-}
-.ProjectDescription_description {
+  }
+  .ProjectDescription_description {
     margin-top: 5px;
-}
+  }
 
-.ProjectDescription_listItem {
+  .ProjectDescription_listItem {
     color: rgb(255, 255, 255);
     font-size: 18px;
     font-weight: 300;
     font-family: Avenir;
     list-style-type: circle;
-
+  }
 }

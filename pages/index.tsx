@@ -2,6 +2,7 @@ import React from "react";
 import type { NextPage, GetStaticProps } from "next";
 import { Hero } from "../ui/components/3-organisms/Hero";
 import { getHeroContent } from "../lib/graphcms";
+import styles from '../styles/wrapper.module.css';
 
 export interface HomePageProps {
   content: {
@@ -17,14 +18,14 @@ export interface HomePageProps {
 
 const Home: NextPage<HomePageProps> = ({ content }) => {
   return (
-    <>
+    
       <Hero
         heroImage={content.heroes[0].heroImage.url}
         heroTitle={content.heroes[0].header}
         heroSubtitle={content.heroes[0].subheader.text}
         onClick={"/projects"}
       />
-    </>
+   
   );
 };
 

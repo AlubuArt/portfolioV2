@@ -1,8 +1,9 @@
-.PageHeader_title {
+@media screen and (min-width: 992px) {
+  .PageHeader_title {
     margin-bottom: 0px;
     margin-top: 10px;
-
-}
-.PageHeader_subtitle {
+  }
+  .PageHeader_subtitle {
     margin-top: 0px;
+  }
 }

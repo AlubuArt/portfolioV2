@@ -23,22 +23,27 @@ export const Hero: React.FC<HeroProps> = ({
 
   return (
     <div className={styles.Hero___wrapper}>
-      <div className={styles.Hero___container}>
+      <div className={styles.HeroImage___container}>
         <Image
           alt=""
           width={"2000"}
           height={"1110"}
           layout={"responsive"}
           src={heroImage}
+          className={styles.image}
         />
       </div>
-      <div className={styles.Hero___text}>
+      <div className={styles.Hero___text___container}>
+        
+
+          
         <PageHeader
           type={"HeroHeader"}
           onClick={handleClick}
           title={heroTitle}
           subtitle={heroSubtitle}
         />
+        
       </div>
     </div>
   );

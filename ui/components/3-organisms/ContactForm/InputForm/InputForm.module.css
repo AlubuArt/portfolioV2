@@ -1,42 +1,40 @@
-.UserInput___container {
+@media screen and (min-width: 992px) {
+  .UserInput___container {
     width: "full";
     margin-left: 20px;
     margin-right: 20px;
     margin-bottom: 20px;
-   }
-   
-   
-   .Buttons___container {
-       margin-left: 20px;
-   }
-   
-   .Inputfield {
-       width: 50%;
-       padding: 6px 0px 5px 33px;
-       font-size: 18px;
-       font-weight: 600;
-       font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-       color: #797979;
-       background-color: transparent;
-       border-width: 0 0 1px 0;
-       border-style: solid;
-       border-color: #797979;
-       line-height: 100%;
-       align-items: center;
-       
-   }
+  }
 
-.icon {
+  .Buttons___container {
+    margin-left: 20px;
+  }
+
+  .Inputfield {
+    width: 50%;
+    padding: 6px 0px 5px 33px;
+    font-size: 18px;
+    font-weight: 600;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+      sans-serif;
+    color: #797979;
+    background-color: transparent;
+    border-width: 0 0 1px 0;
+    border-style: solid;
+    border-color: #797979;
+    line-height: 100%;
+    align-items: center;
+  }
+
+  .icon {
     position: absolute;
     left: 10px;
     color: grey;
-}
+  }
 
-.Input_icons {
+  .Input_icons {
     display: flex;
     align-items: center;
     position: relative;
+  }
 }
-
-
-  

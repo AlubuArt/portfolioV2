@@ -1,6 +1,5 @@
 import React from "react";
 import { Header } from "../../2-molecules/Header";
-import { Container } from '../Container';
 import styles from './PageLayout.module.css';
 
 

@@ -1,6 +1,6 @@
 import React from "react";
 import { Hamburger } from '../../1-atoms/Hamburger';
-import { Container } from '../../4-Layouts/Container';
+import styles from './Header.module.css';
 
 
 export interface HeaderProps {
@@ -8,7 +8,11 @@ export interface HeaderProps {
 }
 
 export const Header: React.FC<HeaderProps> = ({menuItems}) => (
-    
+
+    <div className={styles.Header___menu}>
         <Hamburger menuItems={menuItems} />
+    </div>
+    
+        
     
 )
