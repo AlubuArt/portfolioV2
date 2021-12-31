@@ -78,86 +78,80 @@ export const ContactForm: React.FC = () => {
   };
 
   return (
-    <div className={styles.PageWrapper}>
-      <Container width={"full"} spacing={"lg"}>
-        <div >
-          <PageHeader
-            title={"get in contact"}
-            subtitle={
-              "feel free to contact me about projects, collaborations, freelance work etc. use the form below, or send an email to jc@jcvisueldesign.dk"
-            }
-          />
-        </div>
-        <div className={styles.UserInput___container}>
-          {inputs.map((item, index: number) => {
-            return index === 0 ? (
-              <div className={styles.UserInput} key={index}>
-                <FontAwesomeIcon className={styles.icon} icon={faUser} />
-                <p className={styles.Paragraph}>{item}</p>
-              </div>
-            ) : (
-              <div className={styles.UserInput} key={index}>
-                <FontAwesomeIcon className={styles.icon} icon={faEnvelope} />
-                <p className={styles.Paragraph}>{item}</p>
-              </div>
-            );
-          })}
-          {inputs}
-        </div>
-        <div>
-          {inputStep === "name" ? (
-            <InputForm
-              value={userInputs.name}
-              placeholder={"Fill in your name"}
-              onChange={(e) => handleInputChange("name", e.target.value)}
-              onClick={() => handleNextClick("email", userInputs.name)}
-              onKeyPress={(e) =>
-                handleKeyboardEvent(e, "email", userInputs.name)
-              }
-              type={"name"}
-              icon={faUser}
-              buttonText={"NEXT"}
-            />
-          ) : inputStep === "email" ? (
-            <InputForm
-              value={userInputs.email}
-              placeholder={"this time your email"}
-              onChange={(e) => handleInputChange("email", e.target.value)}
-              onClick={() => handleNextClick("message", userInputs.email)}
-              onKeyPress={(e) =>
-                handleKeyboardEvent(e, "message", userInputs.email)
-              }
-              type={"email"}
-              icon={faEnvelope}
-              buttonText={"NEXT"}
-            />
-          ) : inputStep === "message" ? (
-            <InputForm
-              value={userInputs.message}
-              placeholder={"lastly your message "}
-              onChange={(e) => handleInputChange("message", e.target.value)}
-              onClick={() => submit()}
-              onKeyPress={(e) => submitOnkeyPress(e)}
-              type={"message"}
-              icon={faComment}
-              buttonText={buttonText}
-            />
-          ) : inputStep === "done" ? (
-            <Container width={"md"} spacing={"lg"}>
-              <Heading tag={"h2"} type={"h2"}>
-                {"Nice!"}
-              </Heading>
-              <Heading tag={"h3"} type={"h3"}>
-                {
-                  "Your awesome message was sent successfully. "
-                }
-              </Heading>{" "}
-            </Container>
+    <>
+      
+        <PageHeader
+          title={"get in contact"}
+          subtitle={
+            "feel free to contact me about projects, collaborations, freelance work etc. use the form below, or send an email to jc@jcvisueldesign.dk"
+          }
+        />
+      
+      <div className={styles.UserInput___container}>
+        {inputs.map((item, index: number) => {
+          return index === 0 ? (
+            <div className={styles.UserInput} key={index}>
+              <FontAwesomeIcon className={styles.icon} icon={faUser} />
+              <p className={styles.Paragraph}>{item}</p>
+            </div>
           ) : (
-            "not working"
-          )}
-        </div>
-      </Container>
-    </div>
+            <div className={styles.UserInput} key={index}>
+              <FontAwesomeIcon className={styles.icon} icon={faEnvelope} />
+              <p className={styles.Paragraph}>{item}</p>
+            </div>
+          );
+        })}
+        {inputs}
+      </div>
+      <div className={styles.userInput___form___container}>
+        {inputStep === "name" ? (
+          <InputForm
+            value={userInputs.name}
+            placeholder={"Fill in your name"}
+            onChange={(e) => handleInputChange("name", e.target.value)}
+            onClick={() => handleNextClick("email", userInputs.name)}
+            onKeyPress={(e) => handleKeyboardEvent(e, "email", userInputs.name)}
+            type={"name"}
+            icon={faUser}
+            buttonText={"NEXT"}
+          />
+        ) : inputStep === "email" ? (
+          <InputForm
+            value={userInputs.email}
+            placeholder={"this time your email"}
+            onChange={(e) => handleInputChange("email", e.target.value)}
+            onClick={() => handleNextClick("message", userInputs.email)}
+            onKeyPress={(e) =>
+              handleKeyboardEvent(e, "message", userInputs.email)
+            }
+            type={"email"}
+            icon={faEnvelope}
+            buttonText={"NEXT"}
+          />
+        ) : inputStep === "message" ? (
+          <InputForm
+            value={userInputs.message}
+            placeholder={"lastly your message "}
+            onChange={(e) => handleInputChange("message", e.target.value)}
+            onClick={() => submit()}
+            onKeyPress={(e) => submitOnkeyPress(e)}
+            type={"message"}
+            icon={faComment}
+            buttonText={buttonText}
+          />
+        ) : inputStep === "done" ? (
+          <Container width={"md"} spacing={"lg"}>
+            <Heading tag={"h2"} type={"h2"}>
+              {"Nice!"}
+            </Heading>
+            <Heading tag={"h3"} type={"h3"}>
+              {"Your awesome message was sent successfully. "}
+            </Heading>{" "}
+          </Container>
+        ) : (
+          "not working"
+        )}
+      </div>
+    </>
   );
 };

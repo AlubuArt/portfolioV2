@@ -12,6 +12,9 @@
     flex-direction: column;
 }
 
+.contact___container {
+  margin-top: 25%;
+}
 
 
 @media screen and (min-width: 992px) {

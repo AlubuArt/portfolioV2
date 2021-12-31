@@ -1,5 +1,35 @@
 .icon {
-  color: grey;
+  color: rgb(197, 195, 195);
+}
+.PageWrapper {
+ 
+}
+
+.userInput___form___container {
+  padding: 15px
+}
+
+.UserInput___container {
+  height: 30px;
+  padding-left: 15px;
+  margin-bottom: 80px;
+  display: block;
+}
+
+.UserInput {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-right: 20px;
+}
+
+.Paragraph {
+  font-size: 14px;
+  font-weight: 400;
+  padding-left: 10px;
+  color: rgb(197, 195, 195);
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+    sans-serif;
 }
 
 @media screen and (min-width: 992px) {

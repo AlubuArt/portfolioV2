@@ -7,7 +7,7 @@ import styles from '../styles/wrapper.module.css';
 const ContactPage: NextPage = ({}) => {
 
      return (
-        <div className={styles.wrapper}>
+        <div className={styles.contact___container}>
         <ContactForm />
         </div>
      )

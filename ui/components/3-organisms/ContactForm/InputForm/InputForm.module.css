@@ -1,3 +1,41 @@
+.UserInput___container {
+  margin-bottom: 10px;
+}
+
+.Buttons___container {
+}
+
+.Inputfield {
+  width: 80%;
+  padding: 6px 0px 5px 33px;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0.05rem;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+    sans-serif;
+  color: rgb(197, 195, 195);
+  background-color: transparent;
+  border-width: 0 0 1px 0;
+  border-style: solid;
+  border-color: rgb(197, 195, 195);
+  line-height: 100%;
+  align-items: center;
+}
+
+.icon {
+  position: absolute;
+  left: 10px;
+  color: rgb(197, 195, 195);
+}
+
+.Input_icons {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+
+
 @media screen and (min-width: 992px) {
   .UserInput___container {
     width: "full";
