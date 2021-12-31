@@ -18,11 +18,20 @@ export const Hero: React.FC<HeroProps> = ({
 }) => {
   const router = useRouter();
   const handleClick = () => {
+    console.log("clicked")
     router.push("/projects");
   };
 
   return (
     <div className={styles.Hero___wrapper}>
+      <div className={styles.Hero___text___container}>
+        <PageHeader
+          type={"HeroHeader"}
+          onClick={() => handleClick()}
+          title={heroTitle}
+          subtitle={heroSubtitle}
+        />
+      </div>
       <div className={styles.HeroImage___container}>
         <Image
           alt=""
@@ -32,18 +41,6 @@ export const Hero: React.FC<HeroProps> = ({
           src={heroImage}
           className={styles.image}
         />
-      </div>
-      <div className={styles.Hero___text___container}>
-        
-
-          
-        <PageHeader
-          type={"HeroHeader"}
-          onClick={handleClick}
-          title={heroTitle}
-          subtitle={heroSubtitle}
-        />
-        
       </div>
     </div>
   );

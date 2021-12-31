@@ -1,5 +1,3 @@
-
-
 .projects___container {
   margin-top: 25%;
   height: 100%;
@@ -7,21 +5,27 @@
 
 .project___container {
   margin-top: 25%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .contact___container {
   margin-top: 25%;
 }
 
+.hero___container {
+    
+}
 
-@media screen and (min-width: 992px) {
-  .wrapper {
+@media screen and (min-width: 1200px) {
+ /*  .wrapper {
     max-width: 1000px;
     margin-left: auto;
     margin-right: auto;
     margin-top: 100px;
+  } */
+  .hero___container {
+
   }
 }
