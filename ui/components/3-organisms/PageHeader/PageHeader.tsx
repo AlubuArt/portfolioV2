@@ -23,7 +23,9 @@ export const PageHeader: React.FC<PageHeaderProps> = ({
   liveVersionLink,
   type,
 }) => (
-  <Container width={"full"} spacing={"lg"}>
+ 
+    
+  <div className={styles.pageHeader___container}>
     <Heading className={styles.PageHeader_title} type="h1" tag="h1">
       {title}
     </Heading>
@@ -48,5 +50,6 @@ export const PageHeader: React.FC<PageHeaderProps> = ({
     ) : (
       ""
     )}
-  </Container>
+  </div>
+ 
 );

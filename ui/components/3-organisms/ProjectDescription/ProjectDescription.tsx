@@ -15,7 +15,7 @@ export const ProjectDescription: React.FC<ProjectDescriptionProps> = ({
   description,
   list,
 }) => (
-  <Container width={"full"} spacing={"lg"}>
+  <div className={styles.ProjectDescription___container}>
     <Heading type="h2" tag="h2" className={styles.ProjectDescription_title}>
       {title}
     </Heading>
@@ -36,5 +36,5 @@ export const ProjectDescription: React.FC<ProjectDescriptionProps> = ({
         <></>
       )}
     </ul>
-  </Container>
+  </div>
 );

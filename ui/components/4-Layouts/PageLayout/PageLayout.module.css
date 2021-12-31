@@ -1,9 +1,5 @@
 .PageContent {
-  top: 0;
-  left: 0;
-  width: 100%;
   position: absolute;
-  display: block;
-  background-color: #292a2d;
-  height: 100%;
+  min-height: 100%;
+  overflow: hidden;
 }

@@ -11,7 +11,7 @@ export interface ProjectsProps {
 
 const Projects: NextPage<ProjectsProps> = ({ projects }) => {
   return (
-    <div className={styles.wrapper}>
+    <div className={styles.projects___container}>
       <PageHeader
         title={"project portfolio"}
         subtitle={

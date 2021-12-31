@@ -1,7 +1,16 @@
-.wrapper {
+
+
+.projects___container {
+  margin-top: 25%;
+  height: 100%;
 }
 
-
+.project___container {
+  margin-top: 25%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
 
 
 

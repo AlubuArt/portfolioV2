@@ -1,5 +1,5 @@
 .Card {
-  border-radius: 8px;
+  border-radius: 2px;
   border: 1px solid rgba(55, 65, 70, 0.94);
   box-shadow: 5px 5px 3px 2px #181818;
  
@@ -29,9 +29,13 @@
 .Card___project_card {
   overflow: hidden;
   background-size: cover;
-  width: 345px;
-  height: 220px;
-  margin: 10px
+  margin: auto;
+  margin-bottom: 25px;;
   
   
+}
+
+
+@media screen and (min-width: 992px) {
+
 }

@@ -19,12 +19,14 @@ export interface HomePageProps {
 const Home: NextPage<HomePageProps> = ({ content }) => {
   return (
     
+
       <Hero
         heroImage={content.heroes[0].heroImage.url}
         heroTitle={content.heroes[0].header}
         heroSubtitle={content.heroes[0].subheader.text}
         onClick={"/projects"}
       />
+   
    
   );
 };

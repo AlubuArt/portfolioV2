@@ -17,7 +17,7 @@ const ProjectPage: NextPage<ProjectPageProps> = ({ project }) => {
 
   
   return (
-    <div className={styles.wrapper}>
+    <div className={styles.project___container}>
       <PageHeader
         title={project.projectTitle}
         subtitle={project.description}

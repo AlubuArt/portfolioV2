@@ -1,3 +1,17 @@
+.ProjectDescription___container {
+  padding: 15px
+}
+
+.ProjectDescription_listItem {
+  color: rgb(255, 255, 255);
+  font-size: 16px;
+  font-weight: 800;
+  list-style-type: circle;
+  letter-spacing: 0.07rem;
+}
+
+
+
 @media screen and (min-width: 992px) {
   .ProjectDescription_title {
     margin-bottom: 10px;
@@ -7,10 +21,7 @@
   }
 
   .ProjectDescription_listItem {
-    color: rgb(255, 255, 255);
     font-size: 18px;
     font-weight: 300;
-    font-family: Avenir;
-    list-style-type: circle;
   }
 }

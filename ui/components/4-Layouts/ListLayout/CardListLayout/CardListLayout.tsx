@@ -17,10 +17,8 @@ export const CardListLayout: React.FC<CardListLayoutProps> =  ({ projects }) => 
     router.push(`/projects/${slug}`);
   };
   return (
-    <Container width={"md"} spacing={"lg"}>
-      <div>
-        <div className={styles.CardListLayoutContainer}>
-          {projects.map((item, index: number) => {
+   <>
+   {projects.map((item, index: number) => {
             return (
               <div key={index} className={styles.listItem}>
                 <ProjectCard
@@ -32,8 +30,12 @@ export const CardListLayout: React.FC<CardListLayoutProps> =  ({ projects }) => 
               </div>
             );
           })}
-        </div>
-      </div>
-    </Container>
+   </>
+      
+        
+          
+       
+      
+   
   );
 };
