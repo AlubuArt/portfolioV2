@@ -1,58 +1,44 @@
-.icon {
-  color: rgb(197, 195, 195);
-}
 .PageWrapper {
- 
 }
-
-.userInput___form___container {
-  padding: 15px
-}
-
-.UserInput___container {
-  height: 30px;
-  padding-left: 15px;
-  margin-bottom: 80px;
-  display: block;
+.UserInputs {
+    height: 30px;
+    padding-left: 15px;
+    margin-bottom: 80px;
+    display: block;
 }
 
 .UserInput {
-  display: flex;
-  align-items: center;
-  position: relative;
-  margin-right: 20px;
-}
-
-.Paragraph {
-  font-size: 14px;
-  font-weight: 400;
-  padding-left: 10px;
-  color: rgb(197, 195, 195);
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
-    sans-serif;
-}
-
-@media screen and (min-width: 1200px) {
-  .PageWrapper {
-    min-height: 700px;
-  }
-
-  .Paragraph {
-    font-size: 18px;
-    font-weight: 600;
-  }
-
-  .UserInput___container {
-    height: 30px;
-    padding-left: 20px;
-    margin-bottom: 30px;
-    display: flex;
-  }
-
-  .UserInput {
     display: flex;
     align-items: center;
     position: relative;
     margin-right: 20px;
-  }
+}
+
+.Paragraph {
+    font-size: 14px;
+    font-weight: 400;
+    padding-left: 10px;
+    color: rgb(197, 195, 195);
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+        sans-serif;
+}
+
+.icon {
+    color: rgb(197, 195, 195);
+}
+@media screen and (min-width: 1200px) {
+    .PageWrapper {
+        min-height: 700px;
+    }
+
+    .Paragraph {
+        font-size: 18px;
+        font-weight: 600;
+    }
+
+    .UserInputs {
+        padding-left: 20px;
+        margin-bottom: 30px;
+        display: flex;
+    }
 }

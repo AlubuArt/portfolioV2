@@ -1,36 +1,48 @@
 .Container {
-  position: relative;
+    padding-top: 0px;
 }
 
-.Container___full {
- 
+.Container___projects {
 }
 
-.Container___sm {
-  width: 50%;
-  margin-bottom: 5px;
-  
+.Container___project {
 }
 
-.Container___md {
-  margin:auto;
-  
+.Container___hero {
+    width: 100%;
+    margin-top: 15vh;
 }
 
-.Container___lg {
-  width: 80%;
+.Container___spacing___lg {
+    margin-left: 15px;
+    margin-right: 15px;
+    padding-top: 10vh;
 }
 
-.Container___spacing_sm {
-  margin-bottom: 5px;
+@media screen and (min-width: 1200px) {
+    .Container {
+        width: 1000px;
+        margin-left: auto;
+        margin-right: auto;
+    }
 
-}
+    .Container___projects {
+    }
 
-.Container___spacing_md {
-  margin-bottom: 10px;
+    .Container___project {
+    }
 
-}
+    .Container___CardList {
+        display: flex;
+        flex-wrap: wrap;
+        align-content: stretch;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 75%;
+    }
 
-.Container___spacing_lg {
-  margin-bottom: 50px;
+    .Container___hero {
+        width: 100%;
+        margin-top: 20vh;
+    }
 }

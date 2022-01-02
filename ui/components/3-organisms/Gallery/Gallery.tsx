@@ -13,7 +13,6 @@ import SwiperCore, {
   Mousewheel,
   Keyboard,
 } from "swiper";
-import { Container } from "../../4-Layouts/Container";
 
 SwiperCore.use([Navigation, Pagination, Mousewheel, Keyboard]);
 

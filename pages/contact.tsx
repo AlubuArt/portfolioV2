@@ -1,16 +1,14 @@
 import { NextPage } from "next";
 import React from "react";
-import { ContactForm } from '../ui/components/3-organisms/ContactForm';
-import styles from '../styles/wrapper.module.css';
-
+import { ContactForm } from "../ui/components/3-organisms/ContactForm";
+import { Container } from "../ui/components/4-Layouts/Container";
 
 const ContactPage: NextPage = ({}) => {
-
-     return (
-        <div className={styles.contact___container}>
-        <ContactForm />
-        </div>
-     )
-}
+    return (
+        <Container type={"contact"} spacing={"lg"}>
+            <ContactForm />
+        </Container>
+    );
+};
 
 export default ContactPage;

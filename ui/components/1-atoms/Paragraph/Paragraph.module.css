@@ -1,20 +1,13 @@
-
-
-
 .Paragraph {
-  /* color: rgb(73, 111, 117); */
-  color: white;
-  font-size: 16px;
-  font-weight: 300;
-  width: 100%;
-  margin-top: 0px;
-  
+    color: white;
+    font-size: 16px;
+    font-weight: 300;
+    width: 100%;
+    margin-top: 0px;
 }
 
 @media screen and (min-width: 992px) {
-  .Paragraph {
-    
-    font-size: 18px;
-    
-  }
+    .Paragraph {
+        font-size: 18px;
+    }
 }

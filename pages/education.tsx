@@ -1,16 +1,14 @@
 import { NextPage } from "next";
 import React from "react";
 import UnderConstruction from "../ui/components/3-organisms/UnderConstruction/UnderConstruction";
-import styles from '../styles/wrapper.module.css';
-
+import { Container } from "../ui/components/4-Layouts/Container";
 
 const EducationPage: NextPage = ({}) => {
-
-     return (
-      <div className={styles.wrapper}>
-      <UnderConstruction pageTitle={"education"} />
-      </div>
-     )
-}
+    return (
+        <Container spacing={"lg"}>
+            <UnderConstruction pageTitle={"education"} />
+        </Container>
+    );
+};
 
 export default EducationPage;

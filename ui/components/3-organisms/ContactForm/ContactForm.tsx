@@ -87,7 +87,7 @@ export const ContactForm: React.FC = () => {
           }
         />
       
-      <div className={styles.UserInput___container}>
+      <div className={styles.UserInputs}>
         {inputs.map((item, index: number) => {
           return index === 0 ? (
             <div className={styles.UserInput} key={index}>
@@ -103,7 +103,7 @@ export const ContactForm: React.FC = () => {
         })}
         {inputs}
       </div>
-      <div className={styles.userInput___form___container}>
+   
         {inputStep === "name" ? (
           <InputForm
             value={userInputs.name}
@@ -140,7 +140,7 @@ export const ContactForm: React.FC = () => {
             buttonText={buttonText}
           />
         ) : inputStep === "done" ? (
-          <Container width={"md"} spacing={"lg"}>
+          <Container>
             <Heading tag={"h2"} type={"h2"}>
               {"Nice!"}
             </Heading>
@@ -151,7 +151,7 @@ export const ContactForm: React.FC = () => {
         ) : (
           "not working"
         )}
-      </div>
+  
     </>
   );
 };

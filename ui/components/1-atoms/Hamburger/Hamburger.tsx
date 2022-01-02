@@ -1,7 +1,6 @@
 import React from "react";
 import { slide as Menu } from "react-burger-menu";
 import Link from "next/link";
-import { Autoplay } from "swiper";
 import { Paragraph } from "../Paragraph";
 
 //TODO: move this to css module

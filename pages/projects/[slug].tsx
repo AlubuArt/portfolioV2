@@ -3,8 +3,9 @@ import type { GetStaticPaths, GetStaticProps, NextPage } from "next";
 import { PageHeader } from "../../ui/components/3-organisms/PageHeader";
 import { ProjectDescription } from "../../ui/components/3-organisms/ProjectDescription";
 import { Gallery } from "../../ui/components/3-organisms/Gallery";
-import styles from "../../styles/wrapper.module.css";
 import { getAllProjectsWithSlug, getProject } from "../../lib/graphcms";
+import { Container } from "../../ui/components/4-Layouts/Container";
+
 
 export interface ProjectPageProps {
   project: Models.Project;
@@ -17,28 +18,28 @@ const ProjectPage: NextPage<ProjectPageProps> = ({ project }) => {
 
   
   return (
-    <div className={styles.project___container}>
+    <Container type={'project'} spacing={"lg"}>
       <PageHeader
         title={project.projectTitle}
         subtitle={project.description}
         type={"ProjectHeader"}
         githubLink={() => handleExternalRouting(project.seGithubURL)}
         liveVersionLink={() => handleExternalRouting(project.seLiveUrl)}
-      ></PageHeader>
+        ></PageHeader>
       <Gallery slides={project.projectPictures}></Gallery>
 
       <ProjectDescription
         title="about this project"
         description={project.about.html}
         list={[]} //TODO: should be made optional
-      ></ProjectDescription>
+        ></ProjectDescription>
 
       <ProjectDescription
         title="tech used"
         description="in this project the following technologies was used"
         list={project.keys} //TODO: make it possible to add more than three keys
-      ></ProjectDescription>
-    </div>
+        ></ProjectDescription>
+      </Container>
   );
 };
 
