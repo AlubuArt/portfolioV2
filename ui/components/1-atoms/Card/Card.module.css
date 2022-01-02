@@ -38,4 +38,8 @@
 
 @media screen and (min-width: 992px) {
 
+  .Card {
+    margin-bottom: 50px;
+  }
+
 }

@@ -32,7 +32,7 @@
     sans-serif;
 }
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 1200px) {
   .PageWrapper {
     min-height: 700px;
   }
@@ -40,10 +40,6 @@
   .Paragraph {
     font-size: 18px;
     font-weight: 600;
-    padding-left: 10px;
-    color: #797979;
-    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
-      sans-serif;
   }
 
   .UserInput___container {

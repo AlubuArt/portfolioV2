@@ -1,16 +1,20 @@
-.CardListLayoutContainer {
+.CardListLayout___container {
   
 }
 
 
 
 
-@media screen and (min-width: 992px) {
-  .CardListLayoutContainer {
+@media screen and (min-width: 1200px) {
+  .CardListLayout___container {
     display: flex;
     flex-wrap: wrap;
     align-content: stretch;
     flex-direction: row;
     justify-content: space-between;
+    width:75%;
+    margin-left: auto;
+    margin-right: auto;
+
   }
 }
