@@ -3,6 +3,8 @@ import type { NextPage, GetStaticProps } from "next";
 import { Hero } from "../ui/components/3-organisms/Hero";
 import { getHeroContent } from "../lib/graphcms";
 
+
+
 export interface HomePageProps {
     content: {
         heroes: [

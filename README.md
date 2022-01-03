@@ -48,7 +48,8 @@ The project uses to some extend third party libraries, but the overall aim is to
 ## backlog
 - [ ] Gallery styling
 - [ ] Add loading spinner 
-- [ ] Responsive design for mobile and tablet
+- [x] Responsive design for mobile and tablet
 - [ ] Darkmode/lightmode toggle
 - [ ] Comment section on projects pages
-
+- [ ] Youtube feed
+- [ ] Analytics

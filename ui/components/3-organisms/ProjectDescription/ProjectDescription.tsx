@@ -31,7 +31,7 @@ export const ProjectDescription: React.FC<ProjectDescriptionProps> = ({
                         >
                             {item}
                         </li>
-                    ); //TODO replace with custom list item
+                    ); //TODO replace with custom styled list item
                 })
             ) : (
                 <></>
