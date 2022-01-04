@@ -29,9 +29,9 @@ declare namespace Models {
                 url: string 
               }
              },
-            channelTitle: string;
-            resourceID: {
-              videoID: string; //use this the get the URL for the video.
+            videoOwnerChannelTitle: string;
+            resourceId: {
+              videoId: string; //use this the get the URL for the video.
             }
 
         };

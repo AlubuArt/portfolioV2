@@ -41,8 +41,22 @@
         width: 75%;
     }
 
+    .Container___List {
+        width: 100%;
+    }
+
     .Container___hero {
         width: 100%;
         margin-top: 20vh;
+    }
+
+    .Container___about {
+
+    }
+
+    .Container___textBox {
+        width: 70%;
+        padding-bottom: 20vh;
+
     }
 }

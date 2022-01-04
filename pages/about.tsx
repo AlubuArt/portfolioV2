@@ -5,6 +5,11 @@ import { Button } from "../ui/components/1-atoms/Button";
 import UnderConstruction from "../ui/components/3-organisms/UnderConstruction/UnderConstruction";
 import { getVideos } from "../lib/youtube";
 import { Heading } from "../ui/components/1-atoms/Heading";
+import { Container } from "../ui/components/4-Layouts/Container";
+import { PageHeader } from "../ui/components/3-organisms/PageHeader";
+import { Paragraph } from "../ui/components/1-atoms/Paragraph";
+import { TextBox } from "../ui/components/2-molecules/TextBox";
+import { ListLayout } from "../ui/components/4-Layouts/ListLayout/ListLayout";
 
 
 const AboutPage: NextPage = () => {
@@ -17,30 +22,30 @@ const AboutPage: NextPage = () => {
         video();
     }, []);
 
-    const handleCLick = () => {
-        console.log(videos);
-        console.log(videos[0].snippet.thumbnails)
-    };
+    console.log(videos[0])
 
     return (
-        <>
-            <UnderConstruction pageTitle={"about"} />
-            <Button onClick={handleCLick}>{"try me"}</Button>
-            <Heading type={"h3"} tag={"h3"}>
-                {"My recent viewed YT videos"}
-            </Heading>
-            {videos.map((video, index) => {
-                return (
-                    <>
-                        <p key={index}>{video.snippet.title}</p>
-                        <Image src={video.snippet.thumbnails.medium.url} width={320} height={180} layout={"responsive"} alt={""}></Image>
+        
+        <Container type={"about"} spacing={"lg"}>
+            <PageHeader title={"about me"} subtitle={"This is a short description about me. It is meant to summarize who I am in very few words, and to make the reader wnat to read more about me."} >
+                
+            </PageHeader>
+            <TextBox></TextBox>
+            <Heading tag={"h3"} type={"h3"}>{"my favourite YT playlist"}</Heading>
+            <ListLayout />
 
-                    
-                    </>
-                );
-            })}
-        </>
+
+
+           
+            
+            
+        </Container>
+            
+       
     );
 };
 
 export default AboutPage;
+
+
+
