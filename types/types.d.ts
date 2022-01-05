@@ -36,4 +36,11 @@ declare namespace Models {
 
         };
     }
+
+    export interface AboutMeText {
+        aboutMeHeader: string;
+        aboutShortDescription: string;
+        aboutMeLongDescription: { html: string };
+        author: string;
+    }
 }
