@@ -21,6 +21,26 @@ declare namespace Models {
         text: string;
     }
 
+    export interface PlayListData {
+        kind: string;
+        etag: string;
+        id: string;
+        snippet: {
+            publishedAt: string;
+            channelId: string;
+            title: string;
+            description: string;
+            thumbnails: {};
+            channelTitle: string;
+            playListId: string;
+            position: number;
+            resourceId: {};
+            videoOwnerChannelTitle: string;
+            videoOwnerChannelId: string;
+
+        }
+    }
+
     export interface YTVideo {
         snippet: {
             title: string;
