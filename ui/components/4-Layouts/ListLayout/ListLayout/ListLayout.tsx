@@ -1,7 +1,7 @@
 import React from "react";
 import { ExperienceCard } from "../../../2-molecules/ExperienceCard";
 import { Container } from "../../Container";
-import { ListItem } from "./ListItem";
+import { ListItem } from "../../../2-molecules/ListItem";
 
 interface ListLayoutProps {
     list: [];

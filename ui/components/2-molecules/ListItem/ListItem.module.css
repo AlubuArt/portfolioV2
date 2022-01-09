@@ -1,0 +1,92 @@
+.ListItem_container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    border-bottom: solid white 2px;
+    box-shadow: 0px 6px 18px 0px rgba(0, 0, 0, 0.4);
+}
+
+.image_container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    cursor: pointer;
+}
+
+.image_container .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 30%;
+    height: 30%;
+    display: none;
+    color: #fff;
+}
+
+.image_container:hover .overlay {
+    display: block;
+    background: rgba(1, 160, 218, 0.6);
+}
+
+.separator {
+    height: 1px;
+    background-color: white;
+    width: 70%;
+}
+
+.text_container {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.title {
+    font-weight: 300;
+    font-size: 17px;
+}
+
+.videoTitle {
+    color: white;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.videoChannel {
+    position: relative;
+    margin-top: 0px;
+    margin-bottom: 5px;
+    color: white;
+    padding-left: 10px;
+}
+
+.channel {
+    font-size: 12px;
+}
+
+@media screen and (min-width: 1200px) {
+    .ListItem_container {
+        flex-direction: row;
+
+        width: 80%;
+    }
+
+    .image_container {
+        width: 30%;
+    }
+
+    .text_container {
+        width: 70%;
+    }
+
+    .title {
+        font-weight: 300;
+        font-size: 20px;
+    }
+
+    .channel {
+        font-size: 16px;
+    }
+}

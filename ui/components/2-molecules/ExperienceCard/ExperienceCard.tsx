@@ -1,6 +1,6 @@
 import React from "react";
-import { Container } from "../../4-Layouts/Container";
 import styles from "./ExperienceCard.module.css";
+import { useRouter } from "next/router";
 
 interface ExperienceCardProps {
     experience: Models.Experience;
@@ -9,6 +9,13 @@ interface ExperienceCardProps {
 export const ExperienceCard: React.FC<ExperienceCardProps> = ({
     experience,
 }) => {
+
+
+    const router = useRouter();
+
+    const handleClick = (slug: string) => {
+        router.push(`https://www.${slug}`);
+    };
     return (
         <div className={styles.ExperienceCard_container}>
             <div>
@@ -22,7 +29,7 @@ export const ExperienceCard: React.FC<ExperienceCardProps> = ({
             </div>
 
             <div>
-                <p className={styles.link_container}>{experience.link} -{">"}</p>
+                <p className={styles.link_container} onClick={() => handleClick(experience.link)}>{experience.link} -{">"}</p>
             </div>
         </div>
     );
