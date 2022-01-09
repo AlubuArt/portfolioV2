@@ -8,6 +8,10 @@
 .Container___project {
 }
 
+.Container____experienceCard {
+
+}
+
 .Container___hero {
     width: 100%;
     margin-top: 15vh;
@@ -56,7 +60,7 @@
 
     .Container___textBox {
         width: 70%;
-        padding-bottom: 20vh;
+        padding-bottom: 10vh;
 
     }
 }

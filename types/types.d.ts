@@ -63,4 +63,11 @@ declare namespace Models {
         aboutMeLongDescription: { html: string };
         author: string;
     }
+
+    export interface Experience {
+        companyName: string;
+        dates: string;
+        jobTitle: string;
+        link: string;
+    }
 }
