@@ -40,7 +40,7 @@ const AboutPage: NextPage<AboutPageProps> = ({ text, YTList, experiences }) => {
             </Container>
             <Container spacing={"md"}>
                 <Heading tag={"h2"} type={"h2"}>
-                    {"my favourite YT playlist"}
+                    {"my recently viewed youtube videos"}
                 </Heading>
 
                 {YTList.length > 0 ? (
@@ -58,7 +58,7 @@ export const getStaticProps: GetStaticProps = async () => {
     const text = await getAboutMe();
     const experiences = await getExperiences();
     const YTList = await getYouTubePlaylist(
-        "PLEqpYJHv1AC-40WINYMcCI0T4YCCSc84X"
+        "PLEqpYJHv1AC-ASCBue9-VYB9SLj7LgfV9"
     );
 
     return {
