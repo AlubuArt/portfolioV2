@@ -23,6 +23,14 @@
     padding-top: 10vh;
 }
 
+.Container___spacing___md {
+    padding-top: 10vh;
+}
+
+.Container___spacing___sm {
+    padding-top: 5vh; 
+}
+
 @media screen and (min-width: 1200px) {
     .Container {
         width: 1000px;
@@ -60,7 +68,6 @@
 
     .Container___textBox {
         width: 70%;
-        padding-bottom: 10vh;
 
     }
 }

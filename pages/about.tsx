@@ -6,8 +6,7 @@ import { Container } from "../ui/components/4-Layouts/Container";
 import { PageHeader } from "../ui/components/3-organisms/PageHeader";
 import { TextBox } from "../ui/components/2-molecules/TextBox";
 import { ListLayout } from "../ui/components/4-Layouts/ListLayout/ListLayout";
-import { getAboutMe } from "../lib/graphcms";
-import { ExperienceCard } from "../ui/components/2-molecules/ExperienceCard";
+import { getAboutMe, getExperiences } from "../lib/graphcms";
 
 interface AboutPageProps {
     text: Models.AboutMeText;
@@ -28,20 +27,24 @@ const AboutPage: NextPage<AboutPageProps> = ({ text, YTList, experiences }) => {
                     author={text.author}
                 ></TextBox>
             </div>
-            <Container spacing={"lg"}>
-                {
-                    experiences
-                }
-                <ExperienceCard />
-                <ExperienceCard />
+            <Container spacing={"md"}>
+                <Heading tag={"h2"} type={"h2"}>
+                    {"work history"}
+                </Heading>
+                {experiences.length > 0 ? (
+                    <ListLayout list={experiences} type={"experience"} />
+                ) : (
+                    //TODO: Custom error message to be printed
+                    <p>{"Oh oh! Couldn't load experiences :-("}</p>
+                )}
             </Container>
-            <Container spacing={"lg"}>
-                <Heading tag={"h3"} type={"h3"}>
+            <Container spacing={"md"}>
+                <Heading tag={"h2"} type={"h2"}>
                     {"my favourite YT playlist"}
                 </Heading>
 
                 {YTList.length > 0 ? (
-                    <ListLayout list={YTList} />
+                    <ListLayout list={YTList} type={"youtube"} />
                 ) : (
                     //TODO: Custom error message to be printed
                     <p>{"Oh oh! Couldn't get a YT playlist :-("}</p>
@@ -53,6 +56,7 @@ const AboutPage: NextPage<AboutPageProps> = ({ text, YTList, experiences }) => {
 
 export const getStaticProps: GetStaticProps = async () => {
     const text = await getAboutMe();
+    const experiences = await getExperiences();
     const YTList = await getYouTubePlaylist(
         "PLEqpYJHv1AC-40WINYMcCI0T4YCCSc84X"
     );
@@ -61,6 +65,7 @@ export const getStaticProps: GetStaticProps = async () => {
         props: {
             text: text.aboutMe,
             YTList: YTList,
+            experiences: experiences,
         },
         revalidate: 60,
     };

@@ -4,7 +4,8 @@ import Image from 'next/image';
 import { useRouter } from "next/router";
 
 export interface ListItemProps {
-    items: Models.YTVideo
+    items: Models.YTVideo;
+
 }
 
 
@@ -16,9 +17,12 @@ export const ListItem: React.FC<ListItemProps> = ({items}) => {
         router.push(`https://www.youtube.com/watch?v=${slug}`);
     };
 
+
+
     
 
     return (
+
         <div className={styles.ListItem_container}>
             <div className={styles.text_container}>
                 <div className={styles.videoTitle}><h2 className={styles.title}>{items.snippet.title}</h2>
