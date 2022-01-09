@@ -19,13 +19,18 @@ export const ListLayout: React.FC<ListLayoutProps> = ({ list, type }) => {
                           </div>
                       );
                   })
-                : list.map((item, index: number) => {
+                : 
+                
+                <Container type={"experienceList"}> {
+                     list.map((item, index: number) => {
                       return (
                           <div key={index}>
                               <ExperienceCard experience={item} />
                           </div>
                       );
-                  })
+                  })  }
+                </Container>
+             
             }
         </Container>
     );

@@ -3,7 +3,7 @@ import classNames from "classnames";
 import styles from "./Container.module.css";
 
 export interface ContainerProps {
-    type?: "project" | "hero" | "projects" | "CardList" | "contact" | "inputform" | "about" | "textBox";
+    type?: "project" | "hero" | "projects" | "CardList" | "contact" | "inputform" | "about" | "textBox" | "experienceList";
     children: React.ReactNode;
     spacing?: "sm" | "md" | "lg";
     className?: string;

@@ -50,7 +50,7 @@
         align-content: stretch;
         flex-direction: row;
         justify-content: space-between;
-        width: 75%;
+        width: 70%;
     }
 
     .Container___List {
@@ -68,6 +68,17 @@
 
     .Container___textBox {
         width: 70%;
+
+    }
+
+    .Container___experienceList {
+        display: flex;
+        flex-wrap: wrap;
+        align-content: stretch;
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-between;
+        width: 80%;
 
     }
 }
