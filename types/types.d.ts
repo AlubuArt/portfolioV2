@@ -52,7 +52,8 @@ declare namespace Models {
             videoOwnerChannelTitle: string;
             resourceId: {
               videoId: string; //use this the get the URL for the video.
-            }
+            },
+            publishedAt: Date
 
         };
     }

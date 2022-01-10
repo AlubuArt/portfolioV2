@@ -36,6 +36,7 @@
     height: 1px;
     background-color: white;
     width: 70%;
+    margin-left: 10px;
 }
 
 .text_container {
@@ -60,10 +61,21 @@
     margin-bottom: 5px;
     color: white;
     padding-left: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 70%;
 }
 
 .channel {
     font-size: 12px;
+}
+
+.date {
+    font-size: 12px;
+    opacity: 0.3;
+    margin-left: auto;
+    
 }
 
 @media screen and (min-width: 1200px) {

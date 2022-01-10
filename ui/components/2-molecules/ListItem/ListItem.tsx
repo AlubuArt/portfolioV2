@@ -26,6 +26,9 @@ export const ListItem: React.FC<ListItemProps> = ({ items }) => {
                     <h4 className={styles.channel}>
                         {items.snippet.videoOwnerChannelTitle}
                     </h4>
+                    <div className={styles.date}>
+                    <p >{items.snippet.publishedAt.toString().substring(0, 10)}</p>
+                    </div>
                 </div>
             </div>
             <div
