@@ -107,7 +107,7 @@ export const ContactForm: React.FC = () => {
         {inputStep === "name" ? (
           <InputForm
             value={userInputs.name}
-            placeholder={"Fill in your name"}
+            placeholder={"Fill in your name (1/3)"}
             onChange={(e) => handleInputChange("name", e.target.value)}
             onClick={() => handleNextClick("email", userInputs.name)}
             onKeyPress={(e) => handleKeyboardEvent(e, "email", userInputs.name)}
@@ -118,7 +118,7 @@ export const ContactForm: React.FC = () => {
         ) : inputStep === "email" ? (
           <InputForm
             value={userInputs.email}
-            placeholder={"this time your email"}
+            placeholder={"this time your email... (2/3)"}
             onChange={(e) => handleInputChange("email", e.target.value)}
             onClick={() => handleNextClick("message", userInputs.email)}
             onKeyPress={(e) =>
@@ -131,7 +131,7 @@ export const ContactForm: React.FC = () => {
         ) : inputStep === "message" ? (
           <InputForm
             value={userInputs.message}
-            placeholder={"lastly your message "}
+            placeholder={"lastly your message (3/3)"}
             onChange={(e) => handleInputChange("message", e.target.value)}
             onClick={() => submit()}
             onKeyPress={(e) => submitOnkeyPress(e)}
