@@ -37,24 +37,22 @@ declare namespace Models {
             resourceId: {};
             videoOwnerChannelTitle: string;
             videoOwnerChannelId: string;
-
-        }
+        };
     }
 
     export interface YTVideo {
         snippet: {
             title: string;
-            thumbnails: { 
-              medium: { 
-                url: string 
-              }
-             },
+            thumbnails: {
+                medium: {
+                    url: string;
+                };
+            };
             videoOwnerChannelTitle: string;
             resourceId: {
-              videoId: string; //use this the get the URL for the video.
-            },
-            publishedAt: Date
-
+                videoId: string; //use this the get the URL for the video.
+            };
+            publishedAt: Date;
         };
     }
 

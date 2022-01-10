@@ -8,6 +8,8 @@ import { TextBox } from "../ui/components/2-molecules/TextBox";
 import { ListLayout } from "../ui/components/4-Layouts/ListLayout/ListLayout";
 import { getAboutMe, getExperiences } from "../lib/graphcms";
 
+
+
 interface AboutPageProps {
     text: Models.AboutMeText;
     YTList: [];
@@ -32,7 +34,7 @@ const AboutPage: NextPage<AboutPageProps> = ({ text, YTList, experiences }) => {
                     {"work history"}
                 </Heading>
                 {experiences.length > 0 ? (
-                    <ListLayout list={experiences} type={"experience"} />
+                    <ListLayout list={experiences} type={"experience"} /> 
                 ) : (
                     //TODO: Custom error message to be printed
                     <p>{"Oh oh! Couldn't load experiences :-("}</p>
@@ -44,7 +46,7 @@ const AboutPage: NextPage<AboutPageProps> = ({ text, YTList, experiences }) => {
                 </Heading>
 
                 {YTList.length > 0 ? (
-                    <ListLayout list={YTList} type={"youtube"} />
+                    <ListLayout list={YTList} type={"youtube"} /> 
                 ) : (
                     //TODO: Custom error message to be printed
                     <p>{"Oh oh! Couldn't get a YT playlist :-("}</p>

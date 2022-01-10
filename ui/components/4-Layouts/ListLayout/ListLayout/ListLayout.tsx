@@ -15,7 +15,7 @@ export const ListLayout: React.FC<ListLayoutProps> = ({ list, type }) => {
                 ? list.map((item, index: number) => {
                       return (
                           <div key={index}>
-                              <ListItem items={item}></ListItem>
+                           <ListItem items={item} /> 
                           </div>
                       );
                   })

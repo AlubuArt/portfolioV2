@@ -4,6 +4,7 @@ import Image from "next/image";
 import playOverlay from "../../../../Images/overlay.png";
 import { useRouter } from "next/router";
 
+
 export interface ListItemProps {
     items: Models.YTVideo;
 }
@@ -24,7 +25,7 @@ export const ListItem: React.FC<ListItemProps> = ({ items }) => {
                 <div className={styles.separator}></div>
                 <div className={styles.videoChannel}>
                     <h4 className={styles.channel}>
-                        {items.snippet.videoOwnerChannelTitle}
+                        {items.snippet.videoOwnerChannelTitle } 
                     </h4>
                     <div className={styles.date}>
                     <p >{items.snippet.publishedAt.toString().substring(0, 10)}</p>
