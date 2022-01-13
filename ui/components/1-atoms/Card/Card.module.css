@@ -27,7 +27,8 @@
 .Card___project_card {
     overflow: hidden;
     background-size: cover;
-    margin: auto;
+    margin-left: 5px;
+    margin-right: 5px;
     margin-bottom: 25px;
 }
 
