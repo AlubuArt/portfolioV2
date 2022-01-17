@@ -7,10 +7,9 @@
 - [x] Hero page
 - [x] Projects page
 - [x] Dynamic project page
-- [ ] Experiences page
 - [ ] Education page
 - [x] Contact
-- [ ] About page
+- [X] About page
 
 
 ## about the website
@@ -46,10 +45,10 @@ The project uses to some extend third party libraries, but the overall aim is to
 
 
 ## backlog
-- [ ] Gallery styling
+- [X] Gallery styling
 - [ ] Add loading spinner 
 - [x] Responsive design for mobile and tablet
 - [ ] Darkmode/lightmode toggle
 - [ ] Comment section on projects pages
-- [ ] Youtube feed
+- [X] Youtube feed
 - [ ] Analytics
