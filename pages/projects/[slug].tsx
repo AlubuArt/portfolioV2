@@ -57,7 +57,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
     paths: projects.map(({ slug }: { slug: string }) => ({
       params: { slug },
     })),
-    fallback: false,
+    fallback: 'blocking',
   };
 };
 
