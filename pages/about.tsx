@@ -66,7 +66,7 @@ export const getStaticProps: GetStaticProps = async () => {
     return {
         props: {
             text: text.aboutMe,
-            YTList: YTList,
+            YTList: YTList.reverse(),
             experiences: experiences,
         },
         revalidate: 60,

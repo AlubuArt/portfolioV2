@@ -1,5 +1,5 @@
 import React from "react";
-import type { GetStaticProps, NextPage } from "next";
+import type { GetServerSideProps, GetStaticProps, NextPage } from "next";
 import { PageHeader } from "../ui/components/3-organisms/PageHeader";
 import { CardListLayout } from "../ui/components/4-Layouts/ListLayout/CardListLayout";
 import { getAllProjects } from "../lib/graphcms";
@@ -23,11 +23,10 @@ const Projects: NextPage<ProjectsProps> = ({ projects }) => {
     );
 };
 
-export const getStaticProps: GetStaticProps = async () => {
+export const getServerSideProps: GetServerSideProps = async () => {
     const projects = await getAllProjects();
     return {
-        props: { projects },
-        revalidate: 60,
+        props: { projects }
     };
 };
 

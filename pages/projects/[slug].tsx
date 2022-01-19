@@ -35,8 +35,8 @@ const ProjectPage: NextPage<ProjectPageProps> = ({ project }) => {
         ></ProjectDescription>
 
       <ProjectDescription
-        title="tech used"
-        description="in this project the following technologies was used"
+        title="tech, tools and the fun stuff"
+        description="In this project the following technologies and tools was used"
         list={project.keys} //TODO: make it possible to add more than three keys
         ></ProjectDescription>
       </Container>
