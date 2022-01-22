@@ -3,6 +3,7 @@ import  {useEffect} from 'react'
 import { PageLayout } from "../ui/components/4-Layouts/PageLayout/PageLayout";
 import TagManager from 'react-gtm-module';
 import "../styles/global.css";
+import Footer from "../ui/components/3-organisms/Footer/Footer";
 
 
 
@@ -14,9 +15,14 @@ function MyApp({ Component, pageProps }: AppProps) {
   }, [])
   
   return (
+    <>
     <PageLayout>
       <Component {...pageProps} />
     </PageLayout>
+    <Footer />
+    </>
+  
   );
 }
+
 export default MyApp;

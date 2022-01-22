@@ -69,4 +69,6 @@ declare namespace Models {
         jobTitle: string;
         link: string;
     }
+
+    
 }

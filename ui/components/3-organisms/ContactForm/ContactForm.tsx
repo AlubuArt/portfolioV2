@@ -78,7 +78,7 @@ export const ContactForm: React.FC = () => {
   };
 
   return (
-    <>
+    <div className={styles.PageWrapper}>
       
         <PageHeader
           title={"get in contact"}
@@ -152,6 +152,6 @@ export const ContactForm: React.FC = () => {
           "not working"
         )}
   
-    </>
+    </div>
   );
 };
