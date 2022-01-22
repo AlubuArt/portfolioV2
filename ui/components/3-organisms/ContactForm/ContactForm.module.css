@@ -29,7 +29,7 @@
 }
 @media screen and (min-width: 1200px) {
     .PageWrapper {
-       height: calc(100vh - 10vh - 100px);
+       height: calc(100vh - 10vh - 120px);
     }
 
     .Paragraph {
