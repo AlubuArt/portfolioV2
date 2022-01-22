@@ -1,4 +1,5 @@
 .PageWrapper {
+    height: calc(100vh - 10vh - 102px);
 }
 .UserInputs {
     height: 30px;
@@ -28,7 +29,7 @@
 }
 @media screen and (min-width: 1200px) {
     .PageWrapper {
-        min-height: 700px;
+       height: calc(100vh - 10vh - 100px);
     }
 
     .Paragraph {
