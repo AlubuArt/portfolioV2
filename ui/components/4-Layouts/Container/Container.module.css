@@ -31,6 +31,15 @@
     padding-top: 5vh; 
 }
 
+.Container___CardList {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: stretch;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
 @media screen and (min-width: 1200px) {
     .Container {
         width: 1000px;
@@ -45,11 +54,6 @@
     }
 
     .Container___CardList {
-        display: flex;
-        flex-wrap: wrap;
-        align-content: stretch;
-        flex-direction: row;
-        justify-content: space-between;
         width: 75%;
     }
 

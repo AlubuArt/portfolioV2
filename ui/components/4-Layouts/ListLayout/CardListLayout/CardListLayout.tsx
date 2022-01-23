@@ -17,14 +17,15 @@ export const CardListLayout: React.FC<CardListLayoutProps> = ({ projects }) => {
         <Container type={"CardList"}>
             {projects.map((item, index: number) => {
                 return (
-                    <div key={index}>
+                    
                         <ProjectCard
+                            key={index}
                             title={item.projectTitle}
                             description={item.description}
                             onClick={() => handleClick(item.slug)}
                             image={item.pictureUrl}
                         />
-                    </div>
+                    
                 );
             })}
         </Container>

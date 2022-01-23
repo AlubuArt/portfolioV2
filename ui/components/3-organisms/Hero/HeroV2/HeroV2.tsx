@@ -1,7 +1,7 @@
 import React from "react";
 import { Button } from "../../../1-atoms/Button";
-import { Container } from "../../../4-Layouts/Container";
 import styles from "./HeroV2.module.css";
+import { useRouter } from "next/router";
 
 export interface HeroProps {
     heroTitle: string;
@@ -14,7 +14,11 @@ export const HeroV2: React.FC<HeroProps> = ({
     heroSubtitle,
     onClick,
 }) => {
-    const handleClick = () => {};
+
+    const router = useRouter();
+    const handleClick = (page: string) => {
+        router.push(page)
+    };
 
     return (
         <div className={styles.PageWrapper}>
@@ -34,13 +38,13 @@ export const HeroV2: React.FC<HeroProps> = ({
                     <div className={styles.hero_buttons}>
                         <Button
                             style={"CTA___primary"}
-                            onClick={() => handleClick()}
+                            onClick={() => handleClick("/projects")}
                         >
-                            See projects
+                            see projects
                         </Button>
                         <Button
                             style={"CTA___secondary"}
-                            onClick={() => handleClick()}
+                            onClick={() => handleClick("/contact")}
                         >
                             contact me
                         </Button>
