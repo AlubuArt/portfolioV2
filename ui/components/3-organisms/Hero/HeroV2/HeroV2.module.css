@@ -1,0 +1,88 @@
+.PageWrapper {
+    height: calc(100vh - 10vh - 20px);
+}
+
+.hero_content {
+    padding-left: 15px;
+    padding-right: 20px;
+    color: white;
+    padding-top: 5vh;
+}
+
+.hero_title {
+    font-size: 32px;
+    font-weight: 900;
+    line-height: 35px;
+    margin-bottom: 30px;
+    font-family: "FoundersGrotesk";
+}
+
+.hero_subtitle {
+    font-size: 18px;
+    margin-bottom: 25px;
+    color: #d0d0d0;
+    line-height: 27px;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+}
+
+.hero_splash {
+    font-size: 12px;
+    width: 40vw;
+    transform: rotate(0.97turn);
+    margin-top: 15px;
+    margin-left: auto;
+    margin-right: 0;
+}
+
+.hero_splash_p {
+    margin-left: auto;
+    margin-right: 0;
+}
+
+.blue {
+    color: rgb(28, 156, 173);
+}
+
+@media screen and (min-width: 1200px) {
+    .PageWrapper {
+        width: 50%;
+    }
+
+    .hero_content {
+        color: white;
+        padding-top: 1vh;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    .hero_title {
+        font-size: 72px;
+        font-weight: 900;
+        line-height: 70px;
+        margin-bottom: 30px;
+    }
+
+    .hero_subtitle {
+        font-size: 20px;
+        line-height: 25px;
+        width: 70%;
+        margin-bottom: 10px;
+    }
+
+    .hero_splash {
+        font-size: 14px;
+        width: 200px;
+        transform: rotate(0.97turn);
+        margin-top: 15px;
+        margin-left: auto;
+    }
+    
+    .hero_splash_p {
+        margin-left: auto;
+        margin-right: 0;
+    }
+
+    .hero_cta {
+        width: 50%;
+    }
+}

@@ -2,6 +2,8 @@ import React from "react";
 import type { NextPage, GetStaticProps } from "next";
 import { Hero } from "../ui/components/3-organisms/Hero";
 import { getHeroContent } from "../lib/graphcms";
+import HeroV2 from "../ui/components/3-organisms/Hero/HeroV2/HeroV2";
+import { Container } from "../ui/components/4-Layouts/Container";
 
 
 
@@ -19,12 +21,17 @@ export interface HomePageProps {
 
 const Home: NextPage<HomePageProps> = ({ content }) => {
     return (
-        <Hero
+
+        <Container type={"hero"}>
+            <HeroV2 heroTitle={""} heroSubtitle={""} onClick={""} />
+        </Container>
+        
+       /*  <Hero
             heroImage={content.heroes[0].heroImage.url}
             heroTitle={content.heroes[0].header}
             heroSubtitle={content.heroes[0].subheader.text}
             onClick={"/projects"}
-        />
+        /> */
     );
 };
 

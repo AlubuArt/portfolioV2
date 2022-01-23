@@ -1,3 +1,17 @@
+@font-face {
+  font-family: "FoundersGrotesk";
+  src: url("../public/fonts/FoundersGrotesk/TestFoundersGrotesk-Bold.otf");
+  font-style: normal;
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "FoundersGrotesk";
+  src: url("../public/fonts/FoundersGrotesk/TestFoundersGrotesk-Bold.otf");
+  font-style: normal;
+  font-weight: regular;
+}
+
 body {
   margin: 0px;
   font-family: "Avenir";
