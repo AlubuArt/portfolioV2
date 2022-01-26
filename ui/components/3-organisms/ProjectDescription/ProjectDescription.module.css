@@ -6,6 +6,11 @@
     letter-spacing: 0.07rem;
 }
 
+.projectWrapper {
+    margin-bottom: 7vh;
+    margin-top: 7vh;
+}
+
 @media screen and (min-width: 1200px) {
     .ProjectDescription_title {
         margin-bottom: 10px;

@@ -1,6 +1,6 @@
 .Button {
     border: 0;
-    font-family: Avenir;
+    font-family: "Avenir";
     font-size: 12px;
     line-height: 19px;
     font-weight: 500;
@@ -29,10 +29,10 @@
 }
 
 .Button___CTA___primary {
-    
-    border: 1px solid rgb(28, 156, 173);
-    color: rgb(28, 156, 173);
-    border-radius: 0px;
+    background-color: transparent;
+    border: 1px solid rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
+    border-radius: 2px;
     box-sizing: border-box;
 }
 
@@ -45,48 +45,10 @@
 
 @media screen and (min-width: 1200px) {
     .Button {
-        border: 0;
-        font-family: "Avenir";
         font-size: 16px;
         line-height: 19px;
         font-weight: 700;
         padding: 0.9rem 1.7rem;
-        margin-right: 1rem;
-        margin-top: 1rem;
-        border-radius: 1.5rem;
-        box-shadow: 3px 6px 6px rgba(0, 0, 0, 0.536);
-        cursor: pointer;
-    }
-
-    .Button___primary {
-        background-color: rgb(28, 156, 173);
-        color: #ffffff;
-        margin-right: 0px;
-    }
-    
-    .Button___secondary {
-        background-color: rgb(28, 156, 173);
-        color: #ffffff;
-    }
-    
-    .Button___white {
-        background-color: none;
-        color: rgb(28, 156, 173);
-    }
-    
-    .Button___CTA___primary {
-        background-color: transparent;
-        border: 1px solid rgb(255, 255, 255);
-        color: rgb(255, 255, 255);
-        border-radius: 0px;
-        box-sizing: border-box;
-    }
-    
-    .Button___CTA___secondary {
-        background: rgb(28, 156, 173);
-        color: #ffffff;
-        border-radius: 2px;
-        border: 1px solid rgb(28, 156, 173);
     }
 
 }

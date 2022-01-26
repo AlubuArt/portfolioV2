@@ -2,16 +2,6 @@
     padding-top: 0px;
 }
 
-.Container___projects {
-}
-
-.Container___project {
-}
-
-.Container____experienceCard {
-
-}
-
 .Container___hero {
     width: 100%;
     margin-top: 15vh;
@@ -47,12 +37,6 @@
         margin-right: auto;
     }
 
-    .Container___projects {
-    }
-
-    .Container___project {
-    }
-
     .Container___CardList {
         width: 75%;
     }
@@ -66,9 +50,6 @@
         margin-top: 20vh;
     }
 
-    .Container___about {
-
-    }
 
     .Container___textBox {
         width: 70%;
@@ -80,9 +61,7 @@
         flex-wrap: wrap;
         align-content: stretch;
         flex-direction: row;
-        width: 100%;
         justify-content: space-between;
         width: 80%;
-
     }
 }

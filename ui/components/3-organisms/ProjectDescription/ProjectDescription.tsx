@@ -14,7 +14,7 @@ export const ProjectDescription: React.FC<ProjectDescriptionProps> = ({
     description,
     list,
 }) => (
-    <>
+    <div className={styles.projectWrapper}>
         <Heading type="h2" tag="h2" className={styles.ProjectDescription_title}>
             {title}
         </Heading>
@@ -37,5 +37,5 @@ export const ProjectDescription: React.FC<ProjectDescriptionProps> = ({
                 <></>
             )}
         </ul>
-    </>
+    </div>
 );
