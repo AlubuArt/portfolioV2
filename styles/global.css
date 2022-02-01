@@ -12,9 +12,14 @@
   font-weight: regular;
 }
 
+@font-face {
+  font-family: "Montserrat";
+  src: url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300&display=swap');
+}
+
 body {
   margin: 0px;
-  font-family: "Avenir";
+  font-family: "Montserrat", sans-serif;
   max-width: 100%;
   background-color: #121213;
   height: 100%;
