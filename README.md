@@ -45,10 +45,17 @@ The project uses to some extend third party libraries, but the overall aim is to
 
 
 ## backlog
-- [X] Gallery styling
+- [ ] Changelog from Github AP (https://docs.github.com/en/rest/reference/commits)
+- [ ] Youtube feed v2
 - [ ] Loading spinner 
-- [x] Responsive design for mobile and tablet
 - [ ] Darkmode/lightmode toggle
 - [ ] Comment section on project pages
+- [ ] Advanced Analytics
+
+
+
+## backlog items DONE
+- [X] Gallery styling
+- [x] Responsive design for mobile and tablet
 - [X] Youtube feed
 - [X] Analytics
