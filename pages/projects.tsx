@@ -15,7 +15,7 @@ const Projects: NextPage<ProjectsProps> = ({ projects }) => {
             <PageHeader
                 title={"project portfolio"}
                 subtitle={
-                    "my lastest work with ReactJS, NextJS, Firebase, NodeJS, GraphQL, UX/UI design, Figma"
+                    "my lastest work with ReactJS, NextJS, Firebase, NodeJS, GraphQL, Figma"
                 }
             />
             <CardListLayout projects={projects} />
@@ -26,7 +26,7 @@ const Projects: NextPage<ProjectsProps> = ({ projects }) => {
 export const getServerSideProps: GetServerSideProps = async () => {
     const projects = await getAllProjects();
     return {
-        props: { projects }
+        props: { projects },
     };
 };
 
