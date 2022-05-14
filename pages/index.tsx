@@ -19,9 +19,11 @@ export interface HomePageProps {
 
 const Home: NextPage<HomePageProps> = ({ content }) => {
     return (
-        <Container type={"hero"}>
-            <HeroV2 heroTitle={""} heroSubtitle={""} onClick={""} />
-        </Container>
+        <>
+            <Container type={"hero"}>
+                <HeroV2 heroTitle={""} heroSubtitle={""} onClick={""} />
+            </Container>
+        </>
     );
 };
 
