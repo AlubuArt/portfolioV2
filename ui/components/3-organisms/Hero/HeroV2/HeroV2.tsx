@@ -1,7 +1,9 @@
 import React from "react";
+import Image from "next/image";
 import { Button } from "../../../1-atoms/Button";
 import styles from "./HeroV2.module.css";
 import { useRouter } from "next/router";
+import SnippetImage from '../../../../../public/Images/carbon.svg'
 
 export interface HeroProps {
     heroTitle: string;
@@ -55,6 +57,9 @@ export const HeroV2: React.FC<HeroProps> = ({
                         </p>
                     </div>
                 </div>
+            </div>
+            <div className={styles.hero_image}>
+                <Image className={""} src={SnippetImage} height={"1414"} width={"1852"} alt={"edef"}/> 
             </div>
         </div>
     );

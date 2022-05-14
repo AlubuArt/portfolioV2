@@ -52,6 +52,9 @@ The project uses to some extend third party libraries, but the overall aim is to
 - [ ] Comment section on project pages
 - [ ] Advanced Analytics
 
+## Bugs
+- [ ] Fix bug where project images doesnt show, when new project is added in CMS. (Probaly something with getServerSideProps)
+
 
 
 ## backlog items DONE

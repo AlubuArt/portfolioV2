@@ -1,5 +1,6 @@
 .PageWrapper {
     height: calc(100vh - 10vh - 20px);
+    display: flex;
 }
 
 .hero_content {
@@ -46,7 +47,7 @@
 
 @media screen and (min-width: 1200px) {
     .PageWrapper {
-        width: 50%;
+        width: 100%;
     }
 
     .hero_content {
