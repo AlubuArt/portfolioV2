@@ -22,6 +22,9 @@ export interface GalleryProps {
 }
 
 export const Gallery: React.FC<GalleryProps> = ({ className, slides }) => {
+
+
+  console.log(slides[0].url)
   return (
     
       <div className={styles.Gallery}>
