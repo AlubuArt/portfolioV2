@@ -22,6 +22,7 @@ export const PageLayout: React.FC<PageLayoutProps> = ({ children }) => {
         <div className={styles.PageContent}>
             <Header menuItems={menuItems} />
                {children} 
+            <Footer />
          
         </div>
         
