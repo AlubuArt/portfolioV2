@@ -48,6 +48,7 @@
 @media screen and (min-width: 1200px) {
     .PageWrapper {
         width: 100%;
+        height: calc(100vh - 15vh - 110px);
     }
 
     .hero_content {

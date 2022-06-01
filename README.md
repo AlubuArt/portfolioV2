@@ -53,7 +53,7 @@ The project uses to some extend third party libraries, but the overall aim is to
 - [ ] Advanced Analytics
 
 ## Bugs
-- [ ] Fix bug where project images doesnt show, when new project is added in CMS. (Probaly something with getServerSideProps)
+- [X] Fix bug where project images doesnt show, when new project is added in CMS. (Probaly something with getServerSideProps)
 
 
 

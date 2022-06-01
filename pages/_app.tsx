@@ -19,7 +19,6 @@ function MyApp({ Component, pageProps }: AppProps) {
     <PageLayout>
       <Component {...pageProps} />
     </PageLayout>
-    <Footer />
     </>
   
   );
