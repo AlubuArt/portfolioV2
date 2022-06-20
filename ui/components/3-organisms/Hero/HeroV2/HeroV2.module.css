@@ -1,28 +1,29 @@
 .PageWrapper {
-    height: calc(100vh - 10vh - 20px);
+
     display: flex;
+    flex-direction: column;
 }
 
 .hero_content {
     padding-left: 15px;
     padding-right: 20px;
     color: white;
-    padding-top: 5vh;
+
 }
 
 .hero_title {
     font-size: 32px;
     font-weight: 900;
     line-height: 35px;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
     font-family: "FoundersGrotesk";
 }
 
 .hero_subtitle {
-    font-size: 18px;
-    margin-bottom: 25px;
+    font-size: 16px;
+    margin-bottom: 10px;
     color: #d0d0d0;
-    line-height: 27px;
+    line-height: 1.3rem;
     font-weight: 400;
     letter-spacing: 0.02em;
 }
@@ -34,6 +35,7 @@
     margin-top: 15px;
     margin-left: auto;
     margin-right: 0;
+    display: none;
 }
 
 .hero_splash_p {
@@ -49,6 +51,7 @@
     .PageWrapper {
         width: 100%;
         height: calc(100vh - 15vh - 110px);
+        flex-direction: row;
     }
 
     .hero_content {
@@ -77,6 +80,7 @@
         transform: rotate(0.97turn);
         margin-top: 15px;
         margin-left: auto;
+        display: flex;
     }
     
     .hero_splash_p {
