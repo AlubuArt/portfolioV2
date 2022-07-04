@@ -1,4 +1,5 @@
 import React from "react";
+import Head from 'next/head';
 import type { GetStaticPaths, GetStaticProps, NextPage } from "next";
 import { PageHeader } from "../../ui/components/3-organisms/PageHeader";
 import { ProjectDescription } from "../../ui/components/3-organisms/ProjectDescription";
@@ -18,6 +19,11 @@ const ProjectPage: NextPage<ProjectPageProps> = ({ project }) => {
 
   
   return (
+    <>
+    <Head>
+      <meta name="description" content={project.description}/> 
+      <title>JC - {project.projectTitle}</title> 
+    </Head>
     <Container type={'project'} spacing={"lg"}>
       <PageHeader
         title={project.projectTitle}
@@ -40,6 +46,7 @@ const ProjectPage: NextPage<ProjectPageProps> = ({ project }) => {
         list={project.keys} //TODO: make it possible to add more than three keys
         ></ProjectDescription>
       </Container>
+      </>
   );
 };
 
