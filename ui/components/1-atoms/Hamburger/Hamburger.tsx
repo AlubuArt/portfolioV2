@@ -2,9 +2,6 @@ import React from 'react';
 import { slide as Menu } from 'react-burger-menu';
 import Link from 'next/link';
 import { Heading } from '../Heading';
-import stylesheet from './Hamburger.module.css';
-
-
 //TODO: move this to css module
 var styles = {
   bmBurgerButton: {
