@@ -1,5 +1,4 @@
 import React from 'react';
-import Head from 'next/head';
 import { Header } from '../../2-molecules/Header';
 import Footer from '../../3-organisms/Footer/Footer';
 import styles from './PageLayout.module.css';
@@ -18,18 +17,12 @@ export const PageLayout: React.FC<PageLayoutProps> = ({ children }) => {
   ];
 
   return (
-  
-    
     <div className={styles.PageContent}>
       <Header menuItems={menuItems} />
-      <div className={styles.body}>
-
-      {children}
-      </div>
+      <div className={styles.body}>{children}</div>
       <div className={styles.footer}>
         <Footer />
       </div>
     </div>
-
   );
 };
