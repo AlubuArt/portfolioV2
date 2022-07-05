@@ -42,14 +42,13 @@ interface SeoProps {
   title: string;
   description: string;
   image: string;
-  social: SocialTags;
   createdAt: string;
   updatedAt: string;
   schemaType: string;
 }
 
 export const Seo: React.FC<SeoProps> = (props) => {
-  const { title, description, image, social, schemaType, url } = props;
+  const { title, description, image, schemaType, url } = props;
 
   return (
     <Head>
