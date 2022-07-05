@@ -26,15 +26,13 @@ export const HeroV2: React.FC<HeroProps> = ({
         <div className={styles.PageWrapper}>
             <div className={styles.hero_content}>
                 <div className={styles.hero_title}>
-                    Hi! My name is Jacob 👋 - I{" "}
+                    <span>Hi! My name is Jacob 👋 - I{" "}</span>
                     <span className={styles.blue}>design</span> and{" "}
                     <span className={styles.blue}>develop </span> digital
                     products
                 </div>
                 <div className={styles.hero_subtitle}>
-                    This is my personal website - allways under construction, so
-                    be sure to wear a hard hat. Lets take a look at all the fun
-                    stuff, that I enjoy building.
+                    {heroSubtitle}
                 </div>
                 <div className={styles.hero_cta}>
                     <div className={styles.hero_buttons}>

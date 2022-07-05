@@ -45,6 +45,7 @@ The project uses to some extend third party libraries, but the overall aim is to
 
 
 ## backlog
+- [ ] Projects page needs o be updated for SEO (graphCMS)
 - [ ] Changelog from Github AP (https://docs.github.com/en/rest/reference/commits)
 - [ ] Youtube feed v2
 - [ ] Loading spinner 
