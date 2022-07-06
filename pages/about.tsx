@@ -1,4 +1,4 @@
-import { GetServerSideProps, GetStaticProps, NextPage } from 'next';
+import { GetServerSideProps, NextPage } from 'next';
 import React from 'react';
 import { getYouTubePlaylist } from '../lib/youtube';
 import { Heading } from '../ui/components/1-atoms/Heading';
@@ -14,18 +14,17 @@ interface AboutPageProps {
   YTList: [];
   experiences: [];
   url: string;
-  pageTitle: string;
-  pageDescription: string;
+  metaData: Models.Meta;
 }
 
-const AboutPage: NextPage<AboutPageProps> = ({ text, YTList, experiences, url, pageTitle, pageDescription }) => {
+const AboutPage: NextPage<AboutPageProps> = ({ text, YTList, experiences, metaData, url }) => {
   return (
     <>
       <Seo
         openGraphType={'website'}
         url={url}
-        title={pageTitle}
-        description={pageDescription}
+        title={metaData.pageTitle}
+        description={metaData.pageDescription}
         image={''}
         createdAt={''}
         updatedAt={''}
@@ -73,11 +72,13 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
   return {
     props: {
       text: text.aboutMe,
-      pageTitle: text.aboutMe.meta.pageTitle,
-      pageDescription: text.aboutMe.meta.pageDescription,
       YTList: YTList.reverse(),
       experiences: experiences,
       url: context?.req?.headers?.host,
+      metaData: {
+        pageTitle: text.aboutMe.meta.pageTitle,
+        pageDescription: text.aboutMe.meta.pageDescription,
+      },
     },
   };
 };
