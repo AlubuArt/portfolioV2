@@ -7,7 +7,6 @@
 - [x] Hero page
 - [x] Projects page
 - [x] Dynamic project page
-- [ ] Education page
 - [x] Contact
 - [X] About page
 
