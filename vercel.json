@@ -1,9 +1,8 @@
 
 
-{
+{"comment_1": "should be fixed, so only the main production site is index, not the preview URL's",
   "headers": [
     {
-      "comment_1": "should be fixed, so only the main production site is index, not the preview URL's",
       "source": "/(.*)",
       "headers": [
         {
