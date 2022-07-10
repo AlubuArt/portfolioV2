@@ -51,6 +51,7 @@ The project uses to some extend third party libraries, but the overall aim is to
 - [ ] Darkmode/lightmode toggle
 - [ ] Comment section on project pages
 - [ ] Advanced Analytics
+- [ ] Fix indexing so preview branches wont be indexed (vercel.json)
 
 ## Bugs
 - [X] Fix bug where project images doesnt show, when new project is added in CMS. (Probaly something with getServerSideProps)
