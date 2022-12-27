@@ -17,8 +17,8 @@ declare namespace Models {
   }
 
   export interface MenuItem {
-    path: string;
-    text: string;
+    pageUrl: string;
+    pageName: string;
   }
 
   export interface PlayListData {
@@ -71,7 +71,9 @@ declare namespace Models {
   }
 
   export interface Meta {
-    pageTitle: string;
-    pageDescription: string;
+    metaTitle: string;
+    metaDescription: string;
+    metaImage: string
+
   }
 }

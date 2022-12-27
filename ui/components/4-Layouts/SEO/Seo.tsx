@@ -14,11 +14,11 @@ type SocialTags = {
 
 const socialTags = (props: SocialTags) => {
   const metaTags = [
-    { tagName: 'og:title', content: props.title },
-    { tagName: 'og:type', content: props.openGraphType },
-    { tagName: 'og:url', content: props.url },
-    { tagName: 'og:image', content: props.image },
-    { tagName: 'og:description', content: props.description },
+    { tagName: 'og:title', tagContent: `${props.title} | JCVISUELDESIGN`},
+    { tagName: 'og:type', tagContent: props.openGraphType },
+    { tagName: 'og:url', tagContent: props.url },
+    { tagName: 'og:image', tagContent: props.image },
+    { tagName: 'og:description', tagContent: props.description },
     {
       tagName: 'og:site_name',
       tagContent: settings && settings.meta && settings.meta.title,
@@ -52,7 +52,7 @@ export const Seo: React.FC<SeoProps> = (props) => {
 
   return (
     <Head>
-      <title>{title} | App </title>
+      <title>{title}</title>
       <meta name="description" content={description} />
       <meta itemProp="name" content={title} />
       <meta itemProp="description" content={description} />

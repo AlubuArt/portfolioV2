@@ -3,25 +3,29 @@ import  {useEffect} from 'react'
 import { PageLayout } from "../ui/components/4-Layouts/PageLayout/PageLayout";
 import TagManager from 'react-gtm-module';
 import "../styles/global.css";
-import Footer from "../ui/components/3-organisms/Footer/Footer";
+import { getAllPages } from "../lib/graphcms";
 
 
 
 function MyApp({ Component, pageProps }: AppProps) {
+  
 
   useEffect(() => {
     
     TagManager.initialize({gtmId: 'GTM-TG5VCVT'})
   }, [])
+
+  
   
   return (
     <>
-    <PageLayout>
+    <PageLayout menuItems={pageProps.pages}>
       <Component {...pageProps} />
     </PageLayout>
     </>
   
   );
 }
+
 
 export default MyApp;

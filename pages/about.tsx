@@ -23,9 +23,9 @@ const AboutPage: NextPage<AboutPageProps> = ({ text, YTList, experiences, metaDa
       <Seo
         openGraphType={'website'}
         url={url}
-        title={metaData.pageTitle}
-        description={metaData.pageDescription}
-        image={''}
+        title={metaData.metaTitle}
+        description={metaData.metaDescription}
+        image={metaData.metaImage}
         createdAt={''}
         updatedAt={''}
         schemaType={'acticle'}
@@ -76,8 +76,10 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
       experiences: experiences,
       url: context?.req?.headers?.host,
       metaData: {
-        pageTitle: text.aboutMe.meta.pageTitle,
-        pageDescription: text.aboutMe.meta.pageDescription,
+        metaTitle: text.aboutMe.meta.metaTitle,
+        metaDescription: text.aboutMe.meta.metaDescription,
+        metaImage: text.aboutMe.meta.metaImage.url,
+
       },
     },
   };

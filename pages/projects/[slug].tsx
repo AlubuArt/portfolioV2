@@ -1,12 +1,12 @@
-import React from "react";
+import React from 'react';
 import Head from 'next/head';
-import type { GetStaticPaths, GetStaticProps, NextPage } from "next";
-import { PageHeader } from "../../ui/components/3-organisms/PageHeader";
-import { ProjectDescription } from "../../ui/components/3-organisms/ProjectDescription";
-import { Gallery } from "../../ui/components/3-organisms/Gallery";
-import { getAllProjectsWithSlug, getProject } from "../../lib/graphcms";
-import { Container } from "../../ui/components/4-Layouts/Container";
-
+import type { GetStaticPaths, GetStaticProps, NextPage } from 'next';
+import { PageHeader } from '../../ui/components/3-organisms/PageHeader';
+import { ProjectDescription } from '../../ui/components/3-organisms/ProjectDescription';
+import { Gallery } from '../../ui/components/3-organisms/Gallery';
+import { getAllProjectsWithSlug, getProject } from '../../lib/graphcms';
+import { Container } from '../../ui/components/4-Layouts/Container';
+import { Seo } from '../../ui/components/4-Layouts/SEO/Seo';
 
 export interface ProjectPageProps {
   project: Models.Project;
@@ -17,36 +17,42 @@ const ProjectPage: NextPage<ProjectPageProps> = ({ project }) => {
     document.location.href = url;
   };
 
-  
   return (
     <>
-    <Head>
-      <meta name="description" content={project.description}/> 
-      <title>JC - {project.projectTitle}</title> 
-    </Head>
-    <Container type={'project'} spacing={"lg"}>
-      <PageHeader
-        title={project.projectTitle}
-        subtitle={project.description}
-        type={"ProjectHeader"}
-        githubLink={() => handleExternalRouting(project.seGithubURL)}
-        liveVersionLink={() => handleExternalRouting(project.seLiveUrl)}
-        ></PageHeader>
-      <Gallery slides={project.projectPictures}></Gallery>
+      <Seo
+        openGraphType={''}
+        url={''}
+        title={''}
+        description={''}
+        image={''}
+        createdAt={''}
+        updatedAt={''}
+        schemaType={''}
+      />
 
-      <ProjectDescription
-        title="about this project"
-        description={project.about.html}
-        list={[]} //TODO: should be made optional
+      <Container type={'project'} spacing={'lg'}>
+        <PageHeader
+          title={project.projectTitle}
+          subtitle={project.description}
+          type={'ProjectHeader'}
+          githubLink={() => handleExternalRouting(project.seGithubURL)}
+          liveVersionLink={() => handleExternalRouting(project.seLiveUrl)}
+        ></PageHeader>
+        <Gallery slides={project.projectPictures}></Gallery>
+
+        <ProjectDescription
+          title="about this project"
+          description={project.about.html}
+          list={[]} //TODO: should be made optional
         ></ProjectDescription>
 
-      <ProjectDescription
-        title="tech, tools and the fun stuff"
-        description="In this project the following technologies and tools was used"
-        list={project.keys} //TODO: make it possible to add more than three keys
+        <ProjectDescription
+          title="tech, tools and the fun stuff"
+          description="In this project the following technologies and tools was used"
+          list={project.keys} //TODO: make it possible to add more than three keys
         ></ProjectDescription>
       </Container>
-      </>
+    </>
   );
 };
 
@@ -55,7 +61,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 
   return {
     props: { project: data.project },
-    revalidate: 60 // seconds
+    revalidate: 60, // seconds
   };
 };
 

@@ -6,7 +6,12 @@ export default {
     "extends": [
         "eslint:recommended",
         "plugin:react/recommended",
-        "plugin:@typescript-eslint/recommended"
+        "plugin:@typescript-eslint/recommended",
+        "plugin:react/jsx-runtime",
+        "next/core-web-vitals",
+        "plugin:json/recommended",
+        "plugin:prettier/recommended",
+        "next"
     ],
     "parser": "@typescript-eslint/parser",
     "parserOptions": {
@@ -18,8 +23,10 @@ export default {
     },
     "plugins": [
         "react",
-        "@typescript-eslint"
+        "@typescript-eslint",
+        "prettier"
     ],
     "rules": {
+        "react/prop-types": 0
     }
 }

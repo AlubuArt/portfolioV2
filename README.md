@@ -44,17 +44,20 @@ The project uses to some extend third party libraries, but the overall aim is to
 
 
 ## backlog
-- [ ] Projects page needs o be updated for SEO (graphCMS)
-- [ ] Changelog from Github AP (https://docs.github.com/en/rest/reference/commits)
-- [ ] Youtube feed v2
+- [ ] Projects page needs to be updated for SEO (graphCMS)
+- [ ] Refactor to version 2 (all pagesm and content needs to come from cms)
+- [ ] Changelog from Vercel Deployments API (https://vercel.com/docs/rest-api#introduction/api-basics)
+- [ ] Youtube feed v2 (re-design)
 - [ ] Loading spinner 
 - [ ] Darkmode/lightmode toggle
 - [ ] Comment section on project pages
 - [ ] Advanced Analytics
 - [ ] Fix indexing so preview branches wont be indexed (vercel.json)
+- [ ] Generate sitemap.xml 
 
 ## Bugs
 - [X] Fix bug where project images doesnt show, when new project is added in CMS. (Probaly something with getServerSideProps)
+- [ ] When projects page loades, the projects are in reversed order.
 
 
 

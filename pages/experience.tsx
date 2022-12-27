@@ -6,10 +6,7 @@ import UnderConstruction from "../ui/components/3-organisms/UnderConstruction/Un
 const ExperiencePage: NextPage = ({}) => {
 
      return (
-      
-        <UnderConstruction pageTitle={"experience"} />
-      
-        
+        <UnderConstruction pageTitle={"experience"} />  
      )
 }
 

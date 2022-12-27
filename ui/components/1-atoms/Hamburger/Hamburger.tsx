@@ -40,40 +40,48 @@ var styles = {
   },
   bmItem: {
     display: 'inline-block',
-    paddingBottom: '3rem'
+    paddingBottom: '3rem',
   },
   bmOverlay: {
     background: 'rgba(0, 0, 0, 0.3)',
   },
   heading: {
     paddingBottom: '1rem',
-    cursor: 'pointer'
-  }
-  
+    cursor: 'pointer',
+  },
 };
 
 export interface HamburgerProps {
-  menuItems: Array<Models.MenuItem>;
+  menuItems: Array<Models.MenuItem> | undefined;
 }
 
 export const Hamburger: React.FC<HamburgerProps> = ({ menuItems }) => {
   return (
     <Menu right styles={styles}>
-      {menuItems.map((item, index: number) => {
-        return (
-          <Link key={index} href={item.path} passHref>
-            {/* this feels hacky! Seems like a bug. 
+      {menuItems ? (
+        menuItems.map((item, index: number) => {
+          
+          if (item.pageUrl === 'frontpage') {
+            item.pageUrl = '/';
+            console.log(item.pageUrl)
+          }
+          return (
+            <Link key={index} href={`${item.pageUrl}`} replace passHref>
+              {/* this feels hacky! Seems like a bug. 
             if future me would like to fix it some day, use a link wrapper: https://github.com/vercel/next.js/issues/7915 
             and https://nextjs.org/docs/api-reference/next/link#if-the-child-is-a-function-component
             could be worth fixing for better SEO*/}
-            <div style={styles.heading}>
-              <Heading tag={'h2'} type={'h2'}>
-                {item.text}
-              </Heading>
-            </div>
-          </Link>
-        );
-      })}
+              <div style={styles.heading}>
+                <Heading tag={'a'} type={'h2'}>
+                  {item.pageName}
+                </Heading>
+              </div>
+            </Link>
+          );
+        })
+      ) : (
+        <></>
+      )}
     </Menu>
   );
 };
