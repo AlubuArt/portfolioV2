@@ -15,11 +15,11 @@ function MyApp({ Component, pageProps }: AppProps) {
     TagManager.initialize({gtmId: 'GTM-TG5VCVT'})
   }, [])
 
-  
+  console.log(pageProps.pages)
   
   return (
     <>
-    <PageLayout menuItems={pageProps.pages}>
+    <PageLayout>
       <Component {...pageProps} />
     </PageLayout>
     </>

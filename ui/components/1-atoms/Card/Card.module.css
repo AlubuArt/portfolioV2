@@ -1,39 +1,43 @@
 .Card {
-    border-radius: 2px;
-    border: 1px solid rgba(55, 65, 70, 0.94);
-    box-shadow: 5px 5px 3px 2px #181818;
-    cursor: pointer;
+  border-radius: 2px;
+  border: 1px solid rgba(55, 65, 70, 0.94);
+  box-shadow: 5px 5px 3px 2px #181818;
+  cursor: pointer;
 }
 
 .Card___sm {
-    width: 345px;
-    height: 200px;
+  width:410px;
+  height: 210px;
 }
 
 .Card_lg {
-    width: 876px;
-    height: 287px;
+  width: 876px;
+  height: 287px;
 }
 .Card___basic {
-    background: linear-gradient(
-        261.91deg,
-        rgba(38, 124, 204, 0.17) 1.29%,
-        rgba(2, 164, 255, 0) 100%
-    );
-    mix-blend-mode: normal;
-    opacity: 0.8;
+  background: linear-gradient(261.91deg, rgba(38, 124, 204, 0.17) 1.29%, rgba(2, 164, 255, 0) 100%);
+  mix-blend-mode: normal;
+  opacity: 0.8;
 }
 
 .Card___project_card {
-    overflow: hidden;
-    background-size: cover;
-    margin-left: 5px;
-    margin-right: 5px;
-    margin-bottom: 25px;
+  overflow: hidden;
+  background-size: cover;
+  margin-bottom: 25px;
 }
 
-@media screen and (min-width: 1200px) {
-    .Card {
-        margin-bottom: 50px;
-    }
+@media screen and (min-width: 800px) {
+  .Card {
+    margin-bottom: 50px;
+  }
+
+  .Card___project_card {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+
+  .Card___sm {
+    width: 345px;
+    height: 200px;
+  }
 }

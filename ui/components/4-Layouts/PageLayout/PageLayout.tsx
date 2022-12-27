@@ -6,7 +6,7 @@ import styles from './PageLayout.module.css';
 
 export interface PageLayoutProps {
   children: React.ReactNode;
-  menuItems: [];
+  
 }
 
 export const PageLayout: React.FC<PageLayoutProps> = ({ children }) => {
