@@ -66,7 +66,7 @@ export const Hamburger: React.FC<HamburgerProps> = ({ menuItems }) => {
             console.log(item.pageUrl)
           }
           return (
-            <Link key={index} href={`${item.pageUrl}`} replace passHref>
+            <Link key={index} href={`/${item.pageUrl}`} replace passHref>
               {/* this feels hacky! Seems like a bug. 
             if future me would like to fix it some day, use a link wrapper: https://github.com/vercel/next.js/issues/7915 
             and https://nextjs.org/docs/api-reference/next/link#if-the-child-is-a-function-component
