@@ -9,7 +9,7 @@ import { Seo } from '../ui/components/4-Layouts/SEO/Seo';
 export interface ProjectsProps {
   projects: Array<Models.Project>;
   url: string;
-  metaData: Models.Meta
+  metaData: Models.Meta;
 }
 
 const Projects: NextPage<ProjectsProps> = ({ projects, url, metaData }) => {
@@ -19,9 +19,7 @@ const Projects: NextPage<ProjectsProps> = ({ projects, url, metaData }) => {
         openGraphType={'website'}
         url={url}
         title={metaData.metaTitle}
-        description={
-          metaData.metaDescription
-        }
+        description={metaData.metaDescription}
         image={metaData.metaImage}
         createdAt={''}
         updatedAt={''}
@@ -41,16 +39,17 @@ const Projects: NextPage<ProjectsProps> = ({ projects, url, metaData }) => {
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
   const projects = await getAllProjects();
-  const projectPage = await getProjectPage()
+  const projectPage = await getProjectPage();
   return {
-    props: { 
-      projects, 
+    props: {
+      projects,
       url: context?.req?.headers?.host,
       metaData: {
         metaTitle: projectPage.metaData.metaTitle,
         metaDescription: projectPage.metaData.metaDescription,
-        metaImage: projectPage.metaData.metaImage.url
-      } },
+        metaImage: projectPage.metaData.metaImage.url,
+      },
+    },
   };
 };
 
