@@ -5,16 +5,18 @@ import styles from './Paragraph.module.css';
 export interface ParagraphProps {
     children: React.ReactNode;
     className?: string;
-    tag: 'p'
+    tag: 'p';
+    type?: 'small' | undefined;
 }
 
 export const Paragraph: React.FC<ParagraphProps> = ({
     children,
     className,
-    tag
+    tag,
+    type
 }) => React.createElement(
     tag,
-    {className: classNames(styles.Paragraph, className)},
+    {className: classNames(styles.Paragraph, styles[`Paragraph___${type}`], className)},
     children
     
 );

@@ -76,8 +76,8 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
       experiences: experiences,
       url: context?.req?.headers?.host,
       metaData: {
-        pageTitle: text.aboutMe.meta.pageTitle,
-        pageDescription: text.aboutMe.meta.pageDescription,
+        metaTitle: text.aboutMe.meta.metaTitle,
+        metaDescription: text.aboutMe.meta.metaDescription,
       },
     },
   };
