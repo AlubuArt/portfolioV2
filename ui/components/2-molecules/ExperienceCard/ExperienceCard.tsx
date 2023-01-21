@@ -25,7 +25,7 @@ export const ExperienceCard: React.FC<ExperienceCardProps> = ({ experience }) =>
             {experience.companyName} ({experience.dates})
           </p>
         </div>
-        <div  hidden={isOpen}>
+        <div hidden={isOpen}>
           <p className={styles.linkContainer} onClick={() => setIsOpen(!isOpen)}>
             show more &or;
           </p>
@@ -40,27 +40,14 @@ export const ExperienceCard: React.FC<ExperienceCardProps> = ({ experience }) =>
       >
         <div className={styles.experienceDescription}>
           <Paragraph type={'small'} tag={'p'}>
-            Ved AAU arbejder jeg tæt sammen med resten af mine kollegaer i UX Teamet og eksterne udviklere, på AAU´s nye
-            websites bygget med Umbraco CMS og Nextjs. Mine primære opgaver er at:{' '}
+            {experience.description}
           </Paragraph>
         </div>
         <div className={styles.experienceList}>
           <ul className={styles.list}>
-            <li className={styles.listItem}>
-              Oversætte forskellige perspektiver fra brugere, stakeholders og teammedlemmer til en balanceret Product
-              Backlog.
-            </li>
-            <li>
-              Kontinuerligt justering af Product Backlog, sammen med teamet, for at sikre at forretningsmæssige såvel
-              som brugernes behov, løses.
-            </li>
-            <li>
-              Transparent og rettidigt kommunikation til brugerne samt stakeholders og udviklkere omkring produktet.
-            </li>
-            <li>
-              Sikre værdiskabelsen for kunden, ved at arbejde vekslende med at udforske problem/løsning og udvikling af
-              løsningen.{' '}
-            </li>
+            {experience.keys.map((i) => {
+              return <li className={styles.listItem}>{i}</li>;
+            })}
           </ul>
         </div>
         <div className={styles.linkContainer}>

@@ -23,8 +23,8 @@ const AboutPage: NextPage<AboutPageProps> = ({ text, YTList, experiences, metaDa
       <Seo
         openGraphType={'website'}
         url={url}
-        title={metaData.pageTitle}
-        description={metaData.pageDescription}
+        title={metaData.metaTitle}
+        description={metaData.metaDescription}
         image={''}
         createdAt={''}
         updatedAt={''}

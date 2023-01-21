@@ -41,6 +41,8 @@
   cursor: pointer;
   display: flex;
   width: 100%;
+  ont-size: 14px;
+  font-weight: bold;
 }
 
 .separator {
@@ -54,7 +56,7 @@
 .toggle {
   flex: auto;
   font-size: 14px;
-  font-weight: ;
+  font-weight: bold;
 }
 
 .externalLink {

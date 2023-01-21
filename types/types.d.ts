@@ -16,6 +16,16 @@ declare namespace Models {
     keys: [];
   }
 
+  export interface Experience {
+    companyName: string;
+    dates: string;
+    description: string;
+    jobTitle: string;
+    keys: [string];
+    link: string;
+    linktext: string; 
+  }
+
   export interface MenuItem {
     path: string;
     text: string;
@@ -71,7 +81,7 @@ declare namespace Models {
   }
 
   export interface Meta {
-    pageTitle: string;
-    pageDescription: string;
+    metaTitle: string;
+    metaDescription: string;
   }
 }
