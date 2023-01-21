@@ -25,9 +25,9 @@ export const ExperienceCard: React.FC<ExperienceCardProps> = ({ experience }) =>
             {experience.companyName} ({experience.dates})
           </p>
         </div>
-        <div>
+        <div  hidden={isOpen}>
           <p className={styles.linkContainer} onClick={() => setIsOpen(!isOpen)}>
-            show more
+            show more &or;
           </p>
         </div>
       </div>
@@ -65,10 +65,10 @@ export const ExperienceCard: React.FC<ExperienceCardProps> = ({ experience }) =>
         </div>
         <div className={styles.linkContainer}>
           <p className={styles.toggle} onClick={() => setIsOpen(false)}>
-            show less
+            show less &and;
           </p>
           <p className={styles.externalLink} onClick={() => handleExternalClick(experience.link)}>
-            visit website -&gt;
+            visit website &#8827;
           </p>
         </div>
       </div>

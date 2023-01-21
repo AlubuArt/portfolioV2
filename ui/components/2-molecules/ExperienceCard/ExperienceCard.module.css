@@ -53,6 +53,8 @@
 
 .toggle {
   flex: auto;
+  font-size: 14px;
+  font-weight: ;
 }
 
 .externalLink {
@@ -61,7 +63,7 @@
 
 .experienceContainerIsOpen {
     max-height: 0;
-    transition: max-height 1s ease-in;
+    
     overflow: hidden;
 }
 
