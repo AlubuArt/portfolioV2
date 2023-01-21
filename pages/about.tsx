@@ -25,6 +25,9 @@ const AboutPage: NextPage<AboutPageProps> = ({ text, YTList, experiences, metaDa
         url={url}
         title={metaData.metaTitle}
         description={metaData.metaDescription}
+        image={metaData.metaImage}
+        title={metaData.metaTitle}
+        description={metaData.metaDescription}
         image={''}
         createdAt={''}
         updatedAt={''}
@@ -78,6 +81,8 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
       metaData: {
         metaTitle: text.aboutMe.meta.metaTitle,
         metaDescription: text.aboutMe.meta.metaDescription,
+        metaImage: text.aboutMe.meta.metaImage.url,
+
       },
     },
   };

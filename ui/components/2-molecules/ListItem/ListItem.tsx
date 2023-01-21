@@ -13,7 +13,7 @@ export const ListItem: React.FC<ListItemProps> = ({ items }) => {
     const router = useRouter();
 
     const handleClick = (slug: string) => {
-        router.push(`https://www.youtube.com/watch?v=${slug}`);
+        window.open(`https://www.youtube.com/watch?v=${slug}`, '_blank')
     };
 
     return (

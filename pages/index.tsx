@@ -1,5 +1,5 @@
 import React from 'react';
-import type { NextPage, GetStaticProps, GetServerSideProps } from 'next';
+import type { NextPage, GetServerSideProps } from 'next';
 import { getHeroContent } from '../lib/graphcms';
 import HeroV2 from '../ui/components/3-organisms/Hero/HeroV2/HeroV2';
 import { Container } from '../ui/components/4-Layouts/Container';
@@ -12,15 +12,15 @@ export interface HomePageProps {
     heroImage: { url: string };
     pageTitle: string;
     pageDescription: string;
-  },
+  };
   url: string;
 }
 
-const Home: NextPage<HomePageProps> = ({ content,url }) => {
+const Home: NextPage<HomePageProps> = ({ content, url }) => {
   return (
     <>
       <Seo
-        openGraphType={'website'}
+        openGraphType={''}
         url={url}
         title={content.pageTitle}
         description={content.pageDescription}
@@ -41,7 +41,6 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
   const content = await getHeroContent();
   return {
     props: { content, url: context?.req?.headers?.host },
-   
   };
 };
 

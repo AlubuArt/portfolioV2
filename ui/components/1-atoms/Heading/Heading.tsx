@@ -7,7 +7,7 @@ export interface HeadingProps {
     children: React.ReactNode;
     className?: string;
     type: 'h1' | 'h2' | 'h3' 
-    tag: 'h1' | 'h2' | 'h3' | 'p';
+    tag: 'h1' | 'h2' | 'h3' | 'p' | 'a';
 }
 
 export const Heading: React.FC<HeadingProps> = ({
