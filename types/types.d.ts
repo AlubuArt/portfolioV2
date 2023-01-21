@@ -16,6 +16,16 @@ declare namespace Models {
     keys: [];
   }
 
+  export interface Experience {
+    companyName: string;
+    dates: string;
+    description: string;
+    jobTitle: string;
+    keys: [string];
+    link: string;
+    linktext: string; 
+  }
+
   export interface MenuItem {
     pageUrl: string;
     pageName: string;
