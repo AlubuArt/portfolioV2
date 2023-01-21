@@ -6,15 +6,17 @@ import styles from './PageLayout.module.css';
 
 export interface PageLayoutProps {
   children: React.ReactNode;
-  
 }
 
 export const PageLayout: React.FC<PageLayoutProps> = ({ children }) => {
-  const [pages, setPages] = useState<Models.MenuItem[]>();
+  const [pages, setPages] = useState<Models.MenuItem[]>([
+    { pageName: 'frontpage', pageUrl: 'frontpage' },
+    { pageName: 'about', pageUrl: 'about' },
+    { pageName: 'project', pageUrl: 'projects' },
+    { pageName: 'contact', pageUrl: 'contact' },
+  ]);
 
-
-
-  useEffect(() => {
+  /* useEffect(() => {
     const getMenuItems = async () => {
       let items: Models.MenuItem[] = await getAllPages();
       setPages(items); 
@@ -22,7 +24,7 @@ export const PageLayout: React.FC<PageLayoutProps> = ({ children }) => {
     };
    
     getMenuItems()
-  }, []);
+  }, []); */
 
   return (
     <div className={styles.PageContent}>
