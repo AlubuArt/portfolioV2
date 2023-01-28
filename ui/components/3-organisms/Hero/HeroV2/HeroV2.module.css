@@ -1,94 +1,119 @@
 .PageWrapper {
-
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .hero_content {
-    padding-left: 15px;
-    padding-right: 20px;
-    color: white;
-
+  padding-left: 15px;
+  padding-right: 20px;
+  color: white;
+  flex: 50%;
 }
 
 .hero_title {
-    font-size: 32px;
-    font-weight: 900;
-    line-height: 35px;
-    margin-bottom: 15px;
-    font-family: "FoundersGrotesk";
+  font-size: 32px;
+  font-weight: 900;
+  line-height: 32px;
+  margin-bottom: 15px;
+  font-family: 'FoundersGrotesk';
 }
 
 .hero_subtitle {
-    font-size: 16px;
-    margin-bottom: 10px;
-    color: #d0d0d0;
-    line-height: 1.3rem;
-    font-weight: 400;
-    letter-spacing: 0.02em;
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #d0d0d0;
+  line-height: 1.3rem;
+  font-weight: 400;
+  letter-spacing: 0.02em;
 }
 
 .hero_splash {
-    font-size: 12px;
-    width: 40vw;
-    transform: rotate(0.97turn);
-    margin-top: 15px;
-    margin-left: auto;
-    margin-right: 0;
-    display: none;
+  font-size: 12px;
+  width: 40vw;
+  transform: rotate(0.97turn);
+  margin-top: 15px;
+  margin-left: auto;
+  margin-right: 0;
+  display: none;
 }
 
 .hero_splash_p {
-    margin-left: auto;
-    margin-right: 0;
+  margin-left: auto;
+  margin-right: 0;
 }
 
 .blue {
-    color: rgb(28, 156, 173);
+  color: rgb(28, 156, 173);
+}
+
+.hero_background {
+  width: 700px;
+  background: linear-gradient(315.66deg, #3698c5 0%, #36c555 67.57%);
+  border-radius: 57px 57px 57px 57px;
+  margin-top: 30px;
+  margin-left: 50px;
+  margin-bottom: 20px;
+  max-height: 700px;
+  position: relative;
+  display: flex;
+  overflow: hidden;
+}
+
+.hero_image {
+  position: absolute;
 }
 
 @media screen and (min-width: 1200px) {
-    .PageWrapper {
-        width: 100%;
-        height: calc(100vh - 15vh - 110px);
-        flex-direction: row;
-    }
+  .PageWrapper {
+    width: 100%;
+    height: calc(100vh - 15vh - 110px);
+    flex-direction: row;
+  }
 
-    .hero_content {
-        color: white;
-        padding-top: 1vh;
-        padding-left: 0px;
-        padding-right: 0px;
-    }
-    .hero_title {
-        font-size: 72px;
-        font-weight: 900;
-        line-height: 70px;
-        margin-bottom: 30px;
-    }
+  .hero_content {
+    color: white;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .hero_title {
+    font-size: 72px;
+    font-weight: 900;
+    line-height: 70px;
+    margin-bottom: 30px;
+  }
 
-    .hero_subtitle {
-        font-size: 20px;
-        line-height: 25px;
-        width: 70%;
-        margin-bottom: 10px;
-    }
+  .hero_subtitle {
+    font-size: 20px;
+    line-height: 25px;
+    width: 70%;
+    margin-bottom: 10px;
+  }
 
-    .hero_splash {
-        font-size: 14px;
-        width: 200px;
-        transform: rotate(0.97turn);
-        margin-top: 15px;
-        margin-left: auto;
-        display: flex;
-    }
-    
-    .hero_splash_p {
-        margin-left: auto;
-        margin-right: 0;
-    }
+  .hero_background {
+    width: 100%;
+    margin-right: -20rem;
+    border-radius: 57px 57px 57px 57px;
+    flex: 50%;
+    margin-top: 0px;
 
-    .hero_cta {
-        width: 70%;
-    }
+    margin-bottom: 0px;
+  }
+
+  .hero_splash {
+    font-size: 14px;
+    width: 200px;
+    transform: rotate(0.97turn);
+    margin-top: 15px;
+    margin-left: auto;
+    display: flex;
+  }
+
+  .hero_splash_p {
+    margin-left: auto;
+    margin-right: 0;
+  }
+
+  .hero_cta {
+    width: 70%;
+  }
 }

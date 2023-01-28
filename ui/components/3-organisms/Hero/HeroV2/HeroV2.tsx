@@ -21,8 +21,9 @@ export const HeroV2: React.FC<HeroProps> = ({ heroTitle, heroSubtitle, onClick }
     <div className={styles.PageWrapper}>
       <div className={styles.hero_content}>
         <div className={styles.hero_title}>
-          <span>Hi! My name is Jacob 👋 - I </span>
-          <span className={styles.blue}>design</span> and <span className={styles.blue}>develop </span> digital products
+          <span>Hi 👋 My name is Jacob</span>
+          <br></br>
+          <span className={styles.blue}> I design</span> and <span className={styles.blue}>develop </span> digital products
         </div>
         <div className={styles.hero_subtitle}>{heroSubtitle}</div>
         <div className={styles.hero_cta}>
@@ -34,13 +35,10 @@ export const HeroV2: React.FC<HeroProps> = ({ heroTitle, heroSubtitle, onClick }
               contact me
             </Button>
           </div>
-          <div className={styles.hero_splash}>
-            <p className={styles.hero_splash_p}>or just jump right over to the awesome contact form!</p>
-          </div>
         </div>
       </div>
-      <div className={styles.hero_image}>
-        <Image className={''} src={SnippetImage} height={'1414'} width={'1852'} alt={'edef'} />
+      <div className={styles.hero_background}>
+        <Image className={styles.hero_image} src={SnippetImage} objectFit={'fill'} alt={'edef'} />
       </div>
     </div>
   );
