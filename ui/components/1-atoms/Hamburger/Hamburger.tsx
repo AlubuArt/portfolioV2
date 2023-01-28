@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { slide as Menu } from 'react-burger-menu';
 import Link from 'next/link';
 import { Heading } from '../Heading';
@@ -56,14 +56,15 @@ export interface HamburgerProps {
 }
 
 export const Hamburger: React.FC<HamburgerProps> = ({ menuItems }) => {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
-    <Menu right styles={styles}>
+    <Menu right isOpen={isOpen} onStateChange={(newState) => setIsOpen(newState.isOpen)} styles={styles}>
       {menuItems ? (
         menuItems.map((item, index: number) => {
-          
           if (item.pageUrl === 'frontpage') {
             item.pageUrl = '/';
-            console.log(item.pageUrl)
+            console.log(item.pageUrl);
           }
           return (
             <Link key={index} href={`/${item.pageUrl}`} replace passHref>
@@ -71,7 +72,7 @@ export const Hamburger: React.FC<HamburgerProps> = ({ menuItems }) => {
             if future me would like to fix it some day, use a link wrapper: https://github.com/vercel/next.js/issues/7915 
             and https://nextjs.org/docs/api-reference/next/link#if-the-child-is-a-function-component
             could be worth fixing for better SEO*/}
-              <div style={styles.heading}>
+              <div style={styles.heading} onClick={() => setIsOpen(false)}>
                 <Heading tag={'a'} type={'h2'}>
                   {item.pageName}
                 </Heading>
