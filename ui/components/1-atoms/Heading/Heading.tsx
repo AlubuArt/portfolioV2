@@ -8,6 +8,7 @@ export interface HeadingProps {
     className?: string;
     type: 'h1' | 'h2' | 'h3' 
     tag: 'h1' | 'h2' | 'h3' | 'p' | 'a';
+    onClick?: React.MouseEventHandler;
 }
 
 export const Heading: React.FC<HeadingProps> = ({
