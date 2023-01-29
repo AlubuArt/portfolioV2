@@ -21,7 +21,9 @@ export const HeroV2: React.FC<HeroProps> = ({ heroTitle, heroSubtitle, onClick }
     <div className={styles.PageWrapper}>
       <div className={styles.hero_content}>
         <div className={styles.hero_title}>
-          <span>Hi 👋 My name is Jacob</span>
+          <span>Hi 👋 </span>
+          <br></br>
+          <span>My name is Jacob</span>
           <br></br>
           <span className={styles.blue}> I design</span> and <span className={styles.blue}>develop </span> digital products
         </div>
@@ -29,10 +31,10 @@ export const HeroV2: React.FC<HeroProps> = ({ heroTitle, heroSubtitle, onClick }
         <div className={styles.hero_cta}>
           <div className={styles.hero_buttons}>
             <Button style={'CTA___primary'} onClick={() => handleClick('/projects')}>
-              see projects
+              See Projects
             </Button>
             <Button style={'CTA___secondary'} onClick={() => handleClick('/contact')}>
-              contact me
+              Contact Me
             </Button>
           </div>
         </div>

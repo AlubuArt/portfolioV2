@@ -77,13 +77,13 @@ https://codepen.io/trevoreyre/pen/bRrrEx
   }
 
   .infoTitle {
-    margin-bottom: 5px;
+    margin-bottom: 1px;
     margin-top: 0px;
   }
 
   .infoDescription {
     margin-top: 0px;
-    padding: 10px;
+    padding: 1px;
   }
 
   .infoButton {

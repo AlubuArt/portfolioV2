@@ -1,15 +1,16 @@
 .Button {
     border: 0;
     font-family: "Montserrat", sans-serif;
-    font-size: 12px;
+    font-size: 18px;
     line-height: 19px;
-    font-weight: 500;
-    padding: 0.6rem 1.5rem;
+    font-weight: 600;
+    padding: 1.1rem 1.6rem;
     margin-right: 1rem;
     margin-top: 1rem;
     border-radius: 1.5rem;
     box-shadow: 3px 6px 6px rgba(0, 0, 0, 0.536);
     cursor: pointer;
+    box-sizing: border-box;
 }
 
 .Button___primary {
@@ -30,25 +31,35 @@
 
 .Button___CTA___primary {
     background-color: transparent;
-    border: 1px solid rgb(255, 255, 255);
+    border: 2px solid rgb(255, 255, 255);
     color: rgb(255, 255, 255);
-    border-radius: 2px;
+    border-radius: 5px;
     box-sizing: border-box;
+    
 }
 
 .Button___CTA___secondary {
     background: rgb(28, 156, 173);
     color: #ffffff;
-    border-radius: 2px;
-    border: 1px solid rgb(28, 156, 173);
+    border-radius: 5px;
+    border: 2px solid rgb(28, 156, 173);
 }
 
 @media screen and (min-width: 1200px) {
     .Button {
-        font-size: 16px;
+        font-size: 22px;
         line-height: 19px;
         font-weight: 700;
-        padding: 0.9rem 1.7rem;
+        padding: 1.3rem 3.5rem;
+    }
+
+    .Button___primary {
+        background-color: rgb(28, 156, 173);
+        color: #ffffff;
+        margin-right: 0px;
+        padding: 1rem 2.5rem;
+        font-size: 18px;
+
     }
 
 }

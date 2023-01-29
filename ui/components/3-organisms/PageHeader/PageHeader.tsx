@@ -9,23 +9,10 @@ export interface PageHeaderProps {
   subtitle: string;
   githubLink?: React.MouseEventHandler<HTMLButtonElement>;
   liveVersionLink?: React.MouseEventHandler<HTMLButtonElement>;
-  type?: 'ProjectHeader' | 'PageHeader' ;
+  type?: 'ProjectHeader' | 'PageHeader';
 }
 
 export const PageHeader: React.FC<PageHeaderProps> = ({ title, subtitle, githubLink, liveVersionLink, type }) => {
-  const renderButtons = () => {
-    if (githubLink) {
-      const buttonPrimary = (
-        <Button onClick={githubLink} style={'CTA___secondary'}>
-          {'SEE ON GITHUB'}
-        </Button>
-      );
-    }
-    if (liveVersionLink) {
-      
-    }
-  };
-
   return (
     <div className={styles.pageHeader___container}>
       <Heading className={styles.PageHeader_title} type="h1" tag="h1">
@@ -35,18 +22,18 @@ export const PageHeader: React.FC<PageHeaderProps> = ({ title, subtitle, githubL
         <div dangerouslySetInnerHTML={{ __html: subtitle }} />
       </Paragraph>
 
-    {type === "ProjectHeader" ? (
-      <div>
-        <Button onClick={liveVersionLink} style={"CTA___primary"}>
-          {"VISIT WEBSITE"}
-        </Button>
-        <Button onClick={githubLink} style={"CTA___secondary"}>
-          {"SEE ON GITHUB"}
-        </Button>
-      </div>
-    ) : (
-      ""
-    )} 
+      {type === 'ProjectHeader' ? (
+        <div className={styles.buttons_container}>
+          <Button onClick={liveVersionLink} style={'CTA___primary'}>
+            {'Website'}
+          </Button>
+          <Button onClick={githubLink} style={'CTA___secondary'}>
+            {'Github'}
+          </Button>
+        </div>
+      ) : (
+        ''
+      )}
     </div>
   );
 };

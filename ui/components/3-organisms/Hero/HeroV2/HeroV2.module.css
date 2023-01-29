@@ -11,18 +11,18 @@
 }
 
 .hero_title {
-  font-size: 32px;
+  font-size: 40px;
   font-weight: 900;
-  line-height: 32px;
+  line-height: 40px;
   margin-bottom: 15px;
   font-family: 'FoundersGrotesk';
 }
 
 .hero_subtitle {
-  font-size: 16px;
+  font-size: 18px;
   margin-bottom: 10px;
   color: #d0d0d0;
-  line-height: 1.3rem;
+  line-height: 32px;
   font-weight: 400;
   letter-spacing: 0.02em;
 }
@@ -61,6 +61,10 @@
 
 .hero_image {
   position: absolute;
+}
+.hero_buttons {
+  display: flex;
+  flex-direction: column;
 }
 
 @media screen and (min-width: 1200px) {
@@ -115,5 +119,9 @@
 
   .hero_cta {
     width: 70%;
+  }
+
+  .hero_buttons {
+    display: block;
   }
 }
