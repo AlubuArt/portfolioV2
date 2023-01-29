@@ -44,7 +44,7 @@ The project uses to some extend third party libraries, but the overall aim is to
 
 
 ## backlog
-- [ ] Projects page needs to be updated for SEO (graphCMS)
+
 - [ ] Refactor to version 2 (all pagesm and content needs to come from cms)
 - [ ] Changelog from Vercel Deployments API (https://vercel.com/docs/rest-api#introduction/api-basics)
 - [ ] Youtube feed v2 (re-design)
@@ -57,7 +57,7 @@ The project uses to some extend third party libraries, but the overall aim is to
 
 ## Bugs
 - [X] Fix bug where project images doesnt show, when new project is added in CMS. (Probaly something with getServerSideProps)
-- [ ] When projects page loades, the projects are in reversed order.
+- [X] When projects page loades, the projects are in reversed order.
 
 
 
@@ -66,3 +66,4 @@ The project uses to some extend third party libraries, but the overall aim is to
 - [x] Responsive design for mobile and tablet
 - [X] Youtube feed
 - [X] Analytics
+- [X] Projects page needs to be updated for SEO (graphCMS)

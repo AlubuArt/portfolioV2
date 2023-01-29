@@ -10,9 +10,11 @@ import { Seo } from '../../ui/components/4-Layouts/SEO/Seo';
 
 export interface ProjectPageProps {
   project: Models.Project;
+  metaData: Models.Meta;
+  url: string
 }
 
-const ProjectPage: NextPage<ProjectPageProps> = ({ project }) => {
+const ProjectPage: NextPage<ProjectPageProps> = ({ project, metaData, url }) => {
   const handleExternalRouting = (url: string) => {
     document.location.href = url;
   };
@@ -20,14 +22,14 @@ const ProjectPage: NextPage<ProjectPageProps> = ({ project }) => {
   return (
     <>
       <Seo
-        openGraphType={''}
-        url={''}
-        title={''}
-        description={''}
-        image={''}
+        openGraphType={'website'}
+        url={`https://www.jcvisueldesign.dk/projects/${url}`}
+        title={metaData.metaTitle}
+        description={metaData.metaDescription}
+        image={metaData.metaImage}
         createdAt={''}
         updatedAt={''}
-        schemaType={''}
+        schemaType={'article'}
       />
 
       <Container type={'project'} spacing={'lg'}>
@@ -60,7 +62,15 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   const data = await getProject(params?.slug);
 
   return {
-    props: { project: data.project },
+    props: {
+      project: data.project,
+      url: params?.slug,
+      metaData: {
+        metaTile: data.project.meta.metaTitle,
+        metaDescription: data.project.meta.metaDescription,
+        metaImage: data.project.meta.metaImage.url,
+      },
+    },
     revalidate: 60, // seconds
   };
 };

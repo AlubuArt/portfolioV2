@@ -12,7 +12,7 @@ export const PageLayout: React.FC<PageLayoutProps> = ({ children }) => {
   const [pages, setPages] = useState<Models.MenuItem[]>([
     { pageName: 'frontpage', pageUrl: 'frontpage' },
     { pageName: 'about', pageUrl: 'about' },
-    { pageName: 'project', pageUrl: 'projects' },
+    { pageName: 'projects', pageUrl: 'projects' },
     { pageName: 'contact', pageUrl: 'contact' },
   ]);
 

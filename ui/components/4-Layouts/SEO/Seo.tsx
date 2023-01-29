@@ -50,12 +50,14 @@ interface SeoProps {
 export const Seo: React.FC<SeoProps> = (props) => {
   const { title, description, image, schemaType, url } = props;
 
+
+
   return (
     <Head>
-      <title>{title}</title>
-      <meta name="description" content={description} />
-      <meta itemProp="name" content={title} />
-      <meta itemProp="description" content={description} />
+      <title>{ `${title} | JCVISUELDESIGN`}</title>
+      <meta name="description" content={ `${description} | JCVISUELDESIGN`} />
+      <meta itemProp="name" content={ `${title} | JCVISUELDESIGN`} />
+      <meta itemProp="description" content={ `${description} | JCVISUELDESIGN`} />
       <meta itemProp="image" content={image} />
       <meta name="google-site-verification" content="ecBbBBTpu5mTSh-H128I23-OsIN1BpkX7_uaA9eCCw0" />
       {socialTags(props).map(({ tagName, tagContent }) => {
@@ -66,7 +68,7 @@ export const Seo: React.FC<SeoProps> = (props) => {
         __html: JSON.stringify({
           "@context": "http://schema.org",
           "@type": schemaType,
-          name: title,
+          name: `${title} | JCVISUELDESIGN`,
           about: description,
           url: url,
         }),
