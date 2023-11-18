@@ -29,7 +29,7 @@ const Projects: NextPage<ProjectsProps> = ({ projects, url, metaData }) => {
       <Container type={'projects'} spacing={'lg'}>
         <PageHeader
           title={'project portfolio'}
-          subtitle={'my lastest work with ReactJS, NextJS, Firebase, NodeJS, GraphQL, Figma'}
+          subtitle={'I have sampled some of my lastest work, done with some of the technologies I enjoy most'}
         />
         <CardListLayout projects={projects} />
       </Container>

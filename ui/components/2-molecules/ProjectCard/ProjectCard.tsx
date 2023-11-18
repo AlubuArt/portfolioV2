@@ -4,16 +4,17 @@ import { Card } from '../../1-atoms/Card';
 import { Heading } from '../../1-atoms/Heading';
 import { Button } from '../../1-atoms/Button';
 import { Paragraph } from '../../1-atoms/Paragraph';
+import Link from 'next/link';
 
 export interface ProjectCardProps {
   className?: string;
   title: string;
   description?: string;
   image: Models.Image['url'];
-  onClick: React.MouseEventHandler<HTMLButtonElement>;
+  url: string;
 }
 
-export const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, image, onClick }) => (
+export const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, image, url }) => (
   <>
     <Card image={image} className={styles.project_card} size={'sm'} type={'project_card'} onClick={() => {}}>
       <div className={styles.info}>
@@ -24,9 +25,9 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, im
           <Paragraph tag={'p'}>{description}</Paragraph>
         </div>
         <div className={styles.infoButton}>
-          <Button style={'primary'} onClick={onClick}>
+          <Link  href={url}>
             more...
-          </Button>
+          </Link>
         </div>
       </div>
     </Card>

@@ -88,11 +88,12 @@ https://codepen.io/trevoreyre/pen/bRrrEx
 
   .infoButton {
     position: absolute;
-    bottom: 95px;
+    bottom: 120px;
     text-align: center;
     width: 100%;
     margin-left: auto;
     margin-right: auto;
+    text-decoration: underline;
   }
 
   .project_card:hover .info,

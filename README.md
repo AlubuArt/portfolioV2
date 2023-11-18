@@ -46,6 +46,7 @@ The project uses to some extend third party libraries, but the overall aim is to
 ## backlog
 
 - [ ] Refactor to version 2 (all pagesm and content needs to come from cms)
+- [ ] Upgrade Node and Next
 - [ ] Changelog from Vercel Deployments API (https://vercel.com/docs/rest-api#introduction/api-basics)
 - [ ] Youtube feed v2 (re-design)
 - [ ] Loading spinner 
