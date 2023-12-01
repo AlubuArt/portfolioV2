@@ -26,6 +26,16 @@ declare namespace Models {
     linktext: string; 
   }
 
+  export interface Education {
+    educationName: string;
+    graduationDate: string;
+    description: string;
+    educationTitle: string;
+    keys: [string];
+    link: string;
+    linktext: string; 
+  }
+
   export interface MenuItem {
     pageUrl: string;
     pageName: string;

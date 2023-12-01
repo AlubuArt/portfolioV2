@@ -4,10 +4,11 @@ import styles from './ExperienceCard.module.css';
 import classNames from 'classnames';
 
 interface ExperienceCardProps {
-  experience: Models.Experience;
+  experience?: Models.Experience;
+  education?: Models.Education;
 }
 
-export const ExperienceCard: React.FC<ExperienceCardProps> = ({ experience }) => {
+export const ExperienceCard: React.FC<ExperienceCardProps> = ({ experience, education }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleExternalClick = (input: string) => {
@@ -15,51 +16,104 @@ export const ExperienceCard: React.FC<ExperienceCardProps> = ({ experience }) =>
   };
 
   return (
-    <div className={styles.experienceCardContainer}>
-      <div className={styles.ExperienceCard_container}>
-        <div>
-          <p className={styles.jobTitleContainer}>{experience.jobTitle}</p>
-        </div>
-        <div>
-          <p className={styles.companyContainer}>
-            {experience.companyName} ({experience.dates})
-          </p>
-        </div>
-        <div hidden={isOpen}>
-          <p className={styles.linkContainer} onClick={() => setIsOpen(!isOpen)}>
-            show more &or;
-          </p>
-        </div>
-      </div>
+    <>
+      {experience ? (
+        <div className={styles.experienceCardContainer}>
+          <div className={styles.ExperienceCard_container}>
+            <div>
+              <p className={styles.jobTitleContainer}>{experience.jobTitle}</p>
+            </div>
+            <div>
+              <p className={styles.companyContainer}>
+                {experience.companyName} ({experience.dates})
+              </p>
+            </div>
+            <div hidden={isOpen}>
+              <p className={styles.linkContainer} onClick={() => setIsOpen(!isOpen)}>
+                show more &or;
+              </p>
+            </div>
+          </div>
 
-      <div
-        className={classNames(
-          styles.experienceContainerIsOpen,
-          styles[`experienceContainerIsOpen___${isOpen ? 'open' : 'closed'}`]
-        )}
-      >
-        <div className={styles.experienceDescription}>
-          <Paragraph type={'small'} tag={'p'}>
-            {experience.description}
-          </Paragraph>
+          <div
+            className={classNames(
+              styles.experienceContainerIsOpen,
+              styles[`experienceContainerIsOpen___${isOpen ? 'open' : 'closed'}`]
+            )}
+          >
+            <div className={styles.experienceDescription}>
+              <Paragraph type={'small'} tag={'p'}>
+                {experience.description}
+              </Paragraph>
+            </div>
+            <div className={styles.experienceList}>
+              <ul className={styles.list}>
+                {experience.keys.map((i) => {
+                  return <li className={styles.listItem}>{i}</li>;
+                })}
+              </ul>
+            </div>
+            <div className={styles.linkContainer}>
+              <p className={styles.toggle} onClick={() => setIsOpen(false)}>
+                show less &and;
+              </p>
+              <p className={styles.externalLink} onClick={() => handleExternalClick(experience.link)}>
+                visit website &#8827;
+              </p>
+            </div>
+          </div>
+          <span className={styles.separator}></span>
         </div>
-        <div className={styles.experienceList}>
-          <ul className={styles.list}>
-            {experience.keys.map((i) => {
-              return <li className={styles.listItem}>{i}</li>;
-            })}
-          </ul>
+      ) : education ? (
+        <div className={styles.experienceCardContainer}>
+          <div className={styles.ExperienceCard_container}>
+            <div>
+              <p className={styles.jobTitleContainer}>{education.educationTitle}</p>
+            </div>
+            <div>
+              <p className={styles.companyContainer}>
+                {education.educationName} ({education.graduationDate})
+              </p>
+            </div>
+            <div hidden={isOpen}>
+              <p className={styles.linkContainer} onClick={() => setIsOpen(!isOpen)}>
+                show more &or;
+              </p>
+            </div>
+          </div>
+
+          <div
+            className={classNames(
+              styles.experienceContainerIsOpen,
+              styles[`experienceContainerIsOpen___${isOpen ? 'open' : 'closed'}`]
+            )}
+          >
+            <div className={styles.experienceDescription}>
+              <Paragraph type={'small'} tag={'p'}>
+                {education.description}
+              </Paragraph>
+            </div>
+            <div className={styles.experienceList}>
+              <ul className={styles.list}>
+                {education.keys.map((i) => {
+                  return <li className={styles.listItem}>{i}</li>;
+                })}
+              </ul>
+            </div>
+            <div className={styles.linkContainer}>
+              <p className={styles.toggle} onClick={() => setIsOpen(false)}>
+                show less &and;
+              </p>
+              <p className={styles.externalLink} onClick={() => handleExternalClick(education.link)}>
+                visit website &#8827;
+              </p>
+            </div>
+          </div>
+          <span className={styles.separator}></span>
         </div>
-        <div className={styles.linkContainer}>
-          <p className={styles.toggle} onClick={() => setIsOpen(false)}>
-            show less &and;
-          </p>
-          <p className={styles.externalLink} onClick={() => handleExternalClick(experience.link)}>
-            visit website &#8827;
-          </p>
-        </div>
-      </div>
-      <span className={styles.separator}></span>
-    </div>
+      ) : (
+        <></>
+      )}
+    </>
   );
 };

@@ -1,5 +1,5 @@
 import React from 'react';
-import type { GetServerSideProps, NextPage } from 'next';
+import type { GetServerSideProps, GetStaticPaths, GetStaticProps, NextPage } from 'next';
 import { PageHeader } from '../ui/components/3-organisms/PageHeader';
 import { CardListLayout } from '../ui/components/4-Layouts/ListLayout/CardListLayout';
 import { getAllProjects, getProjectPage } from '../lib/graphcms';
@@ -8,16 +8,15 @@ import { Seo } from '../ui/components/4-Layouts/SEO/Seo';
 
 export interface ProjectsProps {
   projects: Array<Models.Project>;
-  url: string;
   metaData: Models.Meta;
 }
 
-const Projects: NextPage<ProjectsProps> = ({ projects, url, metaData }) => {
+const Projects: NextPage<ProjectsProps> = ({ projects, metaData }) => {
   return (
     <>
       <Seo
         openGraphType={'website'}
-        url={url}
+        url={'https://jcvisueldesign.dk/projects'}
         title={metaData.metaTitle}
         description={metaData.metaDescription}
         image={metaData.metaImage}
@@ -37,19 +36,20 @@ const Projects: NextPage<ProjectsProps> = ({ projects, url, metaData }) => {
   );
 };
 
-export const getServerSideProps: GetServerSideProps = async (context) => {
+export const getStaticProps: GetStaticProps = async () => {
   const projects = await getAllProjects();
   const projectPage = await getProjectPage();
   return {
     props: {
       projects,
-      url: context?.req?.headers?.host,
+
       metaData: {
         metaTitle: projectPage.metaData.metaTitle,
         metaDescription: projectPage.metaData.metaDescription,
         metaImage: projectPage.metaData.metaImage.url,
       },
     },
+    revalidate: 60, // seconds
   };
 };
 
