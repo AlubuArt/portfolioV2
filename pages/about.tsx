@@ -1,5 +1,5 @@
-import { GetServerSideProps, NextPage } from 'next';
-import React from 'react';
+import { GetServerSideProps, GetStaticProps, NextPage } from 'next';
+import React, { useEffect, useState } from 'react';
 import { getYouTubePlaylist } from '../lib/youtube';
 import { Heading } from '../ui/components/1-atoms/Heading';
 import { Container } from '../ui/components/4-Layouts/Container';
@@ -8,22 +8,33 @@ import { TextBox } from '../ui/components/2-molecules/TextBox';
 import { ListLayout } from '../ui/components/4-Layouts/ListLayout/ListLayout';
 import { getAboutMe, getEducations, getExperiences } from '../lib/graphcms';
 import { Seo } from '../ui/components/4-Layouts/SEO/Seo';
+import { LoadingSpinner } from '../ui/components/1-atoms/LoadingSpinner/LoadingSpinner';
 
 interface AboutPageProps {
   text: Models.AboutMeText;
-  YTList: [];
   experiences: [];
   educations: [];
-  url: string;
   metaData: Models.Meta;
 }
 
-const AboutPage: NextPage<AboutPageProps> = ({ text, YTList, experiences, metaData, url, educations }) => {
+const AboutPage: NextPage<AboutPageProps> = ({ text, experiences, metaData, educations }) => {
+  const [YTList, setYTList] = useState<[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const data = await getYouTubePlaylist('PLEqpYJHv1AC-ASCBue9-VYB9SLj7LgfV9');
+      setYTList(data);
+      setLoading(false);
+    };
+    fetchData();
+  }, []);
+
   return (
     <>
       <Seo
         openGraphType={'website'}
-        url={url}
+        url={'https://www.jcvisueldesign.dk/about'}
         title={metaData.metaTitle}
         description={metaData.metaDescription}
         image={metaData.metaImage}
@@ -67,32 +78,23 @@ const AboutPage: NextPage<AboutPageProps> = ({ text, YTList, experiences, metaDa
           <Heading tag={'h2'} type={'h2'}>
             {'my recently viewed youtube videos'}
           </Heading>
-
-          {YTList.length > 0 ? (
-            <ListLayout list={YTList} type={'youtube'} />
-          ) : (
-            //TODO: Custom error message to be printed
-            <p>{"Oh oh! Couldn't get a YT playlist :-("}</p>
-          )}
+          {loading ? <LoadingSpinner /> : <ListLayout list={YTList} type={'youtube'} />}
         </Container>
       </Container>
     </>
   );
 };
 
-export const getServerSideProps: GetServerSideProps = async (context) => {
+export const getStaticProps: GetStaticProps = async () => {
   const text = await getAboutMe();
   const experiences = await getExperiences();
   const educations = await getEducations();
-  const YTList = await getYouTubePlaylist('PLEqpYJHv1AC-ASCBue9-VYB9SLj7LgfV9');
 
   return {
     props: {
       text: text.aboutMe,
-      YTList: YTList.reverse(),
       experiences: experiences,
       educations: educations,
-      url: context?.req?.headers?.host,
       metaData: {
         metaTitle: text.aboutMe.meta.metaTitle,
         metaDescription: text.aboutMe.meta.metaDescription,

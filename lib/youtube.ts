@@ -4,7 +4,7 @@ const URL =
 
 export async function getYouTubePlaylist(
     playListID: string
-): Promise<[Models.PlayListData] | []> {
+): Promise<[]> {
     const query = `${URL}${playListID}&key=${API_KEY}`;
 
     const response = await fetch(query);
@@ -13,7 +13,7 @@ export async function getYouTubePlaylist(
 
     if (data.items) {
         const list = data.items;
-        return list;
+        return list.reverse();
     } else {
         const error =
             "Custom Error: Could not fetch a Youtube playlist with that ID";
