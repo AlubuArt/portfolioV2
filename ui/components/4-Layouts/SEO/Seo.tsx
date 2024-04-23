@@ -58,7 +58,7 @@ export const Seo: React.FC<SeoProps> = (props) => {
       <meta name="description" content={ `${description} | JCVISUELDESIGN`} />
       <meta itemProp="name" content={ `${title} | JCVISUELDESIGN`} />
       <meta itemProp="description" content={ `${description} | JCVISUELDESIGN`} />
-      <meta itemProp="image" content={image} />
+      <meta name="image" property="image"  content={image} />
       <meta name="google-site-verification" content="ecBbBBTpu5mTSh-H128I23-OsIN1BpkX7_uaA9eCCw0" />
       {socialTags(props).map(({ tagName, tagContent }) => {
         return <meta key={tagName} name={tagName} content={tagContent} />;
