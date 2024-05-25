@@ -3,7 +3,7 @@ import { Paragraph } from '../../1-atoms/Paragraph';
 import styles from './ExperienceCard.module.css';
 import classNames from 'classnames';
 
-interface ExperienceCardProps {
+export interface ExperienceCardProps {
   experience?: Models.Experience;
   education?: Models.Education;
 }

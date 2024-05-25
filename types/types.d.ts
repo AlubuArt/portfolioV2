@@ -96,4 +96,16 @@ declare namespace Models {
     metaImage: string
 
   }
+
+  export interface BlogPost {
+    pictureUrl: Image['url'];
+    blogpostTitle: string; 
+    leadinText: string; 
+    date: string;
+    content: any; 
+    id: string;
+    slug: string;
+  }
 }
+
+
